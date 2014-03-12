@@ -1,0 +1,11 @@
+# Hidden system files
+*.DS_Store
+*[Tt]humbs.db
+*.Trashes
+ 
+*.sublime-project
+*.sublime-workspace
+*.sass-cache
+package.json
+node_modules
+npm-debug.log

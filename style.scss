@@ -1,0 +1,62 @@
+/*
+Theme Name: 	LDNfashion
+Theme URI: 		http://ldnfahion.com
+Description: 	LDNfashion theme
+Version: 		0.1
+Author: 		Jon Heslop (But based on Stakers by Viewport Ind.)
+Author URI: 	http://jonheslop.com
+Tags: 			starkers, naked, clean, basic
+*/
+@import "css/bourbon/bourbon";
+@import "css/_utils";
+
+// Media Query Breakpoints
+$mobile : 30em; // 480px
+$moblet : 40em; // 640px
+$tablet : 45em; // 720px
+$tablet-mid : 55.5em; // 888px
+$tablet-landscape : 61.5em; // 984px
+$laptop : 75em; // 1200px
+$desktop : 87em; // 1392px
+$cinema : 105em; // 1680px
+
+// Colours
+$pink : #F27490;
+$white : #fff;
+$black : rgb(25, 25, 25);
+$pitchblack : #0D0D0D;
+$blue : #00ABE4;
+$darkgrey : #808080;
+$grey : #ccc;
+$lightgrey : #E7E7E8;
+$green : #85AF5A;
+$orange : #D48B41;
+$red : #A95550;
+$yellow : #FED230;
+
+// Social colours
+$twitter-blue: #1DACEE;
+$facebook-blue: #415CA7;
+$instagram-blue: #406E95;
+
+
+@include font-face(entypo, "fonts/rapha-entypo", normal, normal);
+@mixin sans { font-family: Verdana, Arial,sans-serif; }
+@mixin nicer-sans { font-family: "Freight Sans Pro W01", Verdana, Arial,sans-serif; }
+@mixin serif { font-family: "Adobe Caslon W01", Georgia, serif; }
+@mixin Trade-Gothic { font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif; }
+@mixin Entypo { font-family: "entypo", "adobe-caslon-pro", serif; }
+@mixin sprite { background: url(../flags.png) 0 0 no-repeat; }
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+@mixin visually-hidden { border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@import "css/_style";
+@import "css/_socialcount";

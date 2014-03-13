@@ -20,19 +20,19 @@ $laptop : 75em; // 1200px
 $desktop : 87em; // 1392px
 $cinema : 105em; // 1680px
 
-// Colours
-$pink : #F27490;
+// Important numbers
+$line: 24;
+$column: 100% / 18; // 16 plus the page gutters 
+$font-size: 16;
+$em: $font-size * 1;
+
+// Base Colours
+$black: #2A2425;
 $white : #fff;
-$black : rgb(25, 25, 25);
-$pitchblack : #0D0D0D;
-$blue : #00ABE4;
-$darkgrey : #808080;
-$grey : #ccc;
-$lightgrey : #E7E7E8;
-$green : #85AF5A;
-$orange : #D48B41;
-$red : #A95550;
-$yellow : #FED230;
+$offwhite : #FAFAFA;
+$darkgrey : desaturate(lighten($black, 25%), 95%);
+$grey : desaturate(lighten($black, 60%), 95%);
+$lightgrey : desaturate(lighten($black, 75%), 95%);
 
 // Social colours
 $twitter-blue: #1DACEE;
@@ -40,13 +40,9 @@ $facebook-blue: #415CA7;
 $instagram-blue: #406E95;
 
 
-@include font-face(entypo, "fonts/rapha-entypo", normal, normal);
-@mixin sans { font-family: Verdana, Arial,sans-serif; }
-@mixin nicer-sans { font-family: "Freight Sans Pro W01", Verdana, Arial,sans-serif; }
-@mixin serif { font-family: "Adobe Caslon W01", Georgia, serif; }
-@mixin Trade-Gothic { font-family: "Trade Gothic W01", Helvetica, Arial, sans-serif; }
-@mixin Entypo { font-family: "entypo", "adobe-caslon-pro", serif; }
-@mixin sprite { background: url(../flags.png) 0 0 no-repeat; }
+@mixin Minion { font-family: "minion-pro",times,serif; }
+@mixin Trajan { font-family: "trajan-sans-pro",helvetica,arial,sans-serif; }
+
 // Hide only visually, but have it available for screenreaders: h5bp.com/v
 @mixin visually-hidden { border: 0;
     clip: rect(0 0 0 0);
@@ -57,6 +53,40 @@ $instagram-blue: #406E95;
     position: absolute;
     width: 1px;
 }
+
+// GLOBAL STUFF
+
+body {
+	/* 16px / 24px */
+	font-size: $font-size / 16 * 1em;
+	line-height: #{$line / $em}em;
+	text-rendering: optimizeLegibility;
+	@include old-ie { max-width: 960px; margin: auto; }
+  margin: 0;
+}
+
+a { @include transition (all .2s linear);
+  &:link, &:visited { text-decoration: none; }
+}
+p { margin: 0; }
+p+p { margin-top: .75em; }
+
+// grid container, that gives us gutters
+.container { margin: 0 $column*2; @include clearfix;
+  @include breakpoint($tablet-landscape) {
+    // margin: 0 auto;
+    // max-width: 1000px;
+  }
+} 
+
+figure { margin: 0;
+	img { max-width: 100%; }
+}
+
+// gives elements gutters using padding
+.wrapper, .menu-item a { padding: 0 #{($line/2)/$em}em; @include box-sizing(border-box); float: left; } 
+
+.cf { @include clearfix; }
 
 @import "css/_style";
 @import "css/_socialcount";

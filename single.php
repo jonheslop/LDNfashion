@@ -10,24 +10,32 @@
  */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
-<article>
-
-	<h2><?php the_title(); ?></h2>
-	<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-	<?php the_content(); ?>			
-
-	<?php if ( get_the_author_meta( 'description' ) ) : ?>
-	<?php echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
-	<h3>About <?php echo get_the_author() ; ?></h3>
-	<?php the_author_meta( 'description' ); ?>
-	<?php endif; ?>
-
-	<?php comments_template( '', true ); ?>
-
-</article>
-<?php endwhile; ?>
-
+<section role="main" class="container">
+	<section id="content" class="cf">
+		<?php if ( have_posts() ) while ( have_posts() ) : the_post();
+			$imageID = get_post_thumbnail_id($post->ID);
+			$image = wp_get_attachment_image_src($imageID, 'large'); ?>
+		<article class="post cf">
+		<?php if ( $image ) : ?>
+			<figure class="post-image wrapper">
+				<img src="<?php echo $image[0]; ?>">
+			</figure>
+		<?php endif; ?>
+			<div class="post-words wrapper">
+				<header class="section_header post-header">
+					<h2><?php the_title(); ?></h2>
+					<p class="meta"><?php the_category(',','single'); ?> | <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> | <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?></p>
+				</header>
+				<div class="post-content">
+					<?php the_content(); ?>
+				</div>
+			</div>
+			<section class="post-comments wrapper">
+				<?php comments_template( '', true ); ?>
+			</section>
+		</article>
+	</section>
+	<?php endwhile; ?>
+	<?php get_template_part( 'parts/_sidebar' ); ?>
+</section>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

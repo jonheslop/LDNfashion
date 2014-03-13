@@ -12,6 +12,15 @@ module.exports = function(grunt) {
 			css: {
 				files: '**/*.scss',
 				tasks: ['sass']
+			},
+			all: {
+				files: [
+					'js/*.js',
+					'{,**/}*.{png,jpg,gif,php}'
+				]
+			},
+			options: {
+				livereload: true
 			}
 		},
 		cssmin: {

@@ -72,10 +72,9 @@ p { margin: 0; }
 p+p { margin-top: .75em; }
 
 // grid container, that gives us gutters
-.container { margin: 0 $column*2; @include clearfix;
-  @include breakpoint($tablet-landscape) {
-    // margin: 0 auto;
-    // max-width: 1000px;
+.container { margin: 0 $column; @include clearfix;
+  @include breakpoint($laptop) {
+    margin: 0 $column*2;
   }
 } 
 

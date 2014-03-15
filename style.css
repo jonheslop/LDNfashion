@@ -28,13 +28,16 @@ p + p {
   margin-top: .75em; }
 
 .container {
-  margin: 0 11.11111%;
+  margin: 0 5.55556%;
   *zoom: 1; }
   .container:before, .container:after {
     content: " ";
     display: table; }
   .container:after {
     clear: both; }
+  @media screen and (min-width: 75em) {
+    .container {
+      margin: 0 11.11111%; } }
 
 figure {
   margin: 0; }

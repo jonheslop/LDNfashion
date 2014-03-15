@@ -30,10 +30,13 @@
 					<?php the_content(); ?>
 				</div>
 			</div>
+			<?php include(locate_template('parts/_sharing.php')); ?>
 			<section class="post-comments wrapper">
 				<?php comments_template( '', true ); ?>
 			</section>
 		</article>
+		<?php include(locate_template('parts/_post-prev-next.php')); ?>
+		<?php include(locate_template('parts/_related-posts.php')); ?>
 	</section>
 	<?php endwhile; ?>
 	<?php get_template_part( 'parts/_sidebar' ); ?>

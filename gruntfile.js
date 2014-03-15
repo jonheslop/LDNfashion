@@ -5,6 +5,9 @@ module.exports = function(grunt) {
 			dist: {
 				files: {
 					'style.css' : 'style.scss'
+				},
+				options: {
+					quiet: true
 				}
 			}
 		},

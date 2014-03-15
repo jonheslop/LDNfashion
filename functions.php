@@ -67,7 +67,7 @@
 		wp_enqueue_script( 'site' );
 
 		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
-        wp_enqueue_style( 'screen' );
+		wp_enqueue_style( 'screen' );
 	}	
 
 	/* ========================================================================================================================
@@ -95,3 +95,69 @@
 			</article>
 		<?php endif;
 	}
+
+	/* ========================================================================================================================
+	
+	Widget Areas and widgets
+	
+	======================================================================================================================== */
+
+	function ldnFashion_widgets_init() {
+		register_sidebar( array(
+			'name' => 'Header Banner Huge',
+			'description' => 'Banner above the site logo',
+			'id' => 'header_banner_huge',
+			'class' => 'header_banner_huge',
+			'before_widget' => '<div id="%1$s" class="wrapper ldnf_widget header_banner_huge %2$s">',
+			'after_widget' => '</div>',
+		));
+		register_sidebar( array(
+			'name' => 'Header Banner',
+			'description' => 'Banner along side the site logo',
+			'id' => 'header_banner',
+			'class' => 'header_banner',
+			'before_widget' => '<div id="%1$s" class="wrapper ldnf_widget header_banner %2$s">',
+			'after_widget' => '</div>',
+		));
+		register_sidebar( array(
+			'name' => 'Sidebar Top',
+			'description' => 'Ad at the top of the sidebar',
+			'id' => 'sidebar_ad_top',
+			'class' => 'sidebar_ad_top',
+			'before_widget' => '<div id="%1$s" class="wrapper ldnf_widget sidebar_ad_top %2$s">',
+			'after_widget' => '</div>',
+		));
+		register_sidebar( array(
+			'name' => 'Sidebar Mini Adverts',
+			'description' => 'Ad multiple mini ads to sidebar',
+			'id' => 'sidebar_mini_ad_box',
+			'class' => 'sidebar_mini_ad_box',
+			'before_widget' => '<li id="%1$s" class="wrapper ldnf_widget sidebar_mini_ads %2$s">',
+			'after_widget' => '</li>',
+		));
+		register_sidebar( array(
+			'name' => 'Sidebar Bottom',
+			'description' => 'Ad at the bottom of the sidebar',
+			'id' => 'sidebar_ad_bottom',
+			'class' => 'sidebar_ad_bottom',
+			'before_widget' => '<div id="%1$s" class="wrapper ldnf_widget sidebar_ad_bottom %2$s">',
+			'after_widget' => '</div>',
+		));
+		register_sidebar( array(
+			'name' => 'Index Ad High',
+			'description' => 'First ad on index page',
+			'id' => 'index_ad_high',
+			'class' => 'index_ad_high',
+			'before_widget' => '<div id="%1$s" class="wrapper ldnf_widget index_ad_high %2$s">',
+			'after_widget' => '</div>',
+		));
+		register_sidebar( array(
+			'name' => 'Index Ad Low',
+			'description' => 'First ad on index page',
+			'id' => 'index_ad_low',
+			'class' => 'index_ad_low',
+			'before_widget' => '<div id="%1$s" class="wrapper ldnf_widget index_ad_low %2$s">',
+			'after_widget' => '</div>',
+		));
+	}
+	add_action( 'widgets_init', 'ldnFashion_widgets_init' );

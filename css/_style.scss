@@ -10,7 +10,7 @@ nav[role="navigation"] { padding: 0 .75em; @include box-sizing(border-box);
 		li {
 			a { display: block; @include Trajan; font-size: .625em; border-bottom: .25em solid $offwhite; text-transform: uppercase; letter-spacing: .125em; font-weight: bold; padding: .4375rem .75rem .375em; line-height: 1.5;
 				&:link, &:visited { color: $darkgrey; }
-				&:hover { color: $black; border-width: 0 0 .25em 0; @include horizontal-border; background-color: $white; }
+				&:hover { color: $black; border-bottom-color: $lightgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */ background-color: $white; }
 			}
 		}
 	}
@@ -36,7 +36,7 @@ footer[role="content-info"] { margin-top: 3em; margin-bottom: 3em; }
 .footer_section { margin-top: 1.5em; width: 25%;
 	&.double { width: 50%; }
 }
-.section_header { margin: 0 0 .75em; /* border-bottom: .125em solid $lightgrey; */ border-width: 0 0 .0625em 0; @include horizontal-border;
+.section_header { margin: 0 0 .75em; border-bottom: .125em solid $lightgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */
 	h2, h3, h4, h5 { margin: 0; @include Freight-Display; }
 	&.sidebar_header, &.footer_header { padding-bottom: .125em;
 		h4 { @include Trajan; letter-spacing: .125em; text-transform: uppercase; color: $darkgrey; font-size: .625em; line-height: 1.5; }
@@ -98,3 +98,26 @@ footer[role="content-info"] { margin-top: 3em; margin-bottom: 3em; }
 	a { background-color: transparent; }
 	&.header_banner { width: 80%; margin-top: .75em; }
 }
+
+// Voucher Codes
+.list-voucher-codes { list-style: none; margin-top: 3em; }
+.list-voucher-code { padding: .75em 0;
+	&+.list-voucher-code { margin-top: .75em; border-top: .0625em solid $lightgrey; }
+	figure { width: 33.333333333%;
+		img { display: block; border: .0625em solid $lightgrey; padding: .125em; @include box-sizing(border-box); background: $offwhite; }
+	}
+	header { width: 66.666666666%; }
+	h3 { margin: 0; }
+	.meta { color: $grey; font-size: .875em; line-height: 1.5; }
+	div.wrapper { margin-top: .75em; width: 66.666666666%; text-align: center; @include Trajan; text-transform: uppercase; letter-spacing: .125em; font-weight: bold; }
+}
+.voucher-code-button { display: block; background-color: $offwhite; @include background-gradient($offwhite, $lightgrey); border: .0625rem solid $lightgrey; padding: 1.5rem .75rem; border-radius: .25rem; font-size: 1em; float: left; width: 100%; @include box-sizing(border-box); color: $grey;
+	&:hover { @include background-gradient; color: $white; }
+}
+input.voucher-code-button { -webkit-appearance: none; text-align: center; @include Trajan; text-transform: uppercase; letter-spacing: .125em; font-weight: bold; @include background-gradient; color: $white; font-size: 1.5em; }
+
+
+
+
+
+

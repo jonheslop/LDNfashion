@@ -33,7 +33,7 @@ $offwhite    : hsl(194, 23%, 97%);
 $darkgrey    : hsl(194, 5%, 37%);
 $grey        : hsl(194, 7%, 57%);
 $lightgrey   : hsl(194, 18%, 88%);
-$cyan        : hsl(194, 100%, 73%);
+$cyan        : hsl(197, 78%, 54%);
 $yellow      : hsl(61, 98%, 67%);
 $lightyellow : hsl(61, 83%, 88%);
 
@@ -60,11 +60,15 @@ $instagram-blue: #406E95;
     -moz-border-image: -moz-linear-gradient(top, $cyan, $yellow) 1 100%;
 }
 
-@mixin background-gradient {
-  background-image: -webkit-gradient(linear, 100% 0, 0 0, from($cyan), to($yellow));
-  background-image: -webkit-linear-gradient(left, $cyan, $yellow);
-  background-image: -o-linear-gradient(left, $cyan, $yellow);
-  background-image: -moz-linear-gradient(left, $cyan, $yellow);
+@mixin background-gradient($start:$cyan, $end:$grey) {
+  background: $start; /* Old browsers */
+  background: -moz-linear-gradient(45deg, $start 0%, $end 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,$start), color-stop(100%,$end)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, $start 0%,$end 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, $start 0%,$end 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, $start 0%,$end 100%); /* IE10+ */
+  background: linear-gradient(45deg, $start 0%,$end 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 // Hide only visually, but have it available for screenreaders: h5bp.com/v

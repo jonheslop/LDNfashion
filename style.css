@@ -109,11 +109,8 @@ nav[role="navigation"] {
         color: #5a6163; }
       nav[role="navigation"] ul li a:hover {
         color: #212527;
-        border-width: 0 0 .25em 0;
-        -webkit-border-image: -webkit-gradient(linear, 100% 0, 0 0, from(#75dfff), to(#fbfd58)) 100% 1;
-        -webkit-border-image: -webkit-linear-gradient(left, #75dfff, #fbfd58) 100% 1;
-        -o-border-image: -o-linear-gradient(left, #75dfff, #fbfd58) 100% 1;
-        -moz-border-image: -moz-linear-gradient(left, #75dfff, #fbfd58) 100% 1;
+        border-bottom-color: #dbe3e6;
+        /* border-width: 0 0 .0625em 0; @include horizontal-border; */
         background-color: white; }
 
 footer[role="content-info"] {
@@ -167,12 +164,8 @@ footer[role="content-info"] {
 
 .section_header {
   margin: 0 0 .75em;
-  /* border-bottom: .125em solid $lightgrey; */
-  border-width: 0 0 .0625em 0;
-  -webkit-border-image: -webkit-gradient(linear, 100% 0, 0 0, from(#75dfff), to(#fbfd58)) 100% 1;
-  -webkit-border-image: -webkit-linear-gradient(left, #75dfff, #fbfd58) 100% 1;
-  -o-border-image: -o-linear-gradient(left, #75dfff, #fbfd58) 100% 1;
-  -moz-border-image: -moz-linear-gradient(left, #75dfff, #fbfd58) 100% 1; }
+  border-bottom: 0.125em solid #dbe3e6;
+  /* border-width: 0 0 .0625em 0; @include horizontal-border; */ }
   .section_header h2, .section_header h3, .section_header h4, .section_header h5 {
     margin: 0;
     font-family: "freight-display-pro",times,serif; }
@@ -231,10 +224,10 @@ footer[role="content-info"] {
   font-size: 1.25em;
   line-height: 1.5; }
 .post-content blockquote {
-  -webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from(#75dfff), to(#fbfd58)) 1 100%;
-  -webkit-border-image: -webkit-linear-gradient(top, #75dfff, #fbfd58) 1 100%;
-  -o-border-image: -o-linear-gradient(top, #75dfff, #fbfd58) 1 100%;
-  -moz-border-image: -moz-linear-gradient(top, #75dfff, #fbfd58) 1 100%;
+  -webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from(#2eb1e5), to(#fbfd58)) 1 100%;
+  -webkit-border-image: -webkit-linear-gradient(top, #2eb1e5, #fbfd58) 1 100%;
+  -o-border-image: -o-linear-gradient(top, #2eb1e5, #fbfd58) 1 100%;
+  -moz-border-image: -moz-linear-gradient(top, #2eb1e5, #fbfd58) 1 100%;
   border-width: 0 0 0 .0625em;
   margin: 1.5em 0 1.5em 1.5em;
   padding-left: .75em; }
@@ -327,6 +320,116 @@ footer[role="content-info"] {
   .ldnf_widget.header_banner {
     width: 80%;
     margin-top: .75em; }
+
+.list-voucher-codes {
+  list-style: none;
+  margin-top: 3em; }
+
+.list-voucher-code {
+  padding: .75em 0; }
+  .list-voucher-code + .list-voucher-code {
+    margin-top: .75em;
+    border-top: 0.0625em solid #dbe3e6; }
+  .list-voucher-code figure {
+    width: 33.333333333%; }
+    .list-voucher-code figure img {
+      display: block;
+      border: 0.0625em solid #dbe3e6;
+      padding: .125em;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background: #f6f8f9; }
+  .list-voucher-code header {
+    width: 66.666666666%; }
+  .list-voucher-code h3 {
+    margin: 0; }
+  .list-voucher-code .meta {
+    color: #8a9599;
+    font-size: .875em;
+    line-height: 1.5; }
+  .list-voucher-code div.wrapper {
+    margin-top: .75em;
+    width: 66.666666666%;
+    text-align: center;
+    font-family: "trajan-sans-pro",helvetica,arial,sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .125em;
+    font-weight: bold; }
+
+.voucher-code-button {
+  display: block;
+  background-color: #f6f8f9;
+  background: #f6f8f9;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #f6f8f9 0%, #dbe3e6 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #f6f8f9), color-stop(100%, #dbe3e6));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #f6f8f9 0%, #dbe3e6 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #f6f8f9 0%, #dbe3e6 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #f6f8f9 0%, #dbe3e6 100%);
+  /* IE10+ */
+  background: linear, 45deg, #f6f8f9 0%, #dbe3e6 100%;
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  border: 0.0625rem solid #dbe3e6;
+  padding: 1.5rem .75rem;
+  border-radius: .25rem;
+  font-size: 1em;
+  float: left;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #8a9599; }
+  .voucher-code-button:hover {
+    background: #2eb1e5;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #2eb1e5 0%, #8a9599 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #2eb1e5), color-stop(100%, #8a9599));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg, #2eb1e5 0%, #8a9599 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg, #2eb1e5 0%, #8a9599 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg, #2eb1e5 0%, #8a9599 100%);
+    /* IE10+ */
+    background: linear, 45deg, #2eb1e5 0%, #8a9599 100%;
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+    color: white; }
+
+input.voucher-code-button {
+  -webkit-appearance: none;
+  text-align: center;
+  font-family: "trajan-sans-pro",helvetica,arial,sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .125em;
+  font-weight: bold;
+  background: #2eb1e5;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #2eb1e5 0%, #8a9599 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #2eb1e5), color-stop(100%, #8a9599));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #2eb1e5 0%, #8a9599 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #2eb1e5 0%, #8a9599 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #2eb1e5 0%, #8a9599 100%);
+  /* IE10+ */
+  background: linear, 45deg, #2eb1e5 0%, #8a9599 100%;
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  color: white;
+  font-size: 1.5em; }
 
 /*! SocialCount - v0.1.6 - 2013-08-08
 * https://github.com/filamentgroup/SocialCount

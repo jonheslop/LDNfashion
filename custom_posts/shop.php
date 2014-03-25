@@ -26,7 +26,7 @@ var $single = "Shop"; 		// this represents the singular name of the post type
 		add_filter('pre_get_posts', array( &$this, 'query_post_type') );
 
 		# Add Custom Taxonomies
-		// add_action( 'init', array( &$this, 'add_taxonomies'), 0 );
+		add_action( 'init', array( &$this, 'add_taxonomies'), 0 );
 
 		# Add meta box
 		add_action('add_meta_boxes', array( &$this, 'add_custom_metaboxes') );
@@ -96,26 +96,26 @@ var $single = "Shop"; 		// this represents the singular name of the post type
 	  }
 	}
 
-	// function add_taxonomies() {
-	//   register_taxonomy(
-	//   	'location', 
-	//   	array($this->type, 'partner', 'story', 'rider', 'builder', 'club', 'post', 'travel'), // to set location to other cpt's
-	//   	array(
-	// 	    'hierarchical' => true,
-	// 	    'labels' => array(
-	// 	    	'name' => __( 'Location' ),
-	// 	    	'singular_name' => __( 'Location' ),
-	// 	    	'all_items' => __( 'All Locations' ),
-	// 	    	'add_new_item' => __( 'Add Location' )
-	// 	  	),
-	// 	  	'public' => true,
-	// 	    'query_var' => true,
-	// 	    'rewrite' => array( 
-	// 	    	'slug' => 'location' 
-	// 	    ),
-	// 	  )
-	// 	 );
-	// }
+	function add_taxonomies() {
+	  register_taxonomy(
+	  	'brand', 
+	  	array($this->type, 'voucher-code', 'sample-sale', 'post'), // to set brand to other cpt's
+	  	array(
+		    'hierarchical' => true,
+		    'labels' => array(
+		    	'name' => __( 'Brands' ),
+		    	'singular_name' => __( 'Brand' ),
+		    	'all_items' => __( 'All Brands' ),
+		    	'add_new_item' => __( 'Add Brand' )
+		  	),
+		  	'public' => true,
+		    'query_var' => true,
+		    'rewrite' => array( 
+		    	'slug' => 'brand'
+		    ),
+		  )
+		 );
+	}
 
 	# @credit: http://wptheming.com/2010/08/custom-metabox-for-post-type/
 	function add_custom_metaboxes() {

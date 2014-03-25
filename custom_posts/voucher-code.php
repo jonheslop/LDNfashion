@@ -26,7 +26,7 @@ var $single = "Voucher Code"; 		// this represents the singular name of the post
 		add_filter('pre_get_posts', array( &$this, 'query_post_type') );
 
 		# Add Custom Taxonomies
-		// add_action( 'init', array( &$this, 'add_taxonomies'), 0 );
+		add_action( 'init', array( &$this, 'add_taxonomies'), 0 );
 
 		# Save entered data
 		add_action('save_post', array( &$this, 'save_postdata') );
@@ -63,7 +63,7 @@ var $single = "Voucher Code"; 		// this represents the singular name of the post
       'publicly_queryable' => true,
       'show_ui' => true,
       'query_var' => true,
-      'rewrite' => array('slug' => strtolower($this->plural), 'with_front' => true),
+      'rewrite' => array('slug' => str_replace(" ", "-", strtolower($this->plural)), 'with_front' => true),
       'capability_type' => 'post',
       'hierarchical' => false,
       'has_archive' => true,
@@ -76,7 +76,6 @@ var $single = "Voucher Code"; 		// this represents the singular name of the post
       	'author',
       	'thumbnail',
       	'excerpt',
-      	'comments',
       	'custom-fields',
       	'revisions'
       ),
@@ -93,26 +92,26 @@ var $single = "Voucher Code"; 		// this represents the singular name of the post
 	  }
 	}
 
-	// function add_taxonomies() {
-	//   register_taxonomy(
-	//   	'location', 
-	//   	array($this->type, 'partner', 'story', 'rider', 'builder', 'club', 'post', 'travel'), // to set location to other cpt's
-	//   	array(
-	// 	    'hierarchical' => true,
-	// 	    'labels' => array(
-	// 	    	'name' => __( 'Location' ),
-	// 	    	'singular_name' => __( 'Location' ),
-	// 	    	'all_items' => __( 'All Locations' ),
-	// 	    	'add_new_item' => __( 'Add Location' )
-	// 	  	),
-	// 	  	'public' => true,
-	// 	    'query_var' => true,
-	// 	    'rewrite' => array( 
-	// 	    	'slug' => 'location' 
-	// 	    ),
-	// 	  )
-	// 	 );
-	// }
+	function add_taxonomies() {
+	  register_taxonomy(
+	  	'brand', 
+	  	array($this->type, 'sample-sale', 'shop', 'post'), // to set brand to other cpt's
+	  	array(
+		    'hierarchical' => true,
+		    'labels' => array(
+		    	'name' => __( 'Brands' ),
+		    	'singular_name' => __( 'Brand' ),
+		    	'all_items' => __( 'All Brands' ),
+		    	'add_new_item' => __( 'Add Brand' )
+		  	),
+		  	'public' => true,
+		    'query_var' => true,
+		    'rewrite' => array( 
+		    	'slug' => 'brand'
+		    ),
+		  )
+		 );
+	}
 
 	function save_postdata($post_id){
 	  if ( empty($_POST) || $_POST['post_type'] !== $this->type || !wp_verify_nonce( $_POST['noncename'], plugin_basename(__FILE__) )) {

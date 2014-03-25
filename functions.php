@@ -26,7 +26,10 @@
 	======================================================================================================================== */
 
 	add_theme_support('post-thumbnails');
-	
+	if ( function_exists( 'add_image_size' ) ) { 
+		add_image_size('voucher-code-thumb', 300, 300, true);
+	}	
+
 	register_nav_menus(array('primary' => 'Primary Navigation'));
 
 	/* ========================================================================================================================
@@ -288,19 +291,20 @@ function repeatable_meta_box_save($post_id) {
  
 	$old = get_post_meta($post_id, 'repeatable_fields', true);
 	$new = array();
- 
- 
-	$titles = $_POST['title'];
+
+	$codes = $_POST['code'];
+	$descriptions = $_POST['description'];
 	$image_urls = $_POST['image_url'];
 	$urls = $_POST['url'];
+	$expiress = $_POST['expires'];
  
-	$count = count( $titles );
+	$count = count( $codes );
  
 	for ( $i = 0; $i < $count; $i++ ) {
-		if ( $titles[$i] != '' ) :
-			$new[$i]['title'] = stripslashes( strip_tags( $titles[$i] ) );
- 
- 
+		if ( $codes[$i] != '' ) :
+			$new[$i]['code'] = stripslashes( strip_tags( $codes[$i] ) );
+		if ( $descriptions[$i] != '' )
+			$new[$i]['description'] = stripslashes( strip_tags( $descriptions[$i] ) );
 		if ( $image_urls[$i] == 'http://' )
 			$new[$i]['image_url'] = '';
 		else
@@ -310,6 +314,8 @@ function repeatable_meta_box_save($post_id) {
 		else
 			$new[$i]['url'] = stripslashes( $urls[$i] ); // and however you want to sanitize
 		endif;
+		if ( $expiress[$i] != '' ) 
+			$new[$i]['expires'] = stripslashes( strip_tags( $expiress[$i] ) );
 	}
  
 	if ( !empty( $new ) && $new != $old )

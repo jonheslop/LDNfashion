@@ -66,7 +66,7 @@ var $single = "Sample Sale"; 		// this represents the singular name of the post 
       'publicly_queryable' => true,
       'show_ui' => true,
       'query_var' => true,
-      'rewrite' => array('slug' => strtolower($this->plural), 'with_front' => true),
+      'rewrite' => array('slug' => str_replace(" ", "-", strtolower($this->plural)), 'with_front' => true),
       'capability_type' => 'post',
       'hierarchical' => false,
       'has_archive' => true,
@@ -154,7 +154,7 @@ var $single = "Sample Sale"; 		// this represents the singular name of the post 
 		  <input type="text" id= "data[sample_sale_when]" name="data[sample_sale_when]" value="<?php if(isset($sample_sale_when)) echo htmlspecialchars($sample_sale_when[0]) ?>"  />
 	  </p>
 	  <p>
-		  <label for="data[sample_sale_description]">Phone</label>
+		  <label for="data[sample_sale_description]">Description</label>
 		  <input type="text" id= "data[sample_sale_description]" name="data[sample_sale_description]" value="<?php if(isset($sample_sale_description)) echo htmlspecialchars($sample_sale_description[0]) ?>" />
 	  </p>
 	  <style type="text/css">

@@ -15,13 +15,13 @@
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post();
 			$imageID = get_post_thumbnail_id($post->ID);
 			$image = wp_get_attachment_image_src($imageID, 'large');
-			$voucher_codes = get_post_meta($post->ID, 'sample_sale_name', true);
-			$voucher_codes = get_post_meta($post->ID, 'sample_sale_address', true);
-			$voucher_codes = get_post_meta($post->ID, 'sample_sale_map', true);
-			$voucher_codes = get_post_meta($post->ID, 'sample_sale_phone', true);
-			$voucher_codes = get_post_meta($post->ID, 'sample_sale_transport', true);
-			$voucher_codes = get_post_meta($post->ID, 'sample_sale_when', true);
-			$voucher_codes = get_post_meta($post->ID, 'sample_sale_description', true); ?>
+			$sample_sale_name = get_post_meta($post->ID, 'sample_sale_name', true);
+			$sample_sale_address = get_post_meta($post->ID, 'sample_sale_address', true);
+			$sample_sale_map = get_post_meta($post->ID, 'sample_sale_map', true);
+			$sample_sale_phone = get_post_meta($post->ID, 'sample_sale_phone', true);
+			$sample_sale_transport = get_post_meta($post->ID, 'sample_sale_transport', true);
+			$sample_sale_when = get_post_meta($post->ID, 'sample_sale_when', true);
+			$sample_sale_description = get_post_meta($post->ID, 'sample_sale_description', true); ?>
 		<article class="post cf">
 		<?php if ( $image ) : ?>
 			<figure class="post-image wrapper">
@@ -31,10 +31,20 @@
 			<div class="post-words wrapper">
 				<header class="section_header post-header">
 					<h2><?php the_title(); ?></h2>
-					<p class="meta"><?php the_category(',','single'); ?> | <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> | <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?></p>
+					<p class="meta"><?php the_category(',','single'); ?> | <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></p>
 				</header>
 				<div class="post-content">
 					<?php the_content(); ?>
+				</div>
+				<div class="shop-address">
+					<header class="section_header sidebar_header">
+						<h4>Sample Sale Details</h4>
+					</header>
+					<p><strong>When:</strong> <?= $sample_sale_when; ?></p>
+					<p><strong>Address:</strong> <?= $sample_sale_name; ?>, <?= $sample_sale_address; ?>, <a href="<?= $sample_sale_map; ?>">(map link)</a></p>
+					<p><strong>Telephone:</strong> <?= $sample_sale_phone; ?></p>
+					<p><strong>Transport:</strong> <?= $sample_sale_transport; ?></p>
+					<p><strong>Details:</strong> <?= $sample_sale_description; ?></p>
 				</div>
 			</div>
 			<?php include(locate_template('parts/_sharing.php')); ?>

@@ -431,6 +431,19 @@ input.voucher-code-button {
   color: white;
   font-size: 1.5em; }
 
+.shop-address {
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  -webkit-column-gap: 1.5em;
+  -moz-column-gap: 1.5em;
+  column-gap: 1.5em;
+  margin-top: 1.5em; }
+  .shop-address .section_header {
+    -webkit-column-span: all;
+    -moz-column-span: all;
+    column-span: all; }
+
 /*! SocialCount - v0.1.6 - 2013-08-08
 * https://github.com/filamentgroup/SocialCount
 * Copyright (c) 2013 zachleat; Licensed MIT */

@@ -28,6 +28,9 @@
 	add_theme_support('post-thumbnails');
 	if ( function_exists( 'add_image_size' ) ) { 
 		add_image_size('voucher-code-thumb', 300, 300, true);
+		add_image_size('gallery-crop', 550, 275, true);
+		add_image_size('index-thumb', 256, 192, true);
+		add_image_size('streetstyle-thumb', 96, 96, true);
 	}	
 
 	register_nav_menus(array('primary' => 'Primary Navigation'));
@@ -41,6 +44,17 @@
 	add_action( 'wp_enqueue_scripts', 'starkers_script_enqueuer' );
 
 	add_filter( 'body_class', array( 'Starkers_Utilities', 'add_slug_to_body_class' ) );
+
+	// http://thereforei.am/2011/10/28/advanced-taxonomy-queries-with-pretty-urls/
+	function ldnf_add_rewrite_rules() {
+	    global $wp_rewrite;
+	 
+		$new_rules = array(
+			'brands/(.+?)/?$' => 'index.php?brand=' . $wp_rewrite->preg_index(1),
+		);
+		$wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
+	}
+	add_action( 'generate_rewrite_rules', 'ldnf_add_rewrite_rules' );
 
 	/* ========================================================================================================================
 	

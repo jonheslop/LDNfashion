@@ -40,7 +40,7 @@ p + p {
     display: table; }
   .container:after {
     clear: both; }
-  @media screen and (min-width: 75em) {
+  @media screen and (min-width: 87em) {
     .container {
       margin: 0 11.11111%; } }
 
@@ -136,11 +136,17 @@ footer[role="content-info"] {
 #content {
   width: 62.5%;
   float: left; }
+  @media screen and (min-width: 75em) {
+    #content {
+      width: 68.75%; } }
 
 #sidebar {
   margin-top: 1.5em;
   width: 37.5%;
   float: left; }
+  @media screen and (min-width: 75em) {
+    #sidebar {
+      width: 31.25%; } }
   #sidebar .ldnf_widget {
     width: 100%; }
   #sidebar .mini-ads {
@@ -177,7 +183,8 @@ footer[role="content-info"] {
   border-bottom: 0.125em solid #dbe3e6;
   /* border-width: 0 0 .0625em 0; @include horizontal-border; */ }
   .section_header h2, .section_header h3, .section_header h4, .section_header h5 {
-    margin: 0;
+    margin: 0; }
+  .section_header h2, .section_header h3 {
     font-family: "freight-display-pro",times,serif; }
   .section_header.sidebar_header, .section_header.footer_header {
     padding-bottom: .125em; }
@@ -454,6 +461,91 @@ input.voucher-code-button {
     -moz-column-span: all;
     column-span: all; }
 
+.posts {
+  list-style-type: none;
+  padding: 0;
+  margin: 1.5em 0 0; }
+
+.post-thumb {
+  width: 33.333333333%;
+  margin-bottom: .75em; }
+
+.post-thumb-header {
+  line-height: 1.3;
+  width: 100%;
+  padding-top: .375em;
+  border-top: 0.125em solid #dbe3e6;
+  border-bottom: none; }
+
+.index_ad_high {
+  margin-bottom: 1.5em;
+  /* padding: .75em 0; border-top: .125em solid $lightgrey; border-bottom: .125em solid $lightgrey; */ }
+  .index_ad_high img {
+    display: block; }
+
+.featured {
+  margin: 1.5em 0;
+  position: relative; }
+
+.slides {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+.slide {
+  width: 100%; }
+  .slide img {
+    display: block; }
+  .slide figcaption {
+    float: left;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #212527;
+    padding: .375em 0 .5em .75em;
+    border-top: 0.25em solid #5a6163; }
+    .slide figcaption h3 {
+      font-size: 2.75em;
+      line-height: 1.125;
+      margin: 0;
+      font-weight: normal;
+      font-family: "freight-display-pro",times,serif;
+      color: white;
+      -webkit-font-smoothing: antialiased; }
+
+.rslides_nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 9999;
+  font-size: 2em;
+  padding: 22.5% .75em;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: transparent !important; }
+  .rslides_nav.prev {
+    left: 0; }
+  .rslides_nav.next {
+    right: 0; }
+  .rslides_nav:link, .rslides_nav:visited {
+    color: white; }
+
+.partition {
+  width: 100%; }
+
+.streetstyle-thumbs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .streetstyle-thumbs li {
+    width: 16.666666666%;
+    margin-bottom: 1.5em; }
+    .streetstyle-thumbs li img {
+      display: block; }
+
 /*! SocialCount - v0.1.6 - 2013-08-08
 * https://github.com/filamentgroup/SocialCount
 * Copyright (c) 2013 zachleat; Licensed MIT */
@@ -693,3 +785,32 @@ input.voucher-code-button {
 
 .socialcount-small .pinterest .count {
   text-indent: -999px; }
+
+/*! http://responsiveslides.com v1.54 by @viljamis */
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0; }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left; }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0; }

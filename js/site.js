@@ -22,5 +22,26 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	// Go Slider! by http://responsiveslides.com/
+	if ( $('.slides').length ) {
+	    $('.slides').responsiveSlides({
+		    	pager: false,
+		    	nav: true,
+		    	auto: true,
+		    	timeout: 6000,
+		    	speed: 1000,
+		    	prevText: '&lang;',
+		    	nextText: '&rang;'
+		    });
+	}
+
 });
 
+jQuery(window).load(function($){
+	if ( $('.equalHeights').length ) {
+		$('.equalHeights').equalHeights();
+	}
+	if ( $('.index_ad_high').length ) {
+		$('.index_ad_high').css('min-height','');
+	}
+});

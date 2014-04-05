@@ -15,6 +15,10 @@
 	  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=197891740280631";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
+	<?php if (is_home()) : ?>
+		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/responsiveslides.min.js"></script>	
+		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jQuery.equalHeights.js"></script>
+	<?php endif; ?>
 	<?php wp_footer(); ?>
 	</body>
 </html>

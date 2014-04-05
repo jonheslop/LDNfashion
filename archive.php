@@ -15,32 +15,33 @@
  */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-
-<?php if ( have_posts() ): ?>
-
-<?php if ( is_day() ) : ?>
-<h2>Archive: <?php echo  get_the_date( 'D M Y' ); ?></h2>							
-<?php elseif ( is_month() ) : ?>
-<h2>Archive: <?php echo  get_the_date( 'M Y' ); ?></h2>	
-<?php elseif ( is_year() ) : ?>
-<h2>Archive: <?php echo  get_the_date( 'Y' ); ?></h2>								
-<?php else : ?>
-<h2>Archive</h2>	
-<?php endif; ?>
-
-<ol>
-<?php while ( have_posts() ) : the_post(); ?>
-	<li>
-		<article>
-			<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-			<?php the_content(); ?>
-		</article>
-	</li>
-<?php endwhile; ?>
-</ol>
-<?php else: ?>
-<h2>No posts to display</h2>	
-<?php endif; ?>
-
+<section role="main" class="container">
+	<?php if ( have_posts() ) : ?>
+	<section id="content" class="cf">
+		<ul class="posts">
+			<?php while ( have_posts() ) : the_post();
+				$imageID = get_post_thumbnail_id($post->ID);
+				$image = wp_get_attachment_image_src($imageID, 'large'); ?>
+			<li class="post cf">
+			<?php if ( $image ) : ?>
+				<figure class="post-image wrapper">
+					<img src="<?php echo $image[0]; ?>">
+				</figure>
+			<?php endif; ?>
+				<div class="post-words wrapper">
+					<header class="section_header post-header">
+						<h2><?php the_title(); ?></h2>
+						<p class="meta"><?php the_category(',','single'); ?> | <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> | <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?></p>
+					</header>
+					<div class="post-content">
+						<?php the_content(); ?>
+					</div>
+				</div>
+			</li>
+		<?php endwhile; ?>
+		</ul>
+	</section>
+	<?php endif; ?>
+	<?php get_template_part( 'parts/_sidebar' ); ?>
+</section>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

@@ -30,7 +30,7 @@
 		add_image_size('voucher-code-thumb', 300, 300, true);
 		add_image_size('gallery-crop', 550, 275, true);
 		add_image_size('index-thumb', 256, 192, true);
-		add_image_size('streetstyle-thumb', 96, 96, true);
+		add_image_size('streetstyle-thumb', 128, 128, true);
 	}	
 
 	register_nav_menus(array('primary' => 'Primary Navigation'));

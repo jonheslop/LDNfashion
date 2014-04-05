@@ -35,14 +35,30 @@
 				<div class="post-content">
 					<?php the_content(); ?>
 				</div>
-				<div class="shop-address">
+			</div>
+			<div class="shop-address cf">
+				<span class="partition wrapper">
 					<header class="section_header sidebar_header">
 						<h4>Shop Details</h4>
 					</header>
-					<p><strong>Address:</strong> <?= $shop_name; ?>, <?= $shop_address; ?>, <a href="<?= $shop_map; ?>">(map link)</a></p>
+				</span>
+				<div class="wrapper">
+					<p><strong>Address:</strong> <?= $shop_name; ?>,<br/><?= str_replace(',', ',<br/>', $shop_address); ?><br/><a href="<?= $shop_map; ?>">(map)</a></p>
+					<? if ( $shop_phone ) : ?>
 					<p><strong>Telephone:</strong> <?= $shop_phone; ?></p>
+					<? endif; ?>
+					<? if ( $shop_transport ) : ?>
 					<p><strong>Transport:</strong> <?= $shop_transport; ?></p>
+					<? endif; ?>
+					<? if ( $shop_opening_times ) : ?>
 					<p><strong>Opening Times:</strong> <?= $shop_opening_times; ?></p>
+					<? endif; ?>
+				</div>
+				<div class="wrapper google_map">
+					<figure>
+						<a href="<?= $shop_map; ?>"><img src="http://maps.googleapis.com/maps/api/staticmap?size=400x300&amp;maptype=roadmap\
+&amp;markers=size:mid%7Ccolor:red%7C<?= $shop_address; ?>&amp;sensor=false&amp;scale=2"></a>
+					</figure>
 				</div>
 			</div>
 			<?php include(locate_template('parts/_sharing.php')); ?>

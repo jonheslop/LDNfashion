@@ -36,15 +36,35 @@
 				<div class="post-content">
 					<?php the_content(); ?>
 				</div>
-				<div class="shop-address">
+			</div>
+			<div class="shop-address cf">
+				<span class="partition wrapper">
 					<header class="section_header sidebar_header">
 						<h4>Sample Sale Details</h4>
 					</header>
+				</span>
+				<div class="wrapper">
+					<? if ( $sample_sale_when ) : ?>
 					<p><strong>When:</strong> <?= $sample_sale_when; ?></p>
-					<p><strong>Address:</strong> <?= $sample_sale_name; ?>, <?= $sample_sale_address; ?>, <a href="<?= $sample_sale_map; ?>">(map link)</a></p>
+					<? endif; ?>
+					<? if ( $sample_sale_address ) : ?>
+					<p><strong>Address:</strong> <?= $sample_sale_name; ?>,<br/><?= str_replace(',', ',<br/>', $sample_sale_address); ?>,<br/><a href="<?= $sample_sale_map; ?>">(map)</a></p>
+					<? endif; ?>
+					<? if ( $sample_sale_phone ) : ?>
 					<p><strong>Telephone:</strong> <?= $sample_sale_phone; ?></p>
+					<? endif; ?>
+					<? if ( $sample_sale_transport ) : ?>
 					<p><strong>Transport:</strong> <?= $sample_sale_transport; ?></p>
+					<? endif; ?>
+					<? if ( $sample_sale_description ) : ?>
 					<p><strong>Details:</strong> <?= $sample_sale_description; ?></p>
+					<? endif; ?>
+				</div>
+				<div class="wrapper google_map">
+					<figure>
+						<a href="<?= $sample_sale_map; ?>"><img src="http://maps.googleapis.com/maps/api/staticmap?size=400x300&amp;maptype=roadmap\
+&amp;markers=size:mid%7Ccolor:red%7C<?= $sample_sale_address; ?>&amp;sensor=false&amp;scale=2"></a>
+					</figure>
 				</div>
 			</div>
 			<?php include(locate_template('parts/_sharing.php')); ?>

@@ -559,11 +559,18 @@ input.voucher-code-button {
   column-gap: 1.5em; }
   .brands-alpha li {
     -webkit-column-break-inside: avoid;
-    break-inside: avoid; }
-    .brands-alpha li header {
-      margin-top: 1.5em; }
-    .brands-alpha li:first-of-type header {
-      margin-top: 0; }
+    break-inside: avoid;
+    margin-bottom: 1.5em; }
+    .brands-alpha li:target {
+      background-color: #f9fac7;
+      padding-top: 1.5em; }
+
+.letter-list a {
+  padding: 0 .25em;
+  margin: 0 -.125em; }
+  .letter-list a:hover {
+    background-color: #212527;
+    color: white; }
 
 /*! SocialCount - v0.1.6 - 2013-08-08
 * https://github.com/filamentgroup/SocialCount

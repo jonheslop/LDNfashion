@@ -19,7 +19,6 @@ nav[role="navigation"] { padding: 0 .75em; @include box-sizing(border-box);
 }
 .fixed nav[role="navigation"] { position: fixed; z-index: 9999; top: 0; left: 0; right: 0; width: 88.888888888%; }
 
-
 // Footer 
 footer[role="content-info"] { margin-top: 3em; margin-bottom: 3em; }
 .credits { color: $grey; font-size: .75em; width: 100%; text-align: right; }

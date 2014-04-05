@@ -1,6 +1,8 @@
 // Header
 header[role="banner"] {
-	.logo_wrap { width: 20%; }
+	.logo_wrap { width: 20%;
+		h1 { margin-bottom: 0; }
+	}
 }
 #logo { display: block; text-indent: -9999px; background-image: url(http://ldnfashion.com/wp-content/uploads/2013/08/150x90-logo1.jpg); background-repeat: no-repeat; background-size: 100%; width: 100%; height: 0; padding-bottom: 60%; background-color: transparent!important; }
 
@@ -15,6 +17,8 @@ nav[role="navigation"] { padding: 0 .75em; @include box-sizing(border-box);
 		}
 	}
 }
+.fixed nav[role="navigation"] { position: fixed; z-index: 9999; top: 0; left: 0; right: 0; width: 88.888888888%; }
+
 
 // Footer 
 footer[role="content-info"] { margin-top: 3em; margin-bottom: 3em; }
@@ -119,7 +123,3 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 .shop-address { @include columns(2); @include column-gap(1.5em); margin-top: 1.5em;
 	.section_header { @include column-span(all); }
 }
-
-
-
-

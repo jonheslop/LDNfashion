@@ -47,17 +47,17 @@ $instagram-blue: #406E95;
 @mixin Trajan { font-family: "trajan-sans-pro",helvetica,arial,sans-serif; }
 
 @mixin horizontal-border {
-  -webkit-border-image: -webkit-gradient(linear, 100% 0, 0 0, from($cyan), to($yellow)) 100% 1;
-  -webkit-border-image: -webkit-linear-gradient(left, $cyan, $yellow) 100% 1;
-  -o-border-image: -o-linear-gradient(left, $cyan, $yellow) 100% 1;
-  -moz-border-image: -moz-linear-gradient(left, $cyan, $yellow) 100% 1;
+  -webkit-border-image: -webkit-gradient(linear, 100% 0, 0 0, from($cyan), to($grey)) 100% 1;
+  -webkit-border-image: -webkit-linear-gradient(left, $cyan, $grey) 100% 1;
+  -o-border-image: -o-linear-gradient(left, $cyan, $grey) 100% 1;
+  -moz-border-image: -moz-linear-gradient(left, $cyan, $grey) 100% 1;
 }
 
 @mixin vertical-border {
-    -webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from($cyan), to($yellow)) 1 100%;
-    -webkit-border-image: -webkit-linear-gradient(top, $cyan, $yellow) 1 100%;
-    -o-border-image:  -o-linear-gradient(top, $cyan, $yellow) 1 100%;
-    -moz-border-image: -moz-linear-gradient(top, $cyan, $yellow) 1 100%;
+    -webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from($cyan), to($grey)) 1 100%;
+    -webkit-border-image: -webkit-linear-gradient(top, $cyan, $grey) 1 100%;
+    -o-border-image:  -o-linear-gradient(top, $cyan, $grey) 1 100%;
+    -moz-border-image: -moz-linear-gradient(top, $cyan, $grey) 1 100%;
 }
 
 @mixin background-gradient($start:$cyan, $end:$grey) {

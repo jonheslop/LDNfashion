@@ -349,6 +349,7 @@ function repeatable_meta_box_save($post_id) {
 	}
 }
 
+
 // Disable Admin Bar for everyone
 if (!function_exists('df_disable_admin_bar')) {
 

@@ -549,6 +549,46 @@ input.voucher-code-button {
     .streetstyle-thumbs li img {
       display: block; }
 
+@-webkit-keyframes flash {
+  0% {
+    background-color: white; }
+
+  33% {
+    background-color: #f9fac7; }
+
+  100% {
+    background-color: white; } }
+
+@-moz-keyframes flash {
+  0% {
+    background-color: white; }
+
+  33% {
+    background-color: #f9fac7; }
+
+  100% {
+    background-color: white; } }
+
+@-o-keyframes flash {
+  0% {
+    background-color: white; }
+
+  33% {
+    background-color: #f9fac7; }
+
+  100% {
+    background-color: white; } }
+
+@keyframes flash {
+  0% {
+    background-color: white; }
+
+  33% {
+    background-color: #f9fac7; }
+
+  100% {
+    background-color: white; } }
+
 .brands-alpha {
   width: 100%;
   -webkit-columns: 3;
@@ -562,8 +602,12 @@ input.voucher-code-button {
     break-inside: avoid;
     margin-bottom: 1.5em; }
     .brands-alpha li:target {
-      background-color: #f9fac7;
+      -webkit-animation: flash 1s 1 ease-out;
+      -moz-animation: flash 1s 1 ease-out;
+      animation: flash 1s 1 ease-out;
       padding-top: 1.5em; }
+    .brands-alpha li p + p {
+      margin-top: 0; }
 
 .letter-list a {
   padding: 0 .25em;

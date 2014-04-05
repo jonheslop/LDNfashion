@@ -140,6 +140,9 @@ footer[role="content-info"] {
     #content {
       width: 68.75%; } }
 
+.page_headline {
+  margin: 1.5em 0; }
+
 #sidebar {
   margin-top: 1.5em;
   width: 37.5%;
@@ -545,6 +548,19 @@ input.voucher-code-button {
     margin-bottom: 1.5em; }
     .streetstyle-thumbs li img {
       display: block; }
+
+.brands-alpha {
+  width: 100%;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 3;
+  -webkit-column-gap: 1.5em;
+  -moz-column-gap: 1.5em;
+  column-gap: 1.5em; }
+  .brands-alpha li {
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 1.5em; }
 
 /*! SocialCount - v0.1.6 - 2013-08-08
 * https://github.com/filamentgroup/SocialCount

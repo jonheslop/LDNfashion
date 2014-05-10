@@ -17,6 +17,18 @@ $fix-mqs: false !default;
     }
 }
 // I also have a respond-max mixin, that does what you might expect
+@mixin breakpoint-max($width) {
+    @if $fix-mqs {
+        @if $fix-mqs <= $width {
+            @content;   
+        }
+    }
+    @else {
+        @media screen and (max-width: $width) {
+            @content;
+        }
+    }
+}
 
 $old-ie: false !default;
 

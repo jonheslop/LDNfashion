@@ -1,18 +1,29 @@
 // Header
 header[role="banner"] {
-	.logo_wrap { width: 18.75%;
+	.logo_wrap { width: 37.5%; margin: 0 31.25%;
+		@include breakpoint($mobile) { width: 20%; margin: 0; }
 		h1 { margin: .375em 0; }
 	}
 }
 #logo { display: block; text-indent: -9999px; background-image: url(http://ldnfashion.com/wp-content/uploads/2013/08/150x90-logo1.jpg); background-repeat: no-repeat; background-size: 100%; width: 100%; height: 0; padding-bottom: 60%; background-color: transparent!important; }
 
 // Menu 
-nav[role="navigation"] { padding: 0 .75em; @include box-sizing(border-box);
+nav[role="navigation"] { padding: 0; @include box-sizing(border-box);
+	@include breakpoint($tablet-mid) { padding: 0 .75em; }
 	ul { border-top: .0625em solid $lightgrey; border-bottom: .0625em solid $lightgrey; list-style: none; padding: 0; margin: 0; float: left; width: 100%; background-color: $offwhite; display: flex; flex-flow: row wrap; justify-content: space-between;
 		li {
-			a { display: block; @include Trajan; font-size: .625em; border-bottom: .25em solid $offwhite; text-transform: uppercase; letter-spacing: .125em; font-weight: bold; padding: .4375rem .75rem .375em; line-height: 1.5;
-				&:link, &:visited { color: $darkgrey; }
-				&:hover { color: $black; border-bottom-color: $lightgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */ background-color: $white; }
+			&:last-child { display: block!important; }
+			a { display: block; @include Trajan; font-size: .625em; border-bottom: .25em solid $offwhite; text-transform: uppercase; font-weight: bold; padding: .4375rem .75rem .375em; line-height: 1.5;
+				@include breakpoint($tablet-mid) { letter-spacing: .125em; }
+				&:link, &:visited { color: $black; }
+				&:hover { color: #000; border-bottom-color: $lightgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */ background-color: $white; }
+			}
+			@include breakpoint-max($mobile) { &:nth-child(n+4) { display: none; } }
+			@include breakpoint-max($moblet) { &:nth-child(n+5) { display: none; } }
+			@include breakpoint-max($tablet) { &:nth-child(n+7) { display: none; } }
+			@include breakpoint($tablet) { &:last-child { display: none!important; } }
+			&.active a{
+				&:link, &:visited { color: #000; border-bottom-color: $lightgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */ background-color: $white; } 
 			}
 		}
 	}
@@ -24,12 +35,14 @@ footer[role="content-info"] { margin-top: 3em; margin-bottom: 3em; }
 .credits { color: $grey; font-size: .75em; width: 100%; text-align: right; }
 
 // Structure
-#content { width: 62.5%; float: left;
+#content { width: 100%; float: left;
+	@include breakpoint($tablet) { width: 62.5%; }
 	@include breakpoint($laptop) { width: 68.75%; }
 }
-.page_headline { margin: 1.5em 0; }
+.page_headline { margin: 1.5em 0; width: 100%; }
 
-#sidebar { margin-top: 1.5em; width: 37.5%; float: left;
+#sidebar { margin-top: 1.5em; width: 100%; float: left;
+	@include breakpoint($tablet) { width: 37.5%; }
 	@include breakpoint($laptop) { width: 31.25%; }
 	.ldnf_widget { width: 100%; }
 	.mini-ads { float: left; width: 100%; list-style: none; padding: 0; margin: 1.5em 0; }
@@ -59,6 +72,8 @@ footer[role="content-info"] { margin-top: 3em; margin-bottom: 3em; }
 }
 .ig-b-, .pinterest a { @include transition(none); display: inline-block!important; }
 .pinterest a { position: relative; top: -3px; }
+
+.pluginFacepileConnectConnected { @include breakpoint-max($tablet) { display: none; } }
 
 // Single
 .post { float: left; width: 100%; margin-top: 1.5em;
@@ -101,11 +116,13 @@ footer[role="content-info"] { margin-top: 3em; margin-bottom: 3em; }
 	}
 }
 
-// Widgets
+// Widgets / Adverts
 .ldnf_widget { text-align: right;
 	img { display: inline-block; max-width: 100%; border: .0625em solid $offwhite; }
 	a { background-color: transparent; }
-	&.header_banner { width: 80%; margin-top: .75em; }
+	&.header_banner { width: 100%; margin-top: .75em;
+		@include breakpoint($mobile) { width: 80%; }
+	}
 }
 
 // Voucher Codes
@@ -165,7 +182,8 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 // Street Style
 .partition { width: 100%; }
 .streetstyle-thumbs { list-style-type: none; margin: 0; padding: 0;
-	li { width: 16.666666666%; margin-bottom: 1.5em;
+	li { width: 25%; margin-bottom: 1.5em;
+		@include breakpoint($tablet) { width: 16.666666666%; }
 		img { display: block; }
 	}
 }
@@ -199,12 +217,14 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 
 // Brand page
 .tax-brand {
-	.partition { width: 100%; margin-top: 1.5em;
+	.partition { width: 100%;
 		@include breakpoint($tablet) { width: 50%; }
-		&.brand_news { width: 100%;
-			.post-thumb { width: 33.333333333%; }
+		&.brand_news, &.page_headline, .header_wrap { width: 100%; float: left;
+			.post-thumb { width: 33.333333333%; float: left; }
 		}
 	}
+	.page_headline { @include Freight-Display; }
+	.header_wrap { margin-top: 1.5em; }
 	.post-thumb { width: 100%; 
 		header { border-bottom: .125em solid $lightgrey; padding-bottom: .75em; margin-bottom: .75em; }
 		.brand-map { margin-top: 1.5em; }

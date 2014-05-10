@@ -13,6 +13,11 @@
 
 <section role="main" class="container">
 	<section id="content" class="cf">
+    <div class="wrapper partition page_headline">
+      <header class="post-header">
+        <h2><? single_cat_title(); ?></h2>
+      </header>
+    </div>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
 				<h4>Latest Sample Sale</h4>
@@ -107,17 +112,19 @@
 			<?php endwhile; ?>
 			</ul>
 		</section>
-		<section class="partition brand_news wrapper cf">
+		<section class="partition brand_news cf">
+		<div class="header_wrap wrapper">
 			<header class="section_header sidebar_header">
 				<h4>Latest News</h4>
 			</header>
+		</div>
 			<ul class="posts cf equalHeights">
 				<?php query_posts($query_string.'&posts_per_page=3&post_type=post'); ?>
 				<?php while ( have_posts() ) : the_post();
 					$imageID = get_post_thumbnail_id($post->ID);
 					$image = wp_get_attachment_image_src($imageID, 'index-thumb'); ?>
-				<li class="post-thumb cf">
-				<a href="<?php the_permalink(); ?>">€
+				<li class="post-thumb wrapper cf">
+				<a href="<?php the_permalink(); ?>">
 					<?php if ( $image ) : ?>
 						<figure class="post-image">
 							<img src="<?php echo $image[0]; ?>">

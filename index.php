@@ -18,7 +18,7 @@
 	<section id="content" class="cf">
 	<?php $featuredargs = array(
 		  'posts_per_page' => 6,
-		  'paged' => $paged,
+		//  'paged' => $paged,
 		  'cat' => 7
 		);
 		$featured = new WP_Query($featuredargs); 
@@ -44,7 +44,7 @@
 		<?php endif; ?>
 	<?php if ( have_posts() ) :
 	$count = 0; ?>
-	<?php // query_posts($query_string.'&cat=-7'); ?>
+	<?php query_posts($query_string.'&cat=-7,-83'); ?>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
 				<h4>Latest News</h4>

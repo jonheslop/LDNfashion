@@ -85,7 +85,7 @@
 		wp_register_script( 'modernizr', get_template_directory_uri().'/js/modernizr.min.js' );
 		wp_enqueue_script( 'modernizr' );
 
-		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ) );
+		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ), rand(), true );
 		wp_enqueue_script( 'site' );
 
 		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );

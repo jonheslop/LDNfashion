@@ -103,10 +103,10 @@ p { margin: 0; }
 p+p { margin-top: .75em; }
 
 // grid container, that gives us gutters
-.container { margin: 0 $column; @include clearfix;
-  @include breakpoint($desktop) {
-    margin: 0 $column*2;
-  }
+.container { margin: 0; @include clearfix;
+  @include breakpoint($tablet-mid) { margin: 0 $column/2; }
+  @include breakpoint($laptop) { margin: 0 $column; }
+  @include breakpoint($desktop) { margin: 0 $column*2; }
 } 
 
 figure { margin: 0;

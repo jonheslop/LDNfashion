@@ -14,9 +14,18 @@
 	<section id="content" class="cf">
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post();
 			$imageID = get_post_thumbnail_id($post->ID);
-			$image = wp_get_attachment_image_src($imageID, 'large'); ?>
+			$image = wp_get_attachment_image_src($imageID, 'large');
+			$video = get_post_meta($post->ID, 'video_embed', true); ?>
 		<article class="post cf">
-		<?php if ( $image ) : ?>
+		<? if ( is_numeric($video) ) : ?>
+			<figure class="post-image video wrapper">
+				<iframe id="vimeo" src="http://player.vimeo.com/video/<?= $video;?>?api=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;color=DBE3E6" width="600" height="338" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			</figure>
+		<? elseif ($video) : ?>
+			<figure class="post-image video wrapper">
+				<iframe width="560" height="315" src="//www.youtube.com/embed/<?= $video;?>" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
+			</figure>
+		<?php elseif ( $image ) : ?>
 			<figure class="post-image wrapper">
 				<img src="<?php echo $image[0]; ?>">
 			</figure>

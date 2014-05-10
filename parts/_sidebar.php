@@ -32,11 +32,7 @@
 		<header class="section_header sidebar_header">
 			<h4>Most read articles</h4>
 		</header>
-		<ul>
-			<li><a href="#">A link to somewhere</a></li>
-			<li><a href="#">A different link elsewhere</a></li>
-			<li><a href="#">One last link</a></li>
-		</ul>
+		<?php if (function_exists('wpp_get_mostpopular')) wpp_get_mostpopular('limit=3&stats_comments=0&stats_date=1&stats_date_format=d/m/y'); ?>
 	</section>
 	<?php if ( is_dynamic_sidebar('Sidebar Mini Adverts') ) : ?>
 		<ul class="cf mini-ads">

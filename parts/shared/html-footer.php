@@ -16,8 +16,16 @@
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<?php if (is_home()) : ?>
-		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/responsiveslides.min.js"></script>	
+		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/responsiveslides.min.js"></script>
 		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jQuery.equalHeights.js"></script>
+	<?php endif; ?>
+	<?php if (is_single()) : ?>
+		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.fitvids.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$('.video').fitVids();
+			});
+		</script>
 	<?php endif; ?>
 	<?php wp_footer(); ?>
 	</body>

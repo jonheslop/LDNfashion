@@ -133,7 +133,7 @@ nav[role="navigation"] {
         /* border-width: 0 0 .0625em 0; @include horizontal-border; */
         background-color: white; }
     @media screen and (max-width: 30em) {
-      nav[role="navigation"] ul li:nth-child(n+4) {
+      nav[role="navigation"] ul li:nth-child(n+3) {
         display: none; } }
     @media screen and (max-width: 40em) {
       nav[role="navigation"] ul li:nth-child(n+5) {
@@ -152,11 +152,20 @@ nav[role="navigation"] {
 
 .fixed nav[role="navigation"] {
   position: fixed;
-  z-index: 9999;
+  z-index: 999999;
   top: 0;
   left: 0;
   right: 0;
-  width: 88.888888888%; }
+  width: 100%; }
+  @media screen and (min-width: 55.5em) {
+    .fixed nav[role="navigation"] {
+      width: 94.444444444%; } }
+  @media screen and (min-width: 75em) {
+    .fixed nav[role="navigation"] {
+      width: 88.888888888%; } }
+  @media screen and (min-width: 87em) {
+    .fixed nav[role="navigation"] {
+      width: 77.777777778%; } }
 
 footer[role="content-info"] {
   margin-top: 3em;
@@ -166,7 +175,10 @@ footer[role="content-info"] {
   color: #8a9599;
   font-size: .75em;
   width: 100%;
-  text-align: right; }
+  text-align: center; }
+  @media screen and (min-width: 45em) {
+    .credits {
+      text-align: right; } }
 
 #content {
   width: 100%;
@@ -219,9 +231,15 @@ footer[role="content-info"] {
 
 .footer_section {
   margin-top: 1.5em;
-  width: 25%; }
+  width: 50%; }
+  @media screen and (min-width: 45em) {
+    .footer_section {
+      width: 25%; } }
   .footer_section.double {
-    width: 50%; }
+    width: 100%; }
+    @media screen and (min-width: 45em) {
+      .footer_section.double {
+        width: 50%; } }
 
 .section_header {
   margin: 0 0 .75em;
@@ -376,7 +394,10 @@ footer[role="content-info"] {
         margin: 0; }
 
 .ldnf_widget {
-  text-align: right; }
+  text-align: center; }
+  @media screen and (min-width: 45em) {
+    .ldnf_widget {
+      text-align: right; } }
   .ldnf_widget img {
     display: inline-block;
     max-width: 100%;
@@ -391,8 +412,7 @@ footer[role="content-info"] {
         width: 80%; } }
 
 .list-voucher-codes {
-  list-style: none;
-  margin-top: 3em; }
+  list-style: none; }
 
 .list-voucher-code {
   padding: .75em 0; }
@@ -409,7 +429,7 @@ footer[role="content-info"] {
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       background: #f6f8f9; }
-  .list-voucher-code header {
+  .list-voucher-code header, .list-voucher-code footer {
     width: 66.666666666%; }
   .list-voucher-code h3 {
     margin: 0; }
@@ -425,6 +445,10 @@ footer[role="content-info"] {
     text-transform: uppercase;
     letter-spacing: .125em;
     font-weight: bold; }
+  .list-voucher-code footer {
+    margin-top: .75em; }
+    .list-voucher-code footer p {
+      margin: 0; }
 
 .voucher-code-button {
   display: block;

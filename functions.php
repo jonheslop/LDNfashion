@@ -34,6 +34,9 @@
 	}	
 
 	register_nav_menus(array('primary-nav' => 'Primary Navigation'));
+	register_nav_menus(array('footer-nav-1' => 'Footer Left Navigation'));
+	register_nav_menus(array('footer-nav-2' => 'Footer Middle Navigation'));
+	register_nav_menus(array('footer-nav-3' => 'Footer Right Navigation'));
 
 	/* ========================================================================================================================
 	

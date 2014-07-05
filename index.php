@@ -19,7 +19,7 @@
 	<?php $featuredargs = array(
 		  'posts_per_page' => 6,
 		//  'paged' => $paged,
-		  'cat' => 7
+		  'tag' => 'slider'
 		);
 		$featured = new WP_Query($featuredargs); 
 		if ( $featured->have_posts() ): ?>

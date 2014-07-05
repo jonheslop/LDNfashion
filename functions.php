@@ -33,7 +33,7 @@
 		add_image_size('streetstyle-thumb', 128, 128, true);
 	}	
 
-	register_nav_menus(array('primary' => 'Primary Navigation'));
+	register_nav_menus(array('primary-nav' => 'Primary Navigation'));
 
 	/* ========================================================================================================================
 	

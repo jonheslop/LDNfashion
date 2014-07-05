@@ -7,5 +7,5 @@
 	<?php // get_search_form(); ?>
 </header>
 <nav role="navigation" class="container">
-	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+	<?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
 </nav>

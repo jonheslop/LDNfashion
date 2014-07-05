@@ -112,7 +112,7 @@
 		</ul>
 		<?php endif; ?>
 	<?php if ( have_posts() ) : ?>
-	<?php query_posts($query_string.'&cat=4960'); ?>
+	<?php query_posts($query_string.'&cat=4960&posts_per_page=6'); ?>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
 				<h4>Shopping News</h4>
@@ -140,7 +140,7 @@
 	<?php endif; ?>
 	<?php endif; ?>
 	<?php if ( have_posts() ) : ?>
-	<?php query_posts($query_string.'&cat=4962'); ?>
+	<?php query_posts($query_string.'&cat=4962&posts_per_page=6'); ?>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
 				<h4>Menswear News</h4>

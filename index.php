@@ -44,7 +44,7 @@
 		<?php endif; ?>
 	<?php if ( have_posts() ) :
 	$count = 0; ?>
-	<?php query_posts($query_string.'&tag=-3072&cat=-9717'); ?>
+	<?php query_posts($query_string.'&cat=-9717'); ?>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
 				<h4>Latest News</h4>
@@ -139,6 +139,33 @@
 		<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Index Ad Low')); ?>
 	</section>
 	<?php endif; ?>
+	<?php endif; ?>
+	<?php if ( have_posts() ) : ?>
+	<?php query_posts($query_string.'&cat=4962'); ?>
+		<section class="partition wrapper cf">
+			<header class="section_header sidebar_header">
+				<h4>Menswear News</h4>
+			</header>
+		</section>
+		<ul class="posts cf equalHeights">
+			<?php while ( have_posts() ) : the_post();
+				$imageID = get_post_thumbnail_id($post->ID);
+				$image = wp_get_attachment_image_src($imageID, 'index-thumb');?>
+			<li class="post-thumb wrapper cf">
+			<a href="<?php the_permalink(); ?>">
+				<?php if ( $image ) : ?>
+					<figure class="post-image">
+						<img src="<?php echo $image[0]; ?>">
+					</figure>
+				<?php endif; ?>
+					<header class="section_header post-thumb-header">
+						<h4><?php the_title(); ?></h4>
+					</header>
+				</a>
+			</li>
+		<?php endwhile; ?>
+		</ul>
+	</section>
 	<?php endif; ?>
 	<?php get_template_part( 'parts/_sidebar' ); ?>
 </section>

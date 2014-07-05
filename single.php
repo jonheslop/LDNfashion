@@ -45,7 +45,7 @@
 			</section>
 		</article>
 		<?php include(locate_template('parts/_post-prev-next.php')); ?>
-		<?php include(locate_template('parts/_related-posts.php')); ?>
+		<?php // include(locate_template('parts/_related-posts.php')); ?>
 	</section>
 	<?php endwhile; ?>
 	<?php get_template_part( 'parts/_sidebar' ); ?>

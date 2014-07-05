@@ -5,7 +5,7 @@
 			<h4>Follow LDN fashion</h4>
 		</header>
 		<div class="follow_button facebook">
-			<div class="fb-like" data-href="https://facebook.com/ldnfashion" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+			<div class="fb-like" data-href="https://facebook.com/ldnfashion" data-width="250" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 		</div>
 		<div class="follow_button twitter">
 			<a href="https://twitter.com/ldnfashion" class="twitter-follow-button" data-show-count="false">Follow @ldnfashion</a>
@@ -32,7 +32,7 @@
 		<header class="section_header sidebar_header">
 			<h4>Most read articles</h4>
 		</header>
-		<?php if (function_exists('wpp_get_mostpopular')) wpp_get_mostpopular('limit=3&stats_comments=0&stats_date=1&stats_date_format=d/m/y'); ?>
+		<?php if (function_exists('wpp_get_mostpopular')) wpp_get_mostpopular('limit=3&stats_comments=0&stats_views=0&stats_date=1&stats_date_format=d/m/y'); ?>
 	</section>
 	<?php if ( is_dynamic_sidebar('Sidebar Mini Adverts') ) : ?>
 		<ul class="cf mini-ads">

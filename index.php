@@ -137,7 +137,6 @@
 		<?php endwhile; ?>
 		</ul>
 		<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Index Ad Low')); ?>
-	</section>
 	<?php endif; ?>
 	<?php endif; ?>
 	<?php if ( have_posts() ) : ?>

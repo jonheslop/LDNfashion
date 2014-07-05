@@ -36,18 +36,18 @@ jQuery(document).ready(function($) {
 	}
 
 	// Top Nav show more
-	$('#menu-primary-navigation li:last-child').click(function(e){
+	$('#menu-primary-nav li:last-child').click(function(e){
 		e.preventDefault();
-		var $toggle = $('#menu-primary-navigation li:last-child');
+		var $toggle = $('#menu-primary-nav li:last-child');
 		var more = 'More &raquo;';
 		var less = '&laquo; Less';
 		$toggle.toggleClass('active');
 		if ( $toggle.hasClass('active') ) {
 			$toggle.find('a').html(less);
-			$('#menu-primary-navigation li').show();
+			$('#menu-primary-nav li').show();
 		} else {
 			$toggle.find('a').html(more);
-			$('#menu-primary-navigation li').attr('style','');
+			$('#menu-primary-nav li').attr('style','');
 	}
 	});
 

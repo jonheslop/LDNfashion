@@ -68,7 +68,7 @@
 		<ul class="streetstyle-thumbs">
 		<?php while ( $streetstyle->have_posts() ) : $streetstyle->the_post();
 			$imageID = get_post_thumbnail_id($post->ID);
-			$image = wp_get_attachment_image_src($imageID, 'streetstyle-thumb'); ?>
+			$image = wp_get_attachment_image_src($imageID, 'streetstyle-portrait'); ?>
 			<li class="wrapper">
 				<a href="<?php the_permalink(); ?>">
 					<figure>

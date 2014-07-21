@@ -184,6 +184,14 @@
 			'before_widget' => '<div id="%1$s" class="wrapper ldnf_widget index_ad_low %2$s">',
 			'after_widget' => '</div>',
 		));
+		register_sidebar( array(
+			'name' => 'Homepage Categories',
+			'description' => 'Category grid on index page',
+			'id' => 'category_grid',
+			'class' => 'category_grid',
+			'before_widget' => '<li id="%1$s" class="post-thumb wrapper cf %2$s">',
+			'after_widget' => '</li>',
+		));
 	}
 	add_action( 'widgets_init', 'ldnFashion_widgets_init' );
 

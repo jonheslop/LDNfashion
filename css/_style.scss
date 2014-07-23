@@ -5,23 +5,32 @@ header[role="banner"] {
 		h1 { margin: .375em 0; }
 	}
 }
-#logo { display: block; text-indent: -9999px; background-image: url(http://ldnfashion.com/wp-content/uploads/2013/08/150x90-logo1.jpg); background-repeat: no-repeat; background-size: 100%; width: 100%; height: 0; padding-bottom: 60%; background-color: transparent!important; }
+#logo { display: block; text-indent: -9999px; background-image: url(LDNf-logo.png); background-repeat: no-repeat; background-size: 100%; width: 100%; height: 0; padding-bottom: 21.182266%; background-color: transparent!important; }
 
 // Menu 
-nav[role="navigation"] { padding: 0; @include box-sizing(border-box);
-	@include breakpoint($tablet-mid) { padding: 0 .75em; }
-	ul { border-top: .0625em solid $lightgrey; border-bottom: .0625em solid $lightgrey; list-style: none; padding: 0; margin: 0; float: left; width: 100%; background-color: $offwhite; display: flex; flex-flow: row wrap; justify-content: space-between;
+nav[role="navigation"] { padding: .25em 0 .25em; @include box-sizing(border-box); background-color: $black;
+	.logo_wrap { width: 25%; padding-top: .4125em;
+		@include breakpoint($moblet) { padding-top: 0; }
+		@include breakpoint($tablet) { width: 12.5%; padding-top: .5em; }
+		@include breakpoint($tablet-mid) { padding-top: .333em; }
+		@include breakpoint($tablet-mid) { padding-top: .25em; }
+		@include breakpoint($laptop) { padding-top: 0; }
+		h1 { margin: .25em 0 0; }
+	}
+	ul { list-style: none; padding: 0; margin: 0; float: left; width: 75%; display: flex; flex-flow: row wrap; justify-content: space-between;
+		@include breakpoint($tablet) { width: 87.50%; }
 		li {
+			// &:first-child { padding-left: .375em; }
 			&:last-child { display: block!important; }
-			a { display: block; @include Trajan; font-size: .625em; border-bottom: .25em solid $offwhite; text-transform: uppercase; font-weight: bold; padding: .4375rem .75rem .375em; line-height: 1.5;
+			a { display: block; @include Freight; font-size: .75em; border-bottom: .25em solid $black; text-transform: uppercase; padding: .75rem .75rem .5em; line-height: 1.5; background-color: $black;
 				@include breakpoint($tablet-mid) { letter-spacing: .125em; }
-				&:link, &:visited { color: $black; }
-				&:hover { color: #000; border-bottom-color: $lightgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */ background-color: $white; }
+				&:link, &:visited { color: $white; }
+				&:hover { color: #fff; border-bottom-color: $darkgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */ background-color: $darkgrey; }
 			}
-			@include breakpoint-max($mobile) { &:nth-child(n+3) { display: none; } }
-			@include breakpoint-max($moblet) { &:nth-child(n+5) { display: none; } }
-			@include breakpoint-max($tablet) { &:nth-child(n+7) { display: none; } }
-			@include breakpoint($tablet) { &:last-child { display: none!important; } }
+			@include breakpoint-max($moblet) { &:nth-child(n+3) { display: none; } }
+			@include breakpoint-max($tablet) { &:nth-child(n+5) { display: none; } }
+			@include breakpoint-max($tablet-landscape) { &:nth-child(n+6) { display: none; } }
+			@include breakpoint($tablet-landscape) { &:last-child { display: none!important; } }
 			&.active a{
 				&:link, &:visited { color: #000; border-bottom-color: $lightgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */ background-color: $white; } 
 			}
@@ -29,13 +38,15 @@ nav[role="navigation"] { padding: 0; @include box-sizing(border-box);
 	}
 }
 .fixed nav[role="navigation"] { position: fixed; z-index: 999999; top: 0; left: 0; right: 0; width: 100%;
-	@include breakpoint($tablet-mid) { width: 94.444444444%; }
-	@include breakpoint($laptop) { width: 88.888888888%; }
-	@include breakpoint($desktop) { width: 77.777777778%; }
+	// @include breakpoint($tablet-mid) { width: 94.444444444%; }
+	// @include breakpoint($laptop) { width: 88.888888888%; }
+	// @include breakpoint($desktop) { width: 77.777777778%; }
 }
 
 // Footer 
-footer[role="content-info"] { margin-top: 3em; margin-bottom: 3em; }
+footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-color: $black; color: $white!important;
+	a:link, a:visited { color: $white; background-color: $black; -webkit-font-smoothing: antialiased }
+}
 .credits { color: $grey; font-size: .75em; width: 100%; text-align: center;
 	@include breakpoint($tablet) { text-align: right; }
 }
@@ -66,12 +77,13 @@ footer[role="content-info"] { margin-top: 3em; margin-bottom: 3em; }
 		@include breakpoint($tablet) { width: 50%; }
 	}
 }
-.section_header { margin: 0 0 .75em; border-bottom: .125em solid $lightgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */
+.section_header { margin: 0 0 .75em; border-bottom: .0625em solid $lightgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */
 	h2, h3, h4, h5 { margin: 0; }
 	h2, h3 { @include Freight-Display; }
 	&.sidebar_header, &.footer_header { padding-bottom: .125em;
-		h4 { @include Trajan; letter-spacing: .125em; text-transform: uppercase; color: $darkgrey; font-size: .625em; line-height: 1.5; }
+		h4 { @include Freight; letter-spacing: .125em; text-transform: uppercase; font-size: .75em; line-height: 1.5; font-weight: normal; }
 	}
+	&.footer_header { border-bottom-color: $darkgrey; }
 }
 
 // Sidebar 
@@ -99,7 +111,7 @@ footer[role="content-info"] { margin-top: 3em; margin-bottom: 3em; }
 }
 .post-header {
 	h2 { margin: 0 0 .375em; font-size: 3em; line-height: 1.125; font-weight: 400; }
-	p { @include Trajan; font-size: .625em; font-weight: bold; color: $darkgrey; text-transform: uppercase; letter-spacing: .125em; text-align: right; line-height: 1.5; padding-bottom: .25em;
+	p { @include Freight; font-size: .75em; font-weight: bold; color: $darkgrey; text-transform: uppercase; letter-spacing: .125em; text-align: right; line-height: 1.5; padding-bottom: .25em;
 		a:link, a:visited { color: $darkgrey; }
 	}
 }
@@ -130,9 +142,7 @@ footer[role="content-info"] { margin-top: 3em; margin-bottom: 3em; }
 	@include breakpoint($tablet) { text-align: right; }
 	img { display: inline-block; max-width: 100%; border: .0625em solid $offwhite; }
 	a { background-color: transparent; }
-	&.header_banner { width: 100%; margin-top: .75em;
-		@include breakpoint($mobile) { width: 80%; }
-	}
+	&.header_banner { width: 100%; margin-top: .75em; text-align: left; }
 }
 
 // Voucher Codes
@@ -145,7 +155,7 @@ footer[role="content-info"] { margin-top: 3em; margin-bottom: 3em; }
 	header, footer { width: 66.666666666%; }
 	h3 { margin: 0; }
 	.meta { color: $grey; font-size: .875em; line-height: 1.5; }
-	div.wrapper { margin-top: .75em; width: 66.666666666%; text-align: center; @include Trajan; text-transform: uppercase; letter-spacing: .125em; font-weight: bold; }
+	div.wrapper { margin-top: .75em; width: 66.666666666%; text-align: center; @include Freight; text-transform: uppercase; letter-spacing: .125em; font-weight: bold; }
 	footer { margin-top: .75em;
 		p { margin: 0; }
 	}
@@ -153,7 +163,7 @@ footer[role="content-info"] { margin-top: 3em; margin-bottom: 3em; }
 .voucher-code-button { display: block; background-color: $offwhite; @include background-gradient($offwhite, $lightgrey); border: .0625rem solid $lightgrey; padding: 1.5rem .75rem; border-radius: .25rem; font-size: 1em; float: left; width: 100%; @include box-sizing(border-box); color: $grey;
 	&:hover { @include background-gradient; color: $white; }
 }
-input.voucher-code-button { -webkit-appearance: none; text-align: center; @include Trajan; text-transform: uppercase; letter-spacing: .125em; font-weight: bold; @include background-gradient; color: $white; font-size: 1.5em; }
+input.voucher-code-button { -webkit-appearance: none; text-align: center; @include Freight; text-transform: uppercase; letter-spacing: .125em; font-weight: bold; @include background-gradient; color: $white; font-size: 1.5em; }
 
 // Shop Page
 .shop-address { margin-top: 1.5em; float: left; width: 100%;
@@ -171,7 +181,7 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 // Index 
 .posts { list-style-type: none; padding: 0; margin: 1.5em 0 0; }
 .post-thumb { width: 33.333333333%; margin-bottom: .75em; }
-.post-thumb-header { line-height: 1.3; width: 100%; padding-top: .375em; border-top: .125em solid $lightgrey; border-bottom: none; }
+.post-thumb-header { line-height: 1.3; width: 100%; padding-top: .375em; border-top: .0625em solid $lightgrey; border-bottom: none; }
 
 .index_ad_high { margin-bottom: 1.5em; /* padding: .75em 0; border-top: .125em solid $lightgrey; border-bottom: .125em solid $lightgrey; */
 	img { display: block; }
@@ -241,5 +251,22 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 	.post-thumb { width: 100%; 
 		header { border-bottom: .125em solid $lightgrey; padding-bottom: .75em; margin-bottom: .75em; }
 		.brand-map { margin-top: 1.5em; }
+	}
+}
+
+#gallery { margin-bottom: .75em;
+	&:target { padding-top: 3em; }
+	div { line-height: 0; background-color: $black; position: relative; text-align: center; }
+	img { line-height: 0; display: inline; }
+	.arrow { padding: 0 .25em; position: absolute; color: $white; top: 45%; font-size: 3em; opacity: .5; @include transition(opacity .2s linear); text-shadow: 0 0 3px $darkgrey, -1px 0 3px $darkgrey, 1px 0 3px $darkgrey, 0 -1px 3px $darkgrey, 0 1px 3px $darkgrey, -1px -1px 3px $darkgrey, 1px 1px 3px $darkgrey;
+		&:hover { opacity: 1; }
+	}
+	.prev { left: 0; }
+	.next { right: 0; }
+	figcaption { color: $offwhite; line-height: 1.5; float: left; width: 96%; margin: 0 2%; -webkit-font-smoothing: antialiased;
+		@include breakpoint($moblet) { width: 87.5%; margin: 0 6.25%; }
+		@include breakpoint($tablet-mid) { width: 75%; margin: 0 12.5%; }
+		h2 { margin: .25em 0 .375em; padding: 0 0 .25em; border-bottom: .0625em solid $offwhite; }
+		p { margin: 0 0 .75em; }
 	}
 }

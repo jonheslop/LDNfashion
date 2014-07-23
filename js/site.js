@@ -1,4 +1,3 @@
-
 jQuery(document).ready(function($) {
 
 	$('.voucher-code-button').click(function(e){

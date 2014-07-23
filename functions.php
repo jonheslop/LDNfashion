@@ -60,6 +60,12 @@
 	}
 	add_action( 'generate_rewrite_rules', 'ldnf_add_rewrite_rules' );
 
+	function add_query_vars_filter( $vars ){
+	  $vars[] = "offset";
+	  return $vars;
+	}
+	add_filter( 'query_vars', 'add_query_vars_filter' );
+
 	/* ========================================================================================================================
 	
 	Custom Post Types - include custom post types and taxonimies here e.g.

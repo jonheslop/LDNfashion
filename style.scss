@@ -44,7 +44,7 @@ $instagram-blue: #406E95;
 
 @mixin Freight-Text { font-family: "freight-text-pro",times,serif; }
 @mixin Freight-Display { font-family: "freight-display-pro",times,serif; }
-@mixin Trajan { font-family: "trajan-sans-pro",helvetica,arial,sans-serif; }
+@mixin Freight { font-family: "freight-sans-pro",helvetica,arial,sans-serif; }
 
 @mixin horizontal-border {
   -webkit-border-image: -webkit-gradient(linear, 100% 0, 0 0, from($cyan), to($grey)) 100% 1;

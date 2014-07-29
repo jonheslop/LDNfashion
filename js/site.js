@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 	    $('.slides').responsiveSlides({
 		    	pager: false,
 		    	nav: true,
-		    	auto: true,
+		    	auto: false,
 		    	timeout: 6000,
 		    	speed: 1000,
 		    	prevText: '&lang;',
@@ -59,10 +59,35 @@ jQuery(window).load(function($){
 	if ( jQuery('.index_ad_high').length ) {
 		jQuery('.index_ad_high').css('min-height','');
 	}
+	if ( jQuery('.slides').length ) {
+		if ( jQuery(window).width() > 888 ) {
+			jQuery('.slides').css({'width' : jQuery('.slides').width(), 'height' : jQuery('.slides').height()}).addClass('loaded');
+		} else {
+			jQuery('.slides').removeAttr('style').removeClass('loaded');
+		}
+	}
+
 });
 jQuery(window).resize(function($){
 	if ( jQuery('.equalHeights').length ) {
 		jQuery('.equalHeights').children().attr('style','');
 		jQuery('.equalHeights').equalHeights();
 	}
+
+	if ( jQuery('.slides').length ) {
+		var resizetimeout;
+		jQuery('.slides').removeAttr('style').removeClass('loaded');
+		function resized(){
+			if ( jQuery(window).width() > 888 ) {
+				jQuery('.slides').css({'width' : jQuery('.slides').width(), 'height' : jQuery('.slides').height()}).addClass('loaded');
+			} else {
+				jQuery('.slides').removeAttr('style').removeClass('loaded');
+			}
+		}
+		clearTimeout(resizetimeout);
+		resizetimeout = setTimeout(function() {
+			resized();
+		}, 100);
+	}
+
 });

@@ -27,7 +27,7 @@
 			<ul class="slides">
 			<?php while ( $featured->have_posts() ) : $featured->the_post();
 				$imageID = get_post_thumbnail_id($post->ID);
-				$image = wp_get_attachment_image_src($imageID, 'gallery-crop'); ?>
+				$image = wp_get_attachment_image_src($imageID, 'gallery-crop-large'); ?>
 				<li class="slide wrapper">
 					<a href="<?php the_permalink(); ?>">
 						<figure>

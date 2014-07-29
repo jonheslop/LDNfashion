@@ -600,12 +600,25 @@ input.voucher-code-button {
   margin: 0; }
 
 .slide {
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
   .slide img {
-    display: block; }
-  .slide figcaption {
+    max-width: 100%;
+    height: auto;
+    display: inline-block; }
+  .slide figure {
     float: left;
+    overflow: hidden;
+    line-height: 0;
     width: 100%;
+    background-color: #212527; }
+  .slide figcaption {
+    line-height: 1.5;
+    position: absolute;
+    bottom: 0;
+    left: .75em;
+    right: .75em;
+    float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -805,6 +818,23 @@ input.voucher-code-button {
       border-bottom: 0.0625em solid #f6f8f9; }
     #gallery figcaption p {
       margin: 0 0 .75em; }
+
+.category-image {
+  position: relative; }
+  .category-image figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center; }
+    .category-image figcaption h4 {
+      text-transform: uppercase;
+      font-family: "freight-sans-pro",helvetica,arial,sans-serif;
+      letter-spacing: .125em;
+      margin: 2.5em .75em 0;
+      font-weight: 600;
+      font-size: 1.5em; }
 
 /*! SocialCount - v0.1.6 - 2013-08-08
 * https://github.com/filamentgroup/SocialCount

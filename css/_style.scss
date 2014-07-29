@@ -190,9 +190,10 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 // Featured 
 .featured { margin: 1.5em 0; position: relative; }
 .slides { list-style-type: none; padding: 0; margin: 0; }
-.slide { width: 100%;
-	img { display: block; }
-	figcaption { float: left; width: 100%; @include box-sizing(border-box); background-color: $black; padding: .375em 0 .5em .75em; border-top: .25em solid $darkgrey;
+.slide { width: 100%; height: 100%;
+	img { max-width: 100%; height: auto; display: inline-block; }
+	figure { float: left; overflow: hidden; line-height: 0; width: 100%; background-color: $black; }
+	figcaption { line-height: 1.5; position: absolute; bottom: 0; left: .75em; right: .75em; float: left; @include box-sizing(border-box); background-color: $black; padding: .375em 0 .5em .75em; border-top: .25em solid $darkgrey;
 		h3 { font-size: 2.75em; line-height: 1.125; margin: 0; font-weight: normal; @include Freight-Display; color: $white; -webkit-font-smoothing: antialiased; }
 	}
 }
@@ -268,5 +269,10 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 		@include breakpoint($tablet-mid) { width: 75%; margin: 0 12.5%; }
 		h2 { margin: .25em 0 .375em; padding: 0 0 .25em; border-bottom: .0625em solid $offwhite; }
 		p { margin: 0 0 .75em; }
+	}
+}
+.category-image { position: relative;
+	figcaption { position: absolute; top: 0; left: 0; right: 0; bottom: 0; text-align: center;
+		h4 { text-transform: uppercase; @include Freight; letter-spacing: .125em; margin: 2.5em .75em 0; font-weight: 600; font-size: 1.5em; }
 	}
 }

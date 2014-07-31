@@ -102,7 +102,9 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 	&+.post { border-top: .125em solid $lightgrey; padding-top: 1.5em; }
 }
 .post-image { width: 100%; }
-.post-words { width: 100%; }
+.post-words { width: 100%;
+	img { max-width: 100%; height: auto; }
+}
 .post-content {
 	p { font-size: 1.25em; line-height: 1.5; }
 	blockquote { @include vertical-border; border-width: 0 0 0 .0625em; margin: 1.5em 0 1.5em 1.5em; padding-left: .75em;

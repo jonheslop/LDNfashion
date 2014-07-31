@@ -327,6 +327,9 @@ footer[role="content-info"] {
 
 .post-words {
   width: 100%; }
+  .post-words img {
+    max-width: 100%;
+    height: auto; }
 
 .post-content p {
   font-size: 1.25em;

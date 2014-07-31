@@ -20,7 +20,7 @@
 		  'posts_per_page' => 6,
 		//  'paged' => $paged,
 		  // CHANGE LINE BELOW TO CHANGE THE CATEGORY
-		  'category' => 7
+		  'tag' => 'slider',
 		);
 		$featured = new WP_Query($featuredargs); 
 		if ( $featured->have_posts() ): ?>

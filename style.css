@@ -270,6 +270,9 @@ footer[role="content-info"] {
     @media screen and (min-width: 45em) {
       .footer_section.double {
         width: 50%; } }
+  .footer_section ul {
+    padding-left: 0;
+    list-style-type: none; }
 
 .section_header {
   margin: 0 0 .75em;

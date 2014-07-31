@@ -362,7 +362,8 @@ footer[role="content-info"] {
   margin: 0 0 .375em;
   font-size: 3em;
   line-height: 1.125;
-  font-weight: 400; }
+  font-weight: 400;
+  font-style: italic; }
 .post-header p {
   font-family: "freight-sans-pro",helvetica,arial,sans-serif;
   font-size: .75em;

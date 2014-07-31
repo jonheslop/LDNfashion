@@ -116,7 +116,7 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 	a { border-bottom: .0625em solid $black; }
 }
 .post-header {
-	h2 { margin: 0 0 .375em; font-size: 3em; line-height: 1.125; font-weight: 400; }
+	h2 { margin: 0 0 .375em; font-size: 3em; line-height: 1.125; font-weight: 400; font-style: italic; }
 	p { @include Freight; font-size: .75em; font-weight: bold; color: $darkgrey; text-transform: uppercase; letter-spacing: .125em; text-align: right; line-height: 1.5; padding-bottom: .25em;
 		a:link, a:visited { color: $darkgrey; }
 	}

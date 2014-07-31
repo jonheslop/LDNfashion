@@ -135,7 +135,12 @@ nav[role="navigation"] {
         width: 75%; } }
     @media screen and (min-width: 45em) {
       nav[role="navigation"] ul {
-        width: 87.50%; } }
+        width: 81.25%;
+        margin: 0 6.25% 0 0; } }
+    @media screen and (min-width: 64em) {
+      nav[role="navigation"] ul {
+        width: 75%;
+        margin: 0 6.25%; } }
     nav[role="navigation"] ul li:last-child {
       display: block !important; }
     nav[role="navigation"] ul li a {

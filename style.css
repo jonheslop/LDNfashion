@@ -422,6 +422,9 @@ footer[role="content-info"] {
 
 .ldnf_widget {
   text-align: center; }
+  @media screen and (min-width: 45em) {
+    .ldnf_widget {
+      text-align: left; } }
   .ldnf_widget img {
     display: inline-block;
     max-width: 100%;

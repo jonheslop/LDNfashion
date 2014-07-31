@@ -15,7 +15,7 @@
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<?php wp_head(); ?>
 
-		<script type='text/javascript'>
+		<!-- <script type='text/javascript'>
 		var googletag = googletag || {};
 		googletag.cmd = googletag.cmd || [];
 		(function() {
@@ -60,6 +60,6 @@
 		googletag.enableServices();
 		});
 		</script>
-
+ -->
 	</head>
 	<body <?php body_class(); ?>>

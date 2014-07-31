@@ -9,15 +9,16 @@ header[role="banner"] {
 
 // Menu 
 nav[role="navigation"] { padding: .25em 0 .25em; @include box-sizing(border-box); background-color: $black;
-	.logo_wrap { width: 25%; padding-top: .4125em;
-		@include breakpoint($moblet) { padding-top: 0; }
+	.logo_wrap { width: 50%; margin: 0 25%; padding-top: .4125em;
+		@include breakpoint($moblet) { width: 25%; padding-top: 0; margin: 0; }
 		@include breakpoint($tablet) { width: 12.5%; padding-top: .5em; }
 		@include breakpoint($tablet-mid) { padding-top: .333em; }
 		@include breakpoint($tablet-mid) { padding-top: .25em; }
 		@include breakpoint($laptop) { padding-top: 0; }
 		h1 { margin: .25em 0 0; }
 	}
-	ul { list-style: none; padding: 0; margin: 0; float: left; width: 75%; display: flex; flex-flow: row wrap; justify-content: space-between;
+	ul { list-style: none; padding: 0; margin: 0; float: left; width: 100%; display: flex; flex-flow: row wrap; justify-content: space-between;
+		@include breakpoint($moblet) { width: 75%; }
 		@include breakpoint($tablet) { width: 87.50%; }
 		li {
 			// &:first-child { padding-left: .375em; }
@@ -27,7 +28,7 @@ nav[role="navigation"] { padding: .25em 0 .25em; @include box-sizing(border-box)
 				&:link, &:visited { color: $white; }
 				&:hover { color: #fff; border-bottom-color: $darkgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */ background-color: $darkgrey; }
 			}
-			@include breakpoint-max($moblet) { &:nth-child(n+3) { display: none; } }
+			@include breakpoint-max($moblet) { &:nth-child(n+4) { display: none; } }
 			@include breakpoint-max($tablet) { &:nth-child(n+5) { display: none; } }
 			@include breakpoint-max($tablet-landscape) { &:nth-child(n+6) { display: none; } }
 			@include breakpoint($tablet-landscape) { &:last-child { display: none!important; } }

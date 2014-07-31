@@ -14,25 +14,21 @@
 <section role="main" class="container">
 	<?php if ( have_posts() ) : ?>
 	<section id="content" class="cf">
-		<ul class="posts">
+		<ul class="posts cf equalHeights">
 			<?php while ( have_posts() ) : the_post();
 				$imageID = get_post_thumbnail_id($post->ID);
-				$image = wp_get_attachment_image_src($imageID, 'large'); ?>
-			<li class="post cf">
-			<?php if ( $image ) : ?>
-				<figure class="post-image wrapper">
-					<img src="<?php echo $image[0]; ?>">
-				</figure>
-			<?php endif; ?>
-				<div class="post-words wrapper">
-					<header class="section_header post-header">
-						<h2><?php the_title(); ?></h2>
-						<p class="meta"><?php the_category(',','single'); ?> | <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> | <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?></p>
+				$image = wp_get_attachment_image_src($imageID, 'index-thumb');?>
+			<li class="post-thumb wrapper cf">
+			<a href="<?php the_permalink(); ?>">
+				<?php if ( $image ) : ?>
+					<figure class="post-image">
+						<img src="<?php echo $image[0]; ?>">
+					</figure>
+				<?php endif; ?>
+					<header class="section_header post-thumb-header">
+						<h4><?php the_title(); ?></h4>
 					</header>
-					<div class="post-content">
-						<?php the_content(); ?>
-					</div>
-				</div>
+				</a>
 			</li>
 		<?php endwhile; ?>
 		</ul>

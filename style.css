@@ -235,8 +235,7 @@ footer[role="content-info"] {
     padding: 0;
     margin: 1.5em 0; }
   #sidebar li.ldnf_widget {
-    width: 50%;
-    text-align: center; }
+    width: 50%; }
     @media screen and (min-width: 75em) {
       #sidebar li.ldnf_widget {
         width: 33.333333333%; } }

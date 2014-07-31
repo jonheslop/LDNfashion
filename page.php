@@ -86,19 +86,12 @@
 			<div class="post-words wrapper">
 				<header class="section_header post-header">
 					<h2><?php the_title(); ?></h2>
-					<p class="meta"><?php the_category(',','single'); ?> | <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> | <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?></p>
 				</header>
 				<div class="post-content">
 					<?php the_content(); ?>
 				</div>
 			</div>
-			<?php include(locate_template('parts/_sharing.php')); ?>
-			<section class="post-comments wrapper">
-				<?php comments_template( '', true ); ?>
-			</section>
 		</article>
-		<?php include(locate_template('parts/_post-prev-next.php')); ?>
-		<?php // include(locate_template('parts/_related-posts.php')); ?>
 	</section>
 	<?php endwhile; ?>
 	<?php get_template_part( 'parts/_sidebar' ); ?>

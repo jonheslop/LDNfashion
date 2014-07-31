@@ -38,8 +38,8 @@ jQuery(document).ready(function($) {
 	$('#menu-primary-nav li:last-child').click(function(e){
 		e.preventDefault();
 		var $toggle = $('#menu-primary-nav li:last-child');
-		var more = 'More &raquo;';
-		var less = '&laquo; Less';
+		var more = 'More&nbsp;&raquo;';
+		var less = '&laquo;&nbsp;Less';
 		$toggle.toggleClass('active');
 		if ( $toggle.hasClass('active') ) {
 			$toggle.find('a').html(less);

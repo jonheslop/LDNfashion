@@ -137,14 +137,6 @@
 
 	function ldnFashion_widgets_init() {
 		register_sidebar( array(
-			'name' => 'Header Banner Huge',
-			'description' => 'Banner above the site logo',
-			'id' => 'header_banner_huge',
-			'class' => 'header_banner_huge',
-			'before_widget' => '<div id="%1$s" class="wrapper ldnf_widget header_banner_huge %2$s">',
-			'after_widget' => '</div>',
-		));
-		register_sidebar( array(
 			'name' => 'Header Banner',
 			'description' => 'Banner along side the site logo',
 			'id' => 'header_banner',

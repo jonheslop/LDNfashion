@@ -5,7 +5,7 @@ header[role="banner"] {
 		h1 { margin: .375em 0; }
 	}
 }
-#logo { display: block; text-indent: -9999px; background-image: url(LDNf-logo.png); background-repeat: no-repeat; background-size: 100%; width: 100%; height: 0; padding-bottom: 21.182266%; background-color: transparent!important; }
+#logo { display: block; text-indent: -9999px; background-image: url(LDNf-logo.png); background-repeat: no-repeat; background-size: 100%; width: 100%; height: 0; padding-bottom: 22.3333333%; background-color: transparent!important; }
 
 // Menu 
 nav[role="navigation"] { padding: .25em 0 .25em; @include box-sizing(border-box); background-color: $black;
@@ -194,7 +194,7 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 	img { max-width: 100%; height: auto; display: inline-block; }
 	figure { float: left; overflow: hidden; line-height: 0; width: 100%; background-color: $black; }
 	figcaption { line-height: 1.5; position: absolute; bottom: 0; left: .75em; right: .75em; float: left; @include box-sizing(border-box); background-color: $black; padding: .375em 0 .5em .75em; border-top: .25em solid $darkgrey;
-		h3 { font-size: 2.75em; line-height: 1.125; margin: 0; font-weight: normal; @include Freight-Display; color: $white; -webkit-font-smoothing: antialiased; }
+		h3 { font-size: 2.75em; line-height: 1.125; margin: 0; font-style: italic; font-weight: normal; @include Freight-Display; color: $white; -webkit-font-smoothing: antialiased; }
 	}
 }
 .rslides_nav { position: absolute; top: 0; bottom: 0; z-index: 9999; font-size: 2em; padding: 22.5% .75em; height: 100%; @include box-sizing(border-box); background-color: transparent!important;

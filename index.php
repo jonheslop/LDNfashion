@@ -46,10 +46,10 @@
 			<header class="section_header sidebar_header">
 				<h4>Categories</h4>
 			</header>
+			<ul class="posts cf equalHeights">
+				<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Homepage Categories')); ?>
+			</ul>
 		</section>
-		<ul class="posts cf equalHeights">
-			<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Homepage Categories')); ?>
-		</ul>
 		<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Index Ad High')); ?>
 	<?php if ( have_posts() ) :
 	$count = 0; ?>
@@ -64,20 +64,20 @@
 			<header class="section_header sidebar_header">
 				<h4>Street Style</h4>
 			</header>
+			<ul class="streetstyle-thumbs">
+			<?php while ( $streetstyle->have_posts() ) : $streetstyle->the_post();
+				$imageID = get_post_thumbnail_id($post->ID);
+				$image = wp_get_attachment_image_src($imageID, 'streetstyle-portrait'); ?>
+				<li class="wrapper">
+					<a href="<?php the_permalink(); ?>">
+						<figure>
+							<img src="<?php echo $image[0]; ?>">
+						</figure>
+					</a>
+				</li>
+			<?php endwhile; ?>
+				</ul>
 		</section>
-		<ul class="streetstyle-thumbs">
-		<?php while ( $streetstyle->have_posts() ) : $streetstyle->the_post();
-			$imageID = get_post_thumbnail_id($post->ID);
-			$image = wp_get_attachment_image_src($imageID, 'streetstyle-portrait'); ?>
-			<li class="wrapper">
-				<a href="<?php the_permalink(); ?>">
-					<figure>
-						<img src="<?php echo $image[0]; ?>">
-					</figure>
-				</a>
-			</li>
-		<?php endwhile; ?>
-		</ul>
 		<?php endif; ?>
 	<?php if ( have_posts() ) : ?>
 	<?php query_posts($query_string.'&cat=4960&posts_per_page=6'); ?>
@@ -85,25 +85,25 @@
 			<header class="section_header sidebar_header">
 				<h4>Shopping News</h4>
 			</header>
+			<ul class="posts cf equalHeights">
+				<?php while ( have_posts() ) : the_post();
+					$imageID = get_post_thumbnail_id($post->ID);
+					$image = wp_get_attachment_image_src($imageID, 'index-thumb');?>
+				<li class="post-thumb wrapper cf">
+				<a href="<?php the_permalink(); ?>">
+					<?php if ( $image ) : ?>
+						<figure class="post-image">
+							<img src="<?php echo $image[0]; ?>">
+						</figure>
+					<?php endif; ?>
+						<header class="section_header post-thumb-header">
+							<h4><?php the_title(); ?></h4>
+						</header>
+					</a>
+				</li>
+			<?php endwhile; ?>
+			</ul>
 		</section>
-		<ul class="posts cf equalHeights">
-			<?php while ( have_posts() ) : the_post();
-				$imageID = get_post_thumbnail_id($post->ID);
-				$image = wp_get_attachment_image_src($imageID, 'index-thumb');?>
-			<li class="post-thumb wrapper cf">
-			<a href="<?php the_permalink(); ?>">
-				<?php if ( $image ) : ?>
-					<figure class="post-image">
-						<img src="<?php echo $image[0]; ?>">
-					</figure>
-				<?php endif; ?>
-					<header class="section_header post-thumb-header">
-						<h4><?php the_title(); ?></h4>
-					</header>
-				</a>
-			</li>
-		<?php endwhile; ?>
-		</ul>
 		<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Index Ad Low')); ?>
 		<?php endif; ?>
 	<?php endif; ?>
@@ -113,26 +113,25 @@
 			<header class="section_header sidebar_header">
 				<h4>Menswear News</h4>
 			</header>
+			<ul class="posts cf equalHeights">
+				<?php while ( have_posts() ) : the_post();
+					$imageID = get_post_thumbnail_id($post->ID);
+					$image = wp_get_attachment_image_src($imageID, 'index-thumb');?>
+				<li class="post-thumb wrapper cf">
+				<a href="<?php the_permalink(); ?>">
+					<?php if ( $image ) : ?>
+						<figure class="post-image">
+							<img src="<?php echo $image[0]; ?>">
+						</figure>
+					<?php endif; ?>
+						<header class="section_header post-thumb-header">
+							<h4><?php the_title(); ?></h4>
+						</header>
+					</a>
+				</li>
+			<?php endwhile; ?>
+			</ul>
 		</section>
-		<ul class="posts cf equalHeights">
-			<?php while ( have_posts() ) : the_post();
-				$imageID = get_post_thumbnail_id($post->ID);
-				$image = wp_get_attachment_image_src($imageID, 'index-thumb');?>
-			<li class="post-thumb wrapper cf">
-			<a href="<?php the_permalink(); ?>">
-				<?php if ( $image ) : ?>
-					<figure class="post-image">
-						<img src="<?php echo $image[0]; ?>">
-					</figure>
-				<?php endif; ?>
-					<header class="section_header post-thumb-header">
-						<h4><?php the_title(); ?></h4>
-					</header>
-				</a>
-			</li>
-		<?php endwhile; ?>
-		</ul>
-	</section>
 	<?php endif; ?>
 	</section>
 	<?php get_template_part( 'parts/_sidebar' ); ?>

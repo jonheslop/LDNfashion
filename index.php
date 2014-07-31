@@ -19,6 +19,7 @@
 	<?php $featuredargs = array(
 		  'posts_per_page' => 6,
 		//  'paged' => $paged,
+		  // CHANGE LINE BELOW TO CHANGE THE CATEGORY
 		  'category' => 7
 		);
 		$featured = new WP_Query($featuredargs); 
@@ -56,6 +57,7 @@
 	<?php $streetstyleargs = array(
 		  'posts_per_page' => 12,
 		  'paged' => $paged,
+		  // CHANGE LINE BELOW TO CHANGE THE CATEGORY
 		  'cat' => 9717
 		);
 		$streetstyle = new WP_Query($streetstyleargs); 
@@ -108,7 +110,8 @@
 		<?php endif; ?>
 	<?php endif; ?>
 	<?php if ( have_posts() ) : ?>
-	<?php query_posts($query_string.'&cat=4962&posts_per_page=6'); ?>
+	<?php // CHANGE cat=XXX IN LINE BELOW TO CHANGE THE CATEGORY
+	query_posts($query_string.'&cat=4962&posts_per_page=6'); ?>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
 				<h4>Menswear News</h4>

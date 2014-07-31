@@ -32,6 +32,21 @@
 			</li>
 		<?php endwhile; ?>
 		</ul>
+
+		<nav id="postNav" class="cf">
+			<? if (get_next_posts_link()) : ?>
+			<div class="prev-post wrapper">
+				<?php next_posts_link('&laquo; Older Entries'); ?></div>
+			<? else : ?>
+			<div class="prev-post wrapper">&nbsp;</div>
+			<? endif; ?>
+			<? if (get_previous_posts_link()) : ?>
+			<div class="next-post wrapper">
+				<?php previous_posts_link('Newer Entries »', 0); ?>
+			</div>
+			<? endif; ?>
+		</nav>
+
 	</section>
 	<?php endif; ?>
 	<?php get_template_part( 'parts/_sidebar' ); ?>

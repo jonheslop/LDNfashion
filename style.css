@@ -244,7 +244,7 @@ footer[role="content-info"] {
     margin-bottom: 1em; }
     @media screen and (min-width: 45em) {
       #sidebar li.ldnf_widget {
-        width: 8em; } }
+        width: 9.0625em; } }
     @media screen and (min-width: 75em) {
       #sidebar li.ldnf_widget {
         width: 33.333333333%; } }

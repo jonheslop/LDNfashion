@@ -453,6 +453,8 @@ footer[role="content-info"] {
     width: 100%;
     margin-top: .75em;
     text-align: left; }
+  .ldnf_widget.index_ad_high, .ldnf_widget.index_ad_low {
+    text-align: center; }
 
 .list-voucher-codes {
   list-style: none; }

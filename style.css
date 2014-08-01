@@ -273,7 +273,14 @@ footer[role="content-info"] {
     width: 100%; }
     @media screen and (min-width: 45em) {
       .footer_section.double {
-        width: 50%; } }
+        width: 50%; }
+        .footer_section.double ul {
+          -webkit-columns: 2;
+          -moz-columns: 2;
+          columns: 2;
+          -webkit-column-gap: 1.5em;
+          -moz-column-gap: 1.5em;
+          column-gap: 1.5em; } }
 
 .section_header {
   margin: 0 0 .75em;

@@ -78,7 +78,9 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 .footer_section { margin-top: 1.5em; width: 50%;
 	@include breakpoint($tablet) { width: 25%; }
 	&.double { width: 100%;
-		@include breakpoint($tablet) { width: 50%; }
+		@include breakpoint($tablet) { width: 50%;
+			ul { @include columns(2); @include column-gap(1.5em); }
+		}
 	}
 }
 .section_header { margin: 0 0 .75em; border-bottom: .0625em solid $lightgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */

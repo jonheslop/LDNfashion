@@ -127,9 +127,25 @@ nav[role="navigation"] {
     margin: 0;
     float: left;
     width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
     flex-flow: row wrap;
-    justify-content: space-between; }
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify; }
     @media screen and (min-width: 40em) {
       nav[role="navigation"] ul {
         width: 75%; } }
@@ -863,246 +879,6 @@ input.voucher-code-button {
       margin: 2.5em .75em 0;
       font-weight: 600;
       font-size: 1.5em; }
-
-/*! SocialCount - v0.1.6 - 2013-08-08
-* https://github.com/filamentgroup/SocialCount
-* Copyright (c) 2013 zachleat; Licensed MIT */
-.socialcount {
-  font-size: .875em;
-  line-height: 2.2em; }
-
-.socialcount > li,
-.socialcount > li > a:focus,
-.socialcount .loading {
-  border-radius: 5px; }
-
-.socialcount > li > a.active:focus span[data-icon],
-.socialcount > li.active:hover span[data-icon],
-.socialcount > li.active.hover span[data-icon] {
-  color: white; }
-
-/* Special class added to count when it's >= the minimum */
-/* Base CSS */
-.socialcount {
-  list-style: none;
-  padding-left: 0;
-  margin: 0 0 .6em 0;
-  overflow: hidden; }
-
-.socialcount :link,
-.socialcount :visited {
-  color: inherit; }
-
-.socialcount > li {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  position: relative;
-  vertical-align: top;
-  min-height: 30px;
-  text-align: center;
-  white-space: nowrap;
-  *margin-right: 4px; }
-
-.socialcount.like.de_DE > .facebook {
-  min-width: 90px;
-  /* like */ }
-
-.socialcount-small > li {
-  min-width: 0; }
-
-.socialcount-large > li {
-  float: left;
-  margin: 0 .6em .6em 0; }
-
-.socialcount.recommend .facebook {
-  min-width: 120px; }
-
-.socialcount-small.recommend .facebook {
-  min-width: 0; }
-
-.socialcount-large > li,
-.socialcount-large.recommend .facebook {
-  min-width: 105px; }
-
-.socialcount > li > a {
-  display: block;
-  padding: 0 5px;
-  text-decoration: none;
-  color: inherit; }
-
-.socialcount-small > li > a {
-  padding-left: 8px;
-  padding-right: 8px; }
-
-.socialcount-large > li > a {
-  padding: 12px 5px 8px; }
-
-.socialcount .count {
-  color: inherit;
-  position: relative;
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  text-align: center;
-  margin-left: 6px; }
-
-.socialcount-large .count {
-  display: block;
-  width: 100%;
-  margin-left: 0;
-  padding-top: 10px; }
-
-.socialcount-small .count {
-  margin-left: 0; }
-
-.socialcount .facebook iframe {
-  height: 21px;
-  width: 90px;
-  /* recommend */ }
-
-.socialcount.de_DE .facebook iframe {
-  width: 83px;
-  /* recommend */ }
-
-.socialcount.like .facebook iframe {
-  width: 48px;
-  /* like */ }
-
-.socialcount.like.de_DE .facebook iframe {
-  width: 83px;
-  /* like */ }
-
-.socialcount .button {
-  display: none;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 5px;
-  text-align: center;
-  pointer-events: none; }
-
-.socialcount .button iframe {
-  pointer-events: auto; }
-
-.socialcount-large .button {
-  top: auto;
-  bottom: 2px; }
-
-.socialcount.grade-a.activate-on-hover > li.hover .count,
-.socialcount.grade-a.activate-on-click > li.hover.active .count {
-  text-indent: -999px; }
-
-.socialcount.grade-a.activate-on-hover > li.hover .button,
-.socialcount.grade-a.activate-on-click > li.hover.active .button {
-  display: block; }
-
-.socialcount.grade-a.activate-on-hover > li.hover > a,
-.socialcount.grade-a.activate-on-click > li.hover.active > a {
-  cursor: default; }
-
-.socialcount-small.grade-a.activate-on-hover > li.hover > a,
-.socialcount-small.grade-a.activate-on-click > li.hover.active > a,
-.socialcount.grade-a.activate-on-hover > li.hover .button iframe,
-.socialcount.grade-a.activate-on-click > li.hover.active .button iframe {
-  cursor: pointer; }
-
-/* Inline loading */
-.socialcount .loading {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  background-color: #ccc;
-  background-color: rgba(204, 204, 204, 0.5);
-  color: #000;
-  text-transform: uppercase;
-  font-size: .75em;
-  text-align: center; }
-
-.socialcount-large .loading {
-  padding-top: 30%; }
-
-.socialcount .loading .dot {
-  display: inline-block;
-  /* no ie7 compat needed here, just shows the text links */
-  width: 6px;
-  height: 6px;
-  margin: 0 3px;
-  background: #fff;
-  opacity: 0;
-  border-radius: 50%;
-  -webkit-animation: socialCountLoadingFade .6s infinite;
-  -moz-animation: socialCountLoadingFade .6s infinite;
-  animation: socialCountLoadingFade .6s infinite; }
-
-.socialcount .loading .dot:nth-child(1) {
-  -webkit-animation-delay: 0s;
-  -moz-animation-delay: 0s;
-  animation-delay: 0s; }
-
-.socialcount .loading .dot:nth-child(2) {
-  -webkit-animation-delay: .05s;
-  -moz-animation-delay: .05s;
-  animation-delay: .05s; }
-
-.socialcount .loading .dot:nth-child(3) {
-  -webkit-animation-delay: .1s;
-  -moz-animation-delay: .1s;
-  animation-delay: .1s; }
-
-@-webkit-keyframes socialCountLoadingFade {
-  0% {
-    opacity: 0; }
-
-  50% {
-    opacity: 0.8; }
-
-  100% {
-    opacity: 0; } }
-
-@-moz-keyframes socialCountLoadingFade {
-  0% {
-    opacity: 0; }
-
-  50% {
-    opacity: 0.8; }
-
-  100% {
-    opacity: 0; } }
-
-@keyframes socialCountLoadingFade {
-  0% {
-    opacity: 0; }
-
-  50% {
-    opacity: 0.8; }
-
-  100% {
-    opacity: 0; } }
-
-.socialcount .pinterest {
-  display: none; }
-
-.socialcount.js .pinterest {
-  display: inline-block;
-  *display: inline;
-  zoom: 1; }
-
-.socialcount .pinterest .button {
-  bottom: 0;
-  pointer-events: auto; }
-
-.socialcount-large .pinterest .button {
-  bottom: 10px; }
-
-.socialcount > .pinterest:hover {
-  cursor: pointer; }
-
-.socialcount-small .pinterest .count {
-  text-indent: -999px; }
 
 /*! http://responsiveslides.com v1.54 by @viljamis */
 .rslides {

@@ -17,7 +17,7 @@ nav[role="navigation"] { padding: .25em 0 .25em; @include box-sizing(border-box)
 		@include breakpoint($laptop) { padding-top: 0; }
 		h1 { margin: .25em 0 0; }
 	}
-	ul { list-style: none; padding: 0; margin: 0; float: left; width: 100%; display: flex; flex-flow: row wrap; justify-content: space-between;
+	ul { list-style: none; padding: 0; margin: 0; float: left; width: 100%; @include display(flex); @include flex-flow(row wrap); @include justify-content(space-between);
 		@include breakpoint($moblet) { width: 75%; }
 		// @include breakpoint($tablet) { width: 87.50%; }
 		@include breakpoint($tablet) { width: 81.25%; margin: 0 6.25% 0 0; }

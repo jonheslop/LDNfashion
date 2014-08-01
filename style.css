@@ -149,7 +149,7 @@ nav[role="navigation"] {
       font-size: .75em;
       border-bottom: 0.25em solid #212527;
       text-transform: uppercase;
-      padding: .75rem .75rem .5em;
+      padding: 0.75rem 0.75rem 0.5em !important;
       line-height: 1.5;
       background-color: #212527; }
       @media screen and (min-width: 55.5em) {

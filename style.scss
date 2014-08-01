@@ -16,6 +16,7 @@ $moblet : 40em; // 640px
 $tablet : 45em; // 720px
 $tablet-mid : 55.5em; // 888px
 $tablet-landscape : 61.5em; // 984px
+$ipad: 64em; // 1024px
 $laptop : 75em; // 1200px
 $desktop : 87em; // 1392px
 $cinema : 105em; // 1680px
@@ -114,7 +115,7 @@ figure { margin: 0;
 }
 
 // gives elements gutters using padding
-.wrapper, .menu-item a { padding: 0 #{($line/2)/$em}em; @include box-sizing(border-box); float: left; }
+.wrapper, nav[role="navigation"] .menu-item a { padding: 0 #{($line/2)/$em}em; @include box-sizing(border-box); float: left; }
 
 .cf { @include clearfix; }
 

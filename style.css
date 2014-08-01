@@ -280,7 +280,8 @@ footer[role="content-info"] {
           columns: 2;
           -webkit-column-gap: 1.5em;
           -moz-column-gap: 1.5em;
-          column-gap: 1.5em; } }
+          column-gap: 1.5em;
+          list-style-position: inside; } }
 
 .section_header {
   margin: 0 0 .75em;

@@ -43,14 +43,41 @@
 			</ul>
 		</section>
 		<?php endif; ?>
-		<section class="partition wrapper cf">
+<!-- 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
 				<h4>Categories</h4>
 			</header>
 			<ul class="posts cf equalHeights">
-				<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Homepage Categories')); ?>
+				<?php // if (function_exists('dynamic_sidebar') && dynamic_sidebar('Homepage Categories')); ?>
+			</ul>
+		</section> -->
+	<?php if ( have_posts() ) : ?>
+	<?php // CHANGE cat=XXX IN LINE BELOW TO CHANGE THE CATEGORY
+	query_posts($query_string.'&cat=7&posts_per_page=6'); ?>
+		<section class="partition wrapper cf">
+			<header class="section_header sidebar_header">
+				<h4>News &amp; Features</h4>
+			</header>
+			<ul class="posts cf equalHeights">
+				<?php while ( have_posts() ) : the_post();
+					$imageID = get_post_thumbnail_id($post->ID);
+					$image = wp_get_attachment_image_src($imageID, 'index-thumb');?>
+				<li class="post-thumb wrapper cf">
+				<a href="<?php the_permalink(); ?>">
+					<?php if ( $image ) : ?>
+						<figure class="post-image">
+							<img src="<?php echo $image[0]; ?>">
+						</figure>
+					<?php endif; ?>
+						<header class="section_header post-thumb-header">
+							<h4><?php the_title(); ?></h4>
+						</header>
+					</a>
+				</li>
+			<?php endwhile; ?>
 			</ul>
 		</section>
+	<?php endif; ?>
 		<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Index Ad High')); ?>
 	<?php if ( have_posts() ) :
 	$count = 0; ?>
@@ -85,7 +112,7 @@
 	<?php query_posts($query_string.'&cat=4960&posts_per_page=6'); ?>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
-				<h4>Shopping News</h4>
+				<h4>Shopping</h4>
 			</header>
 			<ul class="posts cf equalHeights">
 				<?php while ( have_posts() ) : the_post();
@@ -114,7 +141,7 @@
 	query_posts($query_string.'&cat=4962&posts_per_page=6'); ?>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
-				<h4>Menswear News</h4>
+				<h4>Menswear</h4>
 			</header>
 			<ul class="posts cf equalHeights">
 				<?php while ( have_posts() ) : the_post();

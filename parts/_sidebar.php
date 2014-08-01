@@ -1,9 +1,6 @@
 <aside id="sidebar" class="cf">
 	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Sidebar Top')); ?>
 	<section class="sidebar_section wrapper social_section">
-		<header class="section_header sidebar_header">
-			<h4>Follow LDN fashion</h4>
-		</header>
 		<div class="follow_button facebook">
 			<div class="fb-like" data-href="https://facebook.com/ldnfashion" data-width="250" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 		</div>

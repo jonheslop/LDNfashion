@@ -50,9 +50,7 @@ nav[role="navigation"] { padding: .25em 0 .25em; @include box-sizing(border-box)
 footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-color: $black; color: $white!important;
 	a:link, a:visited { color: $white; background-color: $black; -webkit-font-smoothing: antialiased }
 }
-.credits { color: $grey; font-size: .75em; width: 100%; text-align: center;
-	@include breakpoint($tablet) { text-align: right; }
-}
+.credits { color: $grey; font-size: .75em; width: 100%; }
 
 // Structure
 #content { width: 100%; float: left;
@@ -79,7 +77,7 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 	@include breakpoint($tablet) { width: 25%; }
 	&.double { width: 100%;
 		@include breakpoint($tablet) { width: 50%;
-			ul { @include columns(2); @include column-gap(1.5em); list-style-position: inside; }
+			ul { @include columns(2); @include column-gap(1.5em); list-style-position: inside; padding-left: 0; }
 		}
 	}
 }

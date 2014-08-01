@@ -80,7 +80,6 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 	&.double { width: 100%;
 		@include breakpoint($tablet) { width: 50%; }
 	}
-	ul { padding-left: 0; list-style-type: none; }
 }
 .section_header { margin: 0 0 .75em; border-bottom: .0625em solid $lightgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */
 	h2, h3, h4, h5 { margin: 0; }

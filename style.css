@@ -55,7 +55,7 @@ figure {
   figure img {
     max-width: 100%; }
 
-.wrapper, .menu-item a {
+.wrapper, nav[role="navigation"] .menu-item a {
   padding: 0 0.75em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -270,9 +270,6 @@ footer[role="content-info"] {
     @media screen and (min-width: 45em) {
       .footer_section.double {
         width: 50%; } }
-  .footer_section ul {
-    padding-left: 0;
-    list-style-type: none; }
 
 .section_header {
   margin: 0 0 .75em;

@@ -5,7 +5,7 @@
 					<h4>Links</h4>
 				</header>
 				<?php wp_nav_menu( array( 'theme_location' => 'footer-nav-1' ) ); ?>
-				<?php if ( is_home() ) {
+				<?php if ( is_home() || is_front_page() || is_index() || is_single() || is_category() ) {
 					$backup_query = $wp_query;
 					$wp_query = new WP_Query(array('post_type' => 'post'));
 					wp_nav_menu( array( 'theme_location' => 'footer-nav-1' ) ); 
@@ -17,7 +17,7 @@
 					<h4>Masthead</h4>
 				</header>
 				<?php wp_nav_menu( array( 'theme_location' => 'footer-nav-2' ) ); ?>
-				<?php if ( is_home() ) {
+				<?php if ( is_home() || is_front_page() || is_index() || is_single() || is_category() ) {
 					$backup_query = $wp_query;
 					$wp_query = new WP_Query(array('post_type' => 'post'));
 					wp_nav_menu( array( 'theme_location' => 'footer-nav-2' ) ); 
@@ -29,7 +29,7 @@
 					<h4>London Department Stores</h4>
 				</header>
 				<?php wp_nav_menu( array( 'theme_location' => 'footer-nav-3' ) ); ?>
-				<?php if ( is_home() ) {
+				<?php if ( is_home() || is_front_page() || is_index() || is_single() || is_category() ) {
 					$backup_query = $wp_query;
 					$wp_query = new WP_Query(array('post_type' => 'post'));
 					wp_nav_menu( array( 'theme_location' => 'footer-nav-3' ) ); 

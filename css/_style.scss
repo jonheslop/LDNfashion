@@ -65,7 +65,7 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 	.ldnf_widget { width: 100%; }
 	.mini-ads { float: left; width: 100%; list-style: none; padding: 0; margin: 1.5em 0; }
 	li.ldnf_widget { width: 50%; margin-bottom: 1em;
-		@include breakpoint($tablet) { width: 9.0625em; }
+		@include breakpoint($tablet-mid) { width: 9.0625em; }
 		@include breakpoint($laptop) { width: 33.333333333%; }
 	}
 }

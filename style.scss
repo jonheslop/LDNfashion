@@ -115,7 +115,7 @@ figure { margin: 0;
 }
 
 // gives elements gutters using padding
-.wrapper, nav[role="navigation"] .menu-item a { padding: 0 #{($line/2)/$em}em; @include box-sizing(border-box); float: left; }
+.wrapper { padding: 0 #{($line/2)/$em}em; @include box-sizing(border-box); float: left; }
 
 .cf { @include clearfix; }
 

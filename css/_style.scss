@@ -25,7 +25,7 @@ nav[role="navigation"] { padding: .25em 0 .25em; @include box-sizing(border-box)
 		li {
 			// &:first-child { padding-left: .375em; }
 			&:last-child { display: block!important; }
-			a { display: block; @include Freight; font-size: .75em; border-bottom: .25em solid $black; text-transform: uppercase; padding: .75rem .75rem .5em!important; line-height: 1.5; background-color: $black;
+			a { display: block; @include Freight; font-size: .75em; border-bottom: .25em solid $black; text-transform: uppercase; padding: .75rem .75rem .5em!important; line-height: 1.5; background-color: $black; @include box-sizing(border-box); float: left;
 				@include breakpoint($tablet-mid) { letter-spacing: .125em; }
 				&:link, &:visited { color: $white; }
 				&:hover { color: #fff; border-bottom-color: $darkgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */ background-color: $darkgrey; }

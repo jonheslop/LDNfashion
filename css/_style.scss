@@ -149,8 +149,10 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 	img { display: inline-block; max-width: 100%; border: .0625em solid $offwhite; }
 	a { background-color: transparent; }
 	&.header_banner { width: 100%; margin-top: .75em; text-align: left; }
-	&.index_ad_high, &.index_ad_low { text-align: center; }
+	&.index_ad_high, &.index_ad_low { width: 100%; text-align: center; }
 }
+
+.index_ad_high { margin-bottom: 1.5em; }
 
 // Voucher Codes
 .list-voucher-codes { list-style: none; }
@@ -189,8 +191,6 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 .posts { list-style-type: none; padding: 0; margin: 1.5em 0 0; }
 .post-thumb { width: 33.333333333%; margin-bottom: .75em; }
 .post-thumb-header { line-height: 1.3; width: 100%; padding-top: .375em; border-top: .0625em solid $lightgrey; border-bottom: none; }
-
-.index_ad_high { margin-bottom: 1.5em; /* padding: .75em 0; border-top: .125em solid $lightgrey; border-bottom: .125em solid $lightgrey; */ }
 
 // Featured 
 .featured { margin: 1.5em 0; position: relative; }

@@ -454,7 +454,11 @@ footer[role="content-info"] {
     margin-top: .75em;
     text-align: left; }
   .ldnf_widget.index_ad_high, .ldnf_widget.index_ad_low {
+    width: 100%;
     text-align: center; }
+
+.index_ad_high {
+  margin-bottom: 1.5em; }
 
 .list-voucher-codes {
   list-style: none; }
@@ -612,10 +616,6 @@ input.voucher-code-button {
   padding-top: .375em;
   border-top: 0.0625em solid #dbe3e6;
   border-bottom: none; }
-
-.index_ad_high {
-  margin-bottom: 1.5em;
-  /* padding: .75em 0; border-top: .125em solid $lightgrey; border-bottom: .125em solid $lightgrey; */ }
 
 .featured {
   margin: 1.5em 0;

@@ -53,7 +53,7 @@
 		</section> -->
 	<?php if ( have_posts() ) : ?>
 	<?php // CHANGE cat=XXX IN LINE BELOW TO CHANGE THE CATEGORY
-	query_posts($query_string.'&cat=7&posts_per_page=6'); ?>
+	query_posts($query_string.'&cat=4957&posts_per_page=6'); ?>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
 				<h4>News &amp; Features</h4>

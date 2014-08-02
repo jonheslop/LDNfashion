@@ -11,13 +11,15 @@ jQuery(document).ready(function($) {
 	// console.log(navOffset);
 
 	$(window).scroll(function(){
-		scrollPosition = $(window).scrollTop();
-		// console.log(scrollPosition);
-		if ( scrollPosition >= navOffset ) {
-			// console.log('its happening!');
-			$('body').addClass('fixed').css('margin-top',navHeight);
-		} else {
-			$('body').removeClass('fixed').css('margin-top',0);
+		if ( jQuery(window).width() > 888 ) {
+			scrollPosition = $(window).scrollTop();
+			// console.log(scrollPosition);
+			if ( scrollPosition >= navOffset ) {
+				// console.log('its happening!');
+				$('body').addClass('fixed').css('margin-top',navHeight);
+			} else {
+				$('body').removeClass('fixed').css('margin-top',0);
+			}
 		}
 	});
 

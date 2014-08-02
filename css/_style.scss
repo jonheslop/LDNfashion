@@ -30,6 +30,7 @@ nav[role="navigation"] { padding: .25em 0 .25em; @include box-sizing(border-box)
 				&:link, &:visited { color: $white; }
 				&:hover { color: #fff; border-bottom-color: $darkgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */ background-color: $darkgrey; }
 			}
+			@include breakpoint-max($mobile) { &:nth-child(n+3) { display: none; } }
 			@include breakpoint-max($moblet) { &:nth-child(n+4) { display: none; } }
 			@include breakpoint-max($tablet) { &:nth-child(n+5) { display: none; } }
 			@include breakpoint-max($tablet-landscape) { &:nth-child(n+6) { display: none; } }
@@ -189,7 +190,9 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 
 // Index 
 .posts { list-style-type: none; padding: 0; margin: 1.5em 0 0; }
-.post-thumb { width: 33.333333333%; margin-bottom: .75em; }
+.post-thumb { width: 50%; margin-bottom: .75em;
+	@include breakpoint($moblet) { width: 33.333333333%; }
+}
 .post-thumb-header { line-height: 1.3; width: 100%; padding-top: .375em; border-top: .0625em solid $lightgrey; border-bottom: none; }
 
 // Featured 
@@ -198,7 +201,8 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 .slide { width: 100%; height: 100%;
 	img { max-width: 100%; height: auto; display: inline-block; }
 	figure { float: left; overflow: hidden; line-height: 0; width: 100%; background-color: $black; }
-	figcaption { line-height: 1.5; position: absolute; bottom: 0; left: .75em; right: .75em; float: left; @include box-sizing(border-box); background-color: $black; padding: .375em 0 .5em .75em; border-top: .25em solid $darkgrey;
+	figcaption { line-height: 1.5; float: left; @include box-sizing(border-box); background-color: $black; padding: .375em 0 .5em .75em; border-top: .25em solid $darkgrey;
+		@include breakpoint ($moblet) { position: absolute; bottom: 0; left: .75em; right: .75em; }
 		h3 { font-size: 2.75em; line-height: 1.125; margin: 0; font-style: italic; font-weight: normal; @include Freight-Display; color: $white; -webkit-font-smoothing: antialiased; }
 	}
 }

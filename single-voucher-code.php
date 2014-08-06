@@ -22,11 +22,6 @@
 			$brand = wp_get_post_terms($post->ID, 'brand'); ?>
 			<?php // Starkers_Utilities::print_a($brand) ?>
 		<article class="post cf">
-		<?php if ( $image ) : ?>
-			<figure class="post-image wrapper">
-				<img src="<?php echo $image[0]; ?>">
-			</figure>
-		<?php endif; ?>
 			<div class="post-words wrapper">
 				<header class="section_header post-header">
 					<h2><?php echo $brand[0]->name; ?> voucher codes</h2>

@@ -13,11 +13,11 @@
 
 <section role="main" class="container">
 	<section id="content" class="cf">
-    <div class="wrapper partition page_headline">
-      <header class="post-header">
-        <h2><? single_cat_title(); ?></h2>
-      </header>
-    </div>
+	    <div class="wrapper partition page_headline">
+	      <header class="post-header">
+	        <h2><? single_cat_title(); ?></h2>
+	      </header>
+	    </div>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
 				<h4>Latest Sample Sale</h4>
@@ -82,6 +82,7 @@
 					$shop_map = get_post_meta($post->ID, 'shop_map', true);
 					$shop_phone = get_post_meta($post->ID, 'shop_phone', true);
 					$shop_transport = get_post_meta($post->ID, 'shop_transport', true);
+					$shop_website = get_post_meta($post->ID, 'shop_website', true);
 					$shop_opening_times = get_post_meta($post->ID, 'shop_opening_times', true); ?>
 				<li class="post-thumb cf">
 					<?php if ( $image ) : ?>
@@ -104,11 +105,53 @@
 							<? if ( $shop_opening_times ) : ?>
 							<p><strong>Opening Times:</strong> <?= $shop_opening_times; ?></p>
 							<? endif; ?>
+							<? if ( $shop_website ) : ?>
+							<p><strong>Website:</strong> <?= $shop_website; ?></p>
+							<? endif; ?>
 					<figure class="brand-map">
 						<a href="<?= $sample_sale_map; ?>"><img src="http://maps.googleapis.com/maps/api/staticmap?size=300x200&amp;maptype=roadmap\
 &amp;markers=size:mid%7Ccolor:red%7C<?= $shop_address; ?>&amp;sensor=false&amp;scale=2"></a>
 					</figure>
 				</li>
+			<?php endwhile; ?>
+			</ul>
+		</section>
+		<section class="partition brand_news cf">
+			<div class="header_wrap wrapper">
+				<header class="section_header sidebar_header">
+					<h4>Latest Voucher Codes</h4>
+				</header>
+			</div>
+			<ul class="list-voucher-codes wrapper cf">
+				<?php query_posts($query_string.'&posts_per_page=-1&post_type=voucher-code'); ?>
+				<?php while ( have_posts() ) : the_post();
+					$imageID = get_post_thumbnail_id($post->ID);
+					$image = wp_get_attachment_image_src($imageID, 'index-thumb');
+					$voucher_code_end_date = get_post_meta($post->ID, 'voucher_code_end_date', true);
+					$voucher_code_start_date = get_post_meta($post->ID, 'voucher_code_start_date', true);
+					$voucher_code_terms = get_post_meta($post->ID, 'voucher_code_terms', true);
+					$voucher_code_url = get_post_meta($post->ID, 'voucher_code_url', true); ?>
+				<? if ( time() > strtotime($voucher_code_start_date) && time() < strtotime($voucher_code_end_date) ) : ?>
+				<li class="list-voucher-code cf">
+					<? if ( $image ) : ?>
+					<figure class="wrapper">
+						<img src="<?= $image[0]; ?>">
+					</figure>
+					<? endif; ?>
+					<header class="wrapper">
+						<h3><? the_content(); ?></h3>
+						<p class="meta">Expires: <?= date('jS F', strtotime($voucher_code_end_date)); ?></p>
+					</header>
+					<div class="wrapper">
+						<a target="_blank" class="voucher-code-button" data-voucher-code="<? the_title(); ?>" href="<?= $voucher_code_url; ?>">Reveal code &amp; open site</a>
+					</div>
+					<? if ( $voucher_code_terms != '' && $voucher_code_terms != 'Not Provided' ) : ?>
+					<footer class="wrapper">
+						<p><small><strong>Terms:</strong> <?= $voucher_code_terms; ?></small></p>
+					</footer>
+					<? endif; ?>
+				</li>
+				<? endif; ?>
 			<?php endwhile; ?>
 			</ul>
 		</section>

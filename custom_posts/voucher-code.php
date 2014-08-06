@@ -7,7 +7,7 @@
 		$this->__construct();
 	}
 
-new VoucherCodesPostType;					// Initial call
+new VoucherCodesPostType; // Initial call
 
 class VoucherCodesPostType {
 	

@@ -15,7 +15,12 @@
 		<?php if ( have_posts() ) while ( have_posts() ) : the_post();
 			$imageID = get_post_thumbnail_id($post->ID);
 			$image = wp_get_attachment_image_src($imageID, 'large');
-			$voucher_codes = get_post_meta($post->ID, 'repeatable_fields', true); ?>
+			$voucher_code_end_date = get_post_meta($post->ID, 'voucher_code_end_date', true);
+			$voucher_code_start_date = get_post_meta($post->ID, 'voucher_code_start_date', true);
+			$voucher_code_terms = get_post_meta($post->ID, 'voucher_code_terms', true);
+			$voucher_code_url = get_post_meta($post->ID, 'voucher_code_url', true);
+			$brand = wp_get_post_terms($post->ID, 'brand'); ?>
+			<?php // Starkers_Utilities::print_a($brand) ?>
 		<article class="post cf">
 		<?php if ( $image ) : ?>
 			<figure class="post-image wrapper">
@@ -24,39 +29,26 @@
 		<?php endif; ?>
 			<div class="post-words wrapper">
 				<header class="section_header post-header">
-					<h2><?php the_title(); ?></h2>
-					<p class="meta"><?php the_category(',','single'); ?> | <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> | <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?></p>
+					<h2><?php echo $brand[0]->name; ?> voucher codes</h2>
 				</header>
-				<div class="post-content">
-					<?php the_content(); ?>
-				</div>
 			</div>
-			<? if ($voucher_codes) : ?>
+			<? if ( time() > strtotime($voucher_code_start_date) && time() < strtotime($voucher_code_end_date) ) : ?>
 			<ul class="list-voucher-codes wrapper cf">
-				<header class="section_header sidebar_header">
-					<h4><? the_title(); ?> voucher codes</h4>
-				</header>
-				<? foreach($voucher_codes as $voucher_code) : ?>
 				<li class="list-voucher-code cf">
-					<? if ( $voucher_code['image_url'] ) : ?>
-					<figure class="wrapper">
-						<img src="<?= $voucher_code['image_url']; ?>">
-					</figure>
-					<? elseif ($image) : ?>
+					<? if ( $image ) : ?>
 					<figure class="wrapper">
 						<img src="<?= $image; ?>">
 					</figure>
 					<? endif; ?>
 					<header class="wrapper">
-						<h3><?= $voucher_code['description']; ?></h3>
-						<p class="meta">Expires: <?= $voucher_code['expires']; ?></p>
+						<h3><? the_content(); ?></h3>
+						<p class="meta">Expires: <?= date('jS F', strtotime($voucher_code_end_date)); ?></p>
 					</header>
 					<div class="wrapper">
-						<a target="_blank" class="voucher-code-button" data-voucher-code="<?= $voucher_code['code']; ?>" href="<?= $voucher_code['url']; ?>">Reveal code &amp; open site</a>
+						<a target="_blank" class="voucher-code-button" data-voucher-code="<? the_title(); ?>" href="<?= $voucher_code_url; ?>">Reveal code &amp; open site</a>
 					</div>
 					</a>
 				</li>
-				<? endforeach; ?>
 			</ul>
 			<? endif; ?>
 			<?php include(locate_template('parts/_sharing.php')); ?>

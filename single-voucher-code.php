@@ -37,7 +37,7 @@
 				<li class="list-voucher-code cf">
 					<? if ( $image ) : ?>
 					<figure class="wrapper">
-						<img src="<?= $image; ?>">
+						<img src="<?= $image[0]; ?>">
 					</figure>
 					<? endif; ?>
 					<header class="wrapper">

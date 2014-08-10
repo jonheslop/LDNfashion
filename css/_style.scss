@@ -296,3 +296,15 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 		span { font-style: italic; font-weight: normal; }
 	}
 }
+.error404 .sidebar_section { margin-top: .825em!important; }
+
+// SEARCH
+.search-wrapper { float: left; width: 100%;
+	input, button { @include box-sizing(border-box); padding: .375rem .75rem; @include appearance(none); border: 1px solid $lightgrey; float: left; }
+	.search_box { width: 50%; margin-right: 5%; @include Freight-Text; font-size: 1em;
+		&:focus { outline: none; border-color: $cyan; }
+	}
+	.search_submit { text-transform: uppercase; font-weight: bold; width: 30%; @include Freight; font-size: 1em; letter-spacing: 2px; text-align: center; background-color: $offwhite; @include background-gradient($offwhite, $lightgrey); padding-right: .5em; color: $grey;
+		&:hover { @include background-gradient; color: $white; }
+	}
+}

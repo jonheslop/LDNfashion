@@ -23,6 +23,14 @@
 			<img src="<?= $gifs->data->image_url; ?>">
 		</figure>
 	</section>
+	<aside id="sidebar" class="cf">
+		<section class="sidebar_section wrapper">
+			<header class="section_header sidebar_header">
+				<h4>Search LDNfashion</h4>
+			</header>
+			<?php get_search_form(); ?>
+		</section>
+	</aside>
 </section>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

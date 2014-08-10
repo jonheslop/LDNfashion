@@ -88,6 +88,16 @@
 				</div>
 			</div>
 			<?php include(locate_template('parts/_sharing.php')); ?>
+			<section class="wrapper author_meta">
+				<header class="section_header sidebar_header">
+					<h4>Posted by</h4>
+				</header>
+					<figure class="wrapper">
+						<a href="<?= get_author_posts_url(get_the_author_meta('ID')); ?>"><?= get_avatar(get_the_author_meta('ID')); ?></a>
+					</figure>
+					<h3><? the_author_posts_link(); ?></h3>
+					<p><?= the_author_meta('user_description'); ?></p>
+			</section>
 			<section class="post-comments wrapper">
 				<?php comments_template( '', true ); ?>
 			</section>

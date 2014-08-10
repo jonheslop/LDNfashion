@@ -144,6 +144,8 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 	}
 }
 
+.author_meta { width: 100%; }
+
 // Widgets / Adverts
 .ldnf_widget { text-align: center;
 	@include breakpoint($tablet) { text-align: left; }

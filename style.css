@@ -456,6 +456,9 @@ footer[role="content-info"] {
       .related-posts li header h3 {
         margin: 0; }
 
+.author_meta {
+  width: 100%; }
+
 .ldnf_widget {
   text-align: center; }
   @media screen and (min-width: 45em) {

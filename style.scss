@@ -203,7 +203,7 @@ figure { margin: 0;
   top: 0;
   }
 
-.rslides li:first-child {
+.rslides li:first-child, .slides li:first-child {
   position: relative;
   display: block;
   float: left;

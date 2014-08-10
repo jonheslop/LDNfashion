@@ -27,6 +27,12 @@
 	</section>
 	<section class="sidebar_section wrapper">
 		<header class="section_header sidebar_header">
+			<h4>Search LDNfashion</h4>
+		</header>
+		<?php get_search_form(); ?>
+	</section>
+	<section class="sidebar_section wrapper">
+		<header class="section_header sidebar_header">
 			<h4>Most read articles</h4>
 		</header>
 		<?php if (function_exists('wpp_get_mostpopular')) wpp_get_mostpopular('limit=5&stats_comments=0&stats_views=0&stats_date=1&stats_date_format=d/m/y'); ?>

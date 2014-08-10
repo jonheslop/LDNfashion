@@ -458,6 +458,10 @@ footer[role="content-info"] {
 
 .author_meta {
   width: 100%; }
+  .author_meta h3 {
+    margin: 0 0 .75em; }
+  .author_meta p {
+    margin: 0; }
 
 .ldnf_widget {
   text-align: center; }

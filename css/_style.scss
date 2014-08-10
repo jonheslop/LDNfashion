@@ -144,7 +144,10 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 	}
 }
 
-.author_meta { width: 100%; }
+.author_meta { width: 100%;
+	h3 { margin: 0 0 .75em; }
+	p { margin: 0; }
+}
 
 // Widgets / Adverts
 .ldnf_widget { text-align: center;

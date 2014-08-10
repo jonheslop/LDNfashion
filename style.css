@@ -887,6 +887,14 @@ input.voucher-code-button {
       font-weight: 600;
       font-size: 1.5em; }
 
+.header_404 {
+  margin: 1.5em 0; }
+  .header_404 h2 {
+    margin: 0 0 .375em; }
+    .header_404 h2 span {
+      font-style: italic;
+      font-weight: normal; }
+
 /*! http://responsiveslides.com v1.54 by @viljamis */
 .rslides {
   position: relative;

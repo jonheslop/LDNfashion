@@ -11,6 +11,8 @@
 	}
 	?>
 </nav>
+<? if ( !is_404() ) : ?>
 <header role="banner" class="container">
 	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Header Banner')); ?>
 </header>
+<? endif; ?>

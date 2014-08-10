@@ -285,3 +285,9 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 		h4 { text-transform: uppercase; @include Freight; letter-spacing: .125em; margin: 2.5em .75em 0; font-weight: 600; font-size: 1.5em; }
 	}
 }
+
+.header_404 { margin: 1.5em 0;
+	h2 { margin: 0 0 .375em; 
+		span { font-style: italic; font-weight: normal; }
+	}
+}

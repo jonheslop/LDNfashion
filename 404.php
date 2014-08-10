@@ -11,6 +11,18 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<h2>Page not found</h2>
+<section role="main" class="container">
+	<section id="content" class="cf">
+		<header class="header_404 section_header">
+			<h2>Page not found, <span>here&rsquo;s a cat gif instead</span></h2>
+		</header>
+		<? $getGIFS = 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cat';
+		$gifs = json_decode(file_get_contents($getGIFS));
+		?>
+		<figure>
+			<img src="<?= $gifs->data->image_url; ?>">
+		</figure>
+	</section>
+</section>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

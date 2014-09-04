@@ -140,7 +140,7 @@
 					<? endif; ?>
 					<header class="wrapper">
 						<h3><? the_content(); ?></h3>
-						<p class="meta">Starts: <?= date('jS F', strtotime($voucher_code_start_date)); ?> | Expires: <?= date('jS F', strtotime($voucher_code_end_date)); ?></p>
+						<p class="meta">Start: <?= date('jS F Y', strtotime($voucher_code_start_date)); ?> | Expiry: <?= date('jS F Y', strtotime($voucher_code_end_date)); ?></p>
 					</header>
 					<div class="wrapper">
 						<a target="_blank" class="voucher-code-button" data-voucher-code="<? the_title(); ?>" href="<?= $voucher_code_url; ?>">Reveal code &amp; open site</a>

@@ -598,6 +598,34 @@ input.voucher-code-button {
   color: white;
   font-size: 1.5em; }
 
+.post-type-archive-voucher-code #content {
+  margin-top: 1.5em; }
+
+.list-sample-sale {
+  padding: .75em 0; }
+  .list-sample-sale + .list-sample-sale {
+    margin-top: .75em;
+    border-top: 0.0625em solid #dbe3e6; }
+  .list-sample-sale figure {
+    width: 33.333333333%; }
+    .list-sample-sale figure img {
+      display: block;
+      border: 0.0625em solid #dbe3e6;
+      padding: .125em;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      background: #f6f8f9; }
+  .list-sample-sale header, .list-sample-sale div {
+    width: 33.333333333%; }
+  .list-sample-sale header h3 {
+    margin: 0 0 .75em; }
+  .list-sample-sale div {
+    font-size: .75em;
+    line-height: 1.5; }
+    .list-sample-sale div p + p {
+      margin-top: .375em; }
+
 .shop-address {
   margin-top: 1.5em;
   float: left;
@@ -806,7 +834,7 @@ input.voucher-code-button {
   width: 100%; }
   @media screen and (min-width: 45em) {
     .tax-brand .partition {
-      width: 50%; } }
+      width: 33.333333333%; } }
   .tax-brand .partition.brand_news, .tax-brand .partition.page_headline, .tax-brand .partition .header_wrap {
     width: 100%;
     float: left; }
@@ -826,6 +854,15 @@ input.voucher-code-button {
   .tax-brand .post-thumb .brand-map {
     margin-top: 1.5em; }
 
+.brand-lists li + li {
+  margin-top: .75em;
+  padding-top: .75em;
+  border-top: 1px dashed #dbe3e6; }
+
+@media screen and (min-width: 55.5em) {
+  .brand-description {
+    width: 66.666666667%;
+    font-size: 1.125em; } }
 #gallery {
   margin-bottom: .75em; }
   #gallery:target {

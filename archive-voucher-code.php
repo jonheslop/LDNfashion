@@ -19,7 +19,7 @@
 	<?php if ( have_posts() ) : ?>
 	<section id="content" class="cf">
 		<section class="partition wrapper cf">
-			<header class="section_header sidebar_header">
+	      <header class="post-header">
 				<h2><?= get_term_by('slug', get_query_var('brand'), 'brand')->name; ?> voucher codes</h2>
 			</header>
 			<ul class="posts cf">

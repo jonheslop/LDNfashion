@@ -20,6 +20,7 @@
 			$shop_map = get_post_meta($post->ID, 'shop_map', true);
 			$shop_phone = get_post_meta($post->ID, 'shop_phone', true);
 			$shop_transport = get_post_meta($post->ID, 'shop_transport', true);
+			$shop_website = get_post_meta($post->ID, 'shop_website', true);
 			$shop_opening_times = get_post_meta($post->ID, 'shop_opening_times', true); ?>
 		<article class="post cf">
 		<?php if ( $image ) : ?>
@@ -30,7 +31,6 @@
 			<div class="post-words wrapper">
 				<header class="section_header post-header">
 					<h2><?php the_title(); ?></h2>
-					<p class="meta"><?php the_category(',','single'); ?> | <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></p>
 				</header>
 				<div class="post-content">
 					<?php the_content(); ?>
@@ -52,6 +52,9 @@
 					<? endif; ?>
 					<? if ( $shop_opening_times ) : ?>
 					<p><strong>Opening Times:</strong> <?= $shop_opening_times; ?></p>
+					<? endif; ?>
+					<? if ( $shop_website ) : ?>
+					<p><strong>Website:</strong> <?= $shop_website; ?></p>
 					<? endif; ?>
 				</div>
 				<div class="wrapper google_map">

@@ -180,6 +180,24 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 }
 input.voucher-code-button { -webkit-appearance: none; text-align: center; @include Freight; text-transform: uppercase; letter-spacing: .125em; font-weight: bold; @include background-gradient; color: $white; font-size: 1.5em; }
 
+.post-type-archive-voucher-code #content { margin-top: 1.5em; }
+
+// Sample Sales
+.list-sample-sale { padding: .75em 0;
+	&+.list-sample-sale { margin-top: .75em; border-top: .0625em solid $lightgrey; }
+	figure { width: 33.333333333%;
+		img { display: block; border: .0625em solid $lightgrey; padding: .125em; @include box-sizing(border-box); background: $offwhite; }
+	}
+	header, div { width: 33.333333333%; }
+	header {
+		h3 { margin: 0 0 .75em; }
+	}
+	div { font-size: .75em; line-height: 1.5;
+		// p { @include Freight; font-weight: 300; }
+		// strong { @include Freight; font-weight: 500; }
+		p+p { margin-top: .375em; }
+	}
+}
 // Shop Page
 .shop-address { margin-top: 1.5em; float: left; width: 100%;
 	// .partition { margin-top: 1.5em; }
@@ -256,7 +274,7 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 // Brand page
 .tax-brand {
 	.partition { width: 100%;
-		@include breakpoint($tablet) { width: 50%; }
+		@include breakpoint($tablet) { width: 33.333333333%; }
 		&.brand_news, &.page_headline, .header_wrap { width: 100%; float: left;
 			.post-thumb { width: 33.333333333%; float: left; }
 		}
@@ -267,6 +285,14 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 		header { border-bottom: .125em solid $lightgrey; padding-bottom: .75em; margin-bottom: .75em; }
 		.brand-map { margin-top: 1.5em; }
 	}
+}
+
+.brand-lists {
+	li+li { margin-top: .75em; padding-top: .75em; border-top: 1px dashed $lightgrey; }
+}
+
+@include breakpoint($tablet-mid) {
+	.brand-description { width: 66.666666667%; font-size: 1.125em; }
 }
 
 #gallery { margin-bottom: .75em;

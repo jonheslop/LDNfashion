@@ -28,7 +28,7 @@ jQuery(document).ready(function($) {
 	    $('.slides').responsiveSlides({
 		    	pager: false,
 		    	nav: true,
-		    	auto: false,
+		    	auto: true,
 		    	timeout: 6000,
 		    	speed: 1000,
 		    	prevText: '&lang;',

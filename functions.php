@@ -56,6 +56,9 @@
 	 
 		$new_rules = array(
 			'brands/(.+?)/?$' => 'index.php?brand=' . $wp_rewrite->preg_index(1),
+			'vouchercodes/(.+?)/?$' => 'index.php?post_type=voucher-code&brand=' . $wp_rewrite->preg_index(1),
+			'samplesales/(.+?)/?$' => 'index.php?post_type=sample-sale&brand=' . $wp_rewrite->preg_index(1),
+			'shop/(.+?)/?$' => 'index.php?post_type=shop&brand=' . $wp_rewrite->preg_index(1),
 		);
 		$wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
 	}
@@ -219,19 +222,3 @@
 		}
 	}
 }
-
-// http://thereforei.am/2011/10/28/advanced-taxonomy-queries-with-pretty-urls/
-function eg_add_rewrite_rules() {
-    global $wp_rewrite;
- 
-    $new_rules = array(
-        'vouchercodes/(.+?)/?$' => 'index.php?post_type=voucher-code&brand=' . $wp_rewrite->preg_index(1),
-        // 'umfrage/location/(.+?)/?$' => 'index.php?category_name=umfrage&location=' . $wp_rewrite->preg_index(1),
-        // 'continental/map' => 'page.php?post=190',
-        // 'continental/films' => 'index.php?category_name=films+continental',
-        // 'continental/location/(.+?)/?$' => 'index.php?location=' . $wp_rewrite->preg_index(1),
-        // 'stores' => 'clubs',
-    );
-    $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
-}
-add_action( 'generate_rewrite_rules', 'eg_add_rewrite_rules' );

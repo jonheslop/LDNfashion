@@ -31,8 +31,8 @@ jQuery(document).ready(function($) {
 		    	auto: true,
 		    	timeout: 6000,
 		    	speed: 1000,
-		    	prevText: '&lang;',
-		    	nextText: '&rang;'
+		    	prevText: '&#9001;',
+		    	nextText: '&#9002;'
 		    });
 	}
 

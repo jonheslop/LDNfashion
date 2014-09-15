@@ -673,7 +673,7 @@ input.voucher-code-button {
   border-top: 0.0625em solid #dbe3e6;
   border-bottom: none; }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 45em) {
   .category-streetstyle .post-thumb {
     width: 20%; } }
 

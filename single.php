@@ -50,19 +50,19 @@
 				} else {
 				    $galleryprevious = $galleryCount;
 				} ?>
-			    <figure id="gallery" class="post-image wrapper">
-				    <div class="cf">
-					    <a class="arrow prev" href="?offset=<?= $galleryprevious; ?>#gallery">&#9001;</a>
-					    <img src="<?= $cellImage[0]; ?>" />
-					    <a class="arrow next" href="?offset=<?= $gallerynext; ?>#gallery">&#9002;</a>
-						<? if ($image_title || $image_caption ) : ?>
-					    <figcaption class="cf">
-					    	<h2<?= ( $image_caption ? ' class="has_caption"' : '' ); ?>><?= $image_title; ?></h2>
-					    	<p><?= $image_caption; ?></p>
-					    </figcaption>
-						<? endif; ?>
-				    </div>
-			    </figure>
+			<figure id="gallery" class="post-image wrapper">
+				<div class="cf">
+					<a class="arrow prev" href="?offset=<?= $galleryprevious; ?>#gallery">&#9001;</a>
+					<img src="<?= $cellImage[0]; ?>" />
+					<a class="arrow next" href="?offset=<?= $gallerynext; ?>#gallery">&#9002;</a>
+					<? if ($image_title || $image_caption ) : ?>
+					<figcaption class="cf">
+						<h2<?= ( $image_caption ? ' class="has_caption"' : '' ); ?>><?= $image_title; ?></h2>
+						<p><?= $image_caption; ?></p>
+					</figcaption>
+					<? endif; ?>
+				</div>
+			</figure>
 			<?php  }?>
 			<? endif; ?>
 		<? elseif ( is_numeric($video) ) : ?>

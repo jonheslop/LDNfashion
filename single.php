@@ -57,7 +57,7 @@
 					    <a class="arrow next" href="?offset=<?= $gallerynext; ?>#gallery">&#9002;</a>
 						<? if ($image_title || $image_caption ) : ?>
 					    <figcaption class="cf">
-					    	<h2><?= $image_title; ?></h2>
+					    	<h2<?= ( $image_caption ? ' class="has_caption"' : '' ); ?>><?= $image_title; ?></h2>
 					    	<p><?= $image_caption; ?></p>
 					    </figcaption>
 						<? endif; ?>

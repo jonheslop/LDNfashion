@@ -909,10 +909,18 @@ input.voucher-code-button {
         margin: 0 12.5%; } }
     #gallery figcaption h2 {
       margin: .25em 0 .375em;
-      padding: 0 0 .25em;
-      border-bottom: 0.0625em solid #f6f8f9; }
+      padding: 0 0 .25em; }
+      #gallery figcaption h2.has_caption {
+        border-bottom: 0.0625em solid #f6f8f9; }
     #gallery figcaption p {
       margin: 0 0 .75em; }
+    #gallery figcaption h2 a:link, #gallery figcaption h2 a:visited, #gallery figcaption p a:link, #gallery figcaption p a:visited {
+      color: #f6f8f9;
+      border-bottom: 1px solid #f6f8f9; }
+    #gallery figcaption h2 a:hover, #gallery figcaption p a:hover {
+      color: #f9fac7;
+      border-bottom-color: #f9fac7;
+      background-color: transparent; }
 
 .category-image {
   position: relative; }

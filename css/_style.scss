@@ -307,8 +307,8 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 	figcaption { color: $offwhite; line-height: 1.5; float: left; width: 96%; margin: 0 2%; -webkit-font-smoothing: antialiased;
 		@include breakpoint($moblet) { width: 87.5%; margin: 0 6.25%; }
 		@include breakpoint($tablet-mid) { width: 75%; margin: 0 12.5%; }
-		h2 { margin: .25em 0 .375em; padding: 0 0 .25em;
-			&.has_caption { border-bottom: .0625em solid $offwhite; }
+		h2 { margin: .25em 0 .375em;
+			&.has_caption { border-bottom: .0625em solid $offwhite; padding: 0 0 .25em; }
 		}
 		p { margin: 0 0 .75em; }
 		h2, p {

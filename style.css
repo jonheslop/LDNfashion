@@ -874,7 +874,8 @@ input.voucher-code-button {
     text-align: center; }
   #gallery img {
     line-height: 0;
-    display: inline; }
+    display: inline;
+    float: left; }
   #gallery .arrow {
     padding: 0 .25em;
     position: absolute;

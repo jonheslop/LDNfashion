@@ -17,12 +17,17 @@
 		<ul class="posts cf equalHeights">
 			<?php while ( have_posts() ) : the_post();
 				$imageID = get_post_thumbnail_id($post->ID);
-				$image = wp_get_attachment_image_src($imageID, 'index-thumb');?>
+				$image = wp_get_attachment_image_src($imageID, 'index-thumb');
+				$streetstyle = wp_get_attachment_image_src($imageID, 'streetstyle-portrait'); ?>
 			<li class="post-thumb wrapper cf">
 			<a href="<?php the_permalink(); ?>">
 				<?php if ( $image ) : ?>
 					<figure class="post-image">
+						<? if ( is_category(9717) ) : ?>
+						<img src="<?php echo $streetstyle[0]; ?>">
+						<? else : ?>
 						<img src="<?php echo $image[0]; ?>">
+						<? endif; ?>
 					</figure>
 				<?php endif; ?>
 					<header class="section_header post-thumb-header">

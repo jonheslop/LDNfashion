@@ -180,7 +180,9 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 }
 input.voucher-code-button { -webkit-appearance: none; text-align: center; @include Freight; text-transform: uppercase; letter-spacing: .125em; font-weight: bold; @include background-gradient; color: $white; font-size: 1.5em; }
 
-.post-type-archive-voucher-code #content { margin-top: 1.5em; }
+.post-type-archive-voucher-code {
+	#content { margin-top: 1.5em; }
+}
 
 // Sample Sales
 .list-sample-sale { padding: .75em 0;
@@ -198,6 +200,11 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 		p+p { margin-top: .375em; }
 	}
 }
+
+.post-type-archive-sample-sale {
+	.page_headline { border-bottom: 1px solid $lightgrey; padding-bottom: 1.5em; }
+}
+
 // Shop Page
 .shop-address { margin-top: 1.5em; float: left; width: 100%;
 	// .partition { margin-top: 1.5em; }

@@ -626,6 +626,10 @@ input.voucher-code-button {
     .list-sample-sale div p + p {
       margin-top: .375em; }
 
+.post-type-archive-sample-sale .page_headline {
+  border-bottom: 1px solid #dbe3e6;
+  padding-bottom: 1.5em; }
+
 .shop-address {
   margin-top: 1.5em;
   float: left;

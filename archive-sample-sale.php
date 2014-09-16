@@ -19,16 +19,18 @@
 	<?php if ( have_posts() ) : ?>
 	<section id="content" class="cf">
 		<section class="partition wrapper cf">
-			<header class="section_header sidebar_header">
-				<h2><?= get_term_by('slug', get_query_var('brand'), 'brand')->name; ?> Sample Sales</h2>
-			</header>
+		    <div class="wrapper partition page_headline">
+		      <header class="post-header">
+		        <h2><? single_cat_title(); ?></h2>
+		      </header>
+		        <div class="brand-description"><?= category_description(); ?></div>
+		    </div>
 			<ul class="posts cf">
 					<?php while ( have_posts() ) : the_post();
 						$imageID = get_post_thumbnail_id($post->ID);
 						$image = wp_get_attachment_image_src($imageID, 'index-thumb');
 						$sample_sale_name = get_post_meta($post->ID, 'sample_sale_name', true);
 						$sample_sale_address = get_post_meta($post->ID, 'sample_sale_address', true);
-						$sample_sale_map = get_post_meta($post->ID, 'sample_sale_map', true);
 						$sample_sale_phone = get_post_meta($post->ID, 'sample_sale_phone', true);
 						$sample_sale_transport = get_post_meta($post->ID, 'sample_sale_transport', true);
 						$sample_sale_when = get_post_meta($post->ID, 'sample_sale_when', true);
@@ -45,8 +47,6 @@
 							<p><? the_content(); ?></p>
 						</header>
 						<div class="wrapper">
-								<a href="<?= $sample_sale_map; ?>"><img src="http://maps.googleapis.com/maps/api/staticmap?size=250x100&amp;maptype=roadmap\
-		&amp;markers=size:mid%7Ccolor:red%7C<?= $sample_sale_address; ?>&amp;sensor=false"></a>
 							<? if ( $sample_sale_when ) : ?>
 							<p><strong>When:</strong> <?= $sample_sale_when; ?></p>
 							<? endif; ?>

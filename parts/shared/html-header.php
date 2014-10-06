@@ -15,7 +15,7 @@
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<?php wp_head(); ?>
 
-		<script type='text/javascript'>
+			<script type='text/javascript'>
 			var googletag = googletag || {};
 			googletag.cmd = googletag.cmd || [];
 			(function() {
@@ -32,10 +32,12 @@
 
 			<script type='text/javascript'>
 			googletag.cmd.push(function() {
-			googletag.defineSlot('/12244649/Header_Banner_Billboard', [970, 250], 'div-gpt-ad-1412246192689-0').addService(googletag.pubads());
+			googletag.defineSlot('/12244649/Header_Banner_Billboard', [970, 250], 'div-gpt-ad-1').addService(googletag.pubads());
 			googletag.pubads().enableSingleRequest();
+			googletag.pubads().collapseEmptyDivs(true);
+			googletag.pubads().enableAsyncRendering();
 			googletag.enableServices();
 			});
-		</script>
+			</script>
 	</head>
 	<body <?php body_class(); ?>>

@@ -19,9 +19,18 @@
 	<?php if ( have_posts() ) : ?>
 	<section id="content" class="cf">
 		<section class="partition wrapper cf">
-	      <header class="post-header">
+		    <div class="wrapper partition page_headline">
+		      <header class="post-header">
 				<h2><?= get_term_by('slug', get_query_var('brand'), 'brand')->name; ?> voucher codes</h2>
-			</header>
+		      </header>
+		      	<figure class="wrapper brand-image">
+		      		<? $brand_image_url = apply_filters( 'taxonomy-images-queried-term-image-url', '', array( 'image_size' => 'medium' ) );?>
+	    			<? if ( $brand_image_url ) : ?>
+		    			<img src="<?= $brand_image_url; ?>">
+		    		<? endif; ?>
+		      	</figure>
+		        <div class="wrapper brand-description"><?= category_description(); ?></div>
+		    </div>
 			<ul class="posts cf">
 					<?php while ( have_posts() ) : the_post();
 						$imageID = get_post_thumbnail_id($post->ID);
@@ -54,6 +63,22 @@
 				<?php endwhile; ?>
 			</ul>
 		</section>
+	</section>
+	<?php else: ?>
+	<section id="content" class="cf">
+	    <div class="wrapper partition page_headline">
+	      <header class="post-header">
+				<h2><?= get_term_by('slug', get_query_var('brand'), 'brand')->name; ?> voucher codes</h2>
+	      </header>
+	      	<figure class="wrapper brand-image">
+	      		<? $brand_image_url = apply_filters( 'taxonomy-images-queried-term-image-url', '', array( 'image_size' => 'medium' ) );?>
+    			<? if ( $brand_image_url ) : ?>
+	    			<img src="<?= $brand_image_url; ?>">
+	    		<? endif; ?>
+	      	</figure>
+	        <div class="wrapper brand-description"><?= category_description(); ?></div>
+	    </div>
+	<p class="wrapper"><em>There are no voucher codes for this brand right now</em></p>
 	</section>
 	<?php endif; ?>
 	<?php get_template_part( 'parts/_sidebar' ); ?>

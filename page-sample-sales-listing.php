@@ -21,7 +21,7 @@
   <section id="content" class="cf">
     <div class="wrapper partition page_headline">
       <header class="section_header post-header">
-        <h2>Browse by brand</h2>
+        <h2>Find sample sales by brand</h2>
       </header>
         <p class="letter-list">Jump to:
           <?php foreach ($brands as $brand) :
@@ -43,7 +43,7 @@
           echo '<header class="section_header"><h3>' . $initial . '</h3></header>';
           $letter=$initial;
         } ?>
-          <p><a href="/brands/<?= $brand->slug; ?>"><?= $brand->name; ?></a></p>
+          <p><a href="/samplesales/<?= $brand->slug; ?>"><?= $brand->name; ?></a></p>
         <? if($initial!=$letter) {
         echo '</li>';
       }

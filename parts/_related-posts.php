@@ -1,4 +1,4 @@
-<footer class="related-posts">
+<!-- <footer class="related-posts">
 	<header class="section_header sidebar_header wrapper">
 		<h4>You may also like</h4>
 	</header>
@@ -68,4 +68,4 @@
 			</header>
 		</li>
 	</ul>
-</footer>
+</footer> -->

@@ -43,7 +43,7 @@
           echo '<header class="section_header"><h3>' . $initial . '</h3></header>';
           $letter=$initial;
         } ?>
-          <p><a href="/brands/<?= $brand->slug; ?>"><?= $brand->name; ?></a></p>
+          <p><a href="/samplesales/<?= $brand->slug; ?>"><?= $brand->name; ?></a></p>
         <? if($initial!=$letter) {
         echo '</li>';
       }

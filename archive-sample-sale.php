@@ -75,7 +75,13 @@
 	      <header class="post-header">
 	        <h2><? single_cat_title(); ?></h2>
 	      </header>
-	        <div class="brand-description"><?= category_description(); ?></div>
+	      	<figure class="wrapper brand-image">
+	      		<? $brand_image_url = apply_filters( 'taxonomy-images-queried-term-image-url', '', array( 'image_size' => 'medium' ) );?>
+    			<? if ( $brand_image_url ) : ?>
+	    			<img src="<?= $brand_image_url; ?>">
+	    		<? endif; ?>
+	      	</figure>
+	        <div class="wrapper brand-description"><?= category_description(); ?></div>
 	    </div>
 	<p class="wrapper"><em>There are no upcoming samples sales right now</em></p>
 	</section>

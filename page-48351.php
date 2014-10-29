@@ -37,6 +37,7 @@
     <ul class="cf wrapper brands-alpha">
       <?php foreach ($brands as $brand) :
         $name = $brand->name;
+        Starkers_Utilities::print_a($brand);
         $initial = strtoupper(substr($name, 0,1));
         $saved_data = get_tax_meta($brand->id,'exclude_from_sample_sales');
         echo $saved_data; ?>

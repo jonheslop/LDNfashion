@@ -39,7 +39,7 @@
         $name = $brand->name;
         Starkers_Utilities::print_a($brand);
         $initial = strtoupper(substr($name, 0,1));
-        $saved_data = get_tax_meta($brand->term_id,'exclude_from_sample_sales');
+        $saved_data = get_tax_meta($brand->term_taxonomy_id,'exclude_from_sample_sales');
         echo $saved_data; ?>
         <? if($initial!=$letter) {
           echo '<li id="' . $initial . '">';

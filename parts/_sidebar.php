@@ -33,9 +33,9 @@
 	</section>
 	<section class="sidebar_section wrapper">
 		<header class="section_header sidebar_header">
-			<h4>Most read articles</h4>
+			<h4>Top 10 most read</h4>
 		</header>
-		<?php if (function_exists('wpp_get_mostpopular')) wpp_get_mostpopular('limit=5&stats_comments=0&stats_views=0&stats_date=1&stats_date_format=d/m/y'); ?>
+		<?php if (function_exists('wpp_get_mostpopular')) wpp_get_mostpopular('limit=10&stats_comments=0&stats_views=0&stats_date=1&stats_date_format=d/m/y'); ?>
 	</section>
 	<?php if ( is_dynamic_sidebar('Sidebar Mini Adverts') ) : ?>
 		<ul class="cf mini-ads">

@@ -252,6 +252,8 @@ footer[role="content-info"] {
       width: 31.25%; } }
   #sidebar .ldnf_widget {
     width: 100%; }
+    #sidebar .ldnf_widget + .ldnf_widget {
+      margin-top: 1.5em; }
   #sidebar .mini-ads {
     float: left;
     width: 100%;

@@ -252,8 +252,6 @@ footer[role="content-info"] {
       width: 31.25%; } }
   #sidebar .ldnf_widget {
     width: 100%; }
-    #sidebar .ldnf_widget + .ldnf_widget {
-      margin-top: 1.5em; }
   #sidebar .mini-ads {
     float: left;
     width: 100%;
@@ -269,6 +267,9 @@ footer[role="content-info"] {
     @media screen and (min-width: 75em) {
       #sidebar li.ldnf_widget {
         width: 33.333333333%; } }
+
+.sidebar_ad_bottom + .sidebar_ad_bottom {
+  margin-top: 1.5em; }
 
 .sidebar_section ul, .footer_section ul {
   margin: 0;

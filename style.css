@@ -350,6 +350,9 @@ footer[role="content-info"] {
   .pluginFacepileConnectConnected {
     display: none; } }
 
+.wpp-list li + li {
+  margin-top: .375em; }
+
 .post {
   float: left;
   width: 100%;

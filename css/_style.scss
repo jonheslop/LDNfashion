@@ -101,6 +101,10 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 
 .pluginFacepileConnectConnected { @include breakpoint-max($tablet) { display: none; } }
 
+.wpp-list {
+	li + li { margin-top: .375em; }
+}
+
 // Single
 .post { float: left; width: 100%; margin-top: 1.5em;
 	&+.post { border-top: .125em solid $lightgrey; padding-top: 1.5em; }

@@ -116,7 +116,7 @@
 	<?php if ( have_posts() ) :
 	$count = 0; ?>
 	<?php $streetstyleargs = array(
-		  'posts_per_page' => 12,
+		  'posts_per_page' => 18,
 		  'paged' => $paged,
 		  // CHANGE LINE BELOW TO CHANGE THE CATEGORY
 		  'cat' => 9717
@@ -143,7 +143,7 @@
 		</section>
 	<?php endif; ?>
 	<?php if ( have_posts() ) : ?>
-	<?php query_posts($query_string.'&cat=4960&posts_per_page=6'); ?>
+	<?php query_posts($query_string.'&cat=4960&posts_per_page=9'); ?>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
 				<h4>Shopping</h4>
@@ -172,7 +172,7 @@
 	<?php endif; ?>
 	<?php if ( have_posts() ) : ?>
 	<?php // CHANGE cat=XXX IN LINE BELOW TO CHANGE THE CATEGORY
-	query_posts($query_string.'&cat=4962&posts_per_page=6'); ?>
+	query_posts($query_string.'&cat=4962&posts_per_page=9'); ?>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
 				<h4>Menswear</h4>

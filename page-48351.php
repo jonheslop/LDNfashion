@@ -40,17 +40,17 @@
         // Starkers_Utilities::print_a($brand);
         $initial = strtoupper(substr($name, 0,1));
         $saved_data = get_tax_meta($brand->term_id,'ba_exclude_from_sample_sales');
-        if ( $saved_data != 'on' ) { 
-          if($initial!=$letter) {
+        if ( $saved_data != 'on' ) : ?> 
+        <? if($initial!=$letter) {
             echo '<li id="' . $initial . '">';
             echo '<header class="section_header"><h3>' . $initial . '</h3></header>';
             $letter=$initial;
-          }
-        } ?>
+          } ?>
           <p><a href="/samplesales/<?= $brand->slug; ?>"><?= $brand->name; ?></a></p>
         <? if($initial!=$letter) {
         echo '</li>';
       }
+      endif;
       endforeach; ?>
   </section>
   <?php get_template_part( 'parts/_sidebar' ); ?>

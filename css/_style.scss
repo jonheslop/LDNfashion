@@ -111,7 +111,9 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 .post { float: left; width: 100%; margin-top: 1.5em;
 	&+.post { border-top: .125em solid $lightgrey; padding-top: 1.5em; }
 }
-.post-image { width: 100%; }
+.post-image { width: 100%;
+	img { width: 100%!important; }
+}
 .post-words { width: 100%;
 	img { max-width: 100%; height: auto; }
 }

@@ -368,6 +368,8 @@ footer[role="content-info"] {
 
 .post-image {
   width: 100%; }
+  .post-image img {
+    width: 100% !important; }
 
 .post-words {
   width: 100%; }

@@ -37,14 +37,15 @@
     <ul class="cf wrapper brands-alpha">
       <?php foreach ($brands as $brand) :
         $name = $brand->name;
-        Starkers_Utilities::print_a($brand);
+        // Starkers_Utilities::print_a($brand);
         $initial = strtoupper(substr($name, 0,1));
         $saved_data = get_tax_meta($brand->term_id,'ba_exclude_from_sample_sales');
-        echo $saved_data; ?>
-        <? if($initial!=$letter) {
-          echo '<li id="' . $initial . '">';
-          echo '<header class="section_header"><h3>' . $initial . '</h3></header>';
-          $letter=$initial;
+        if ( $saved_data != 'on' ) { 
+          if($initial!=$letter) {
+            echo '<li id="' . $initial . '">';
+            echo '<header class="section_header"><h3>' . $initial . '</h3></header>';
+            $letter=$initial;
+          }
         } ?>
           <p><a href="/samplesales/<?= $brand->slug; ?>"><?= $brand->name; ?></a></p>
         <? if($initial!=$letter) {

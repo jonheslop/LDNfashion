@@ -37,7 +37,9 @@
     <ul class="cf wrapper brands-alpha">
       <?php foreach ($brands as $brand) :
         $name = $brand->name;
-        $initial = strtoupper(substr($name, 0,1)); ?>
+        $initial = strtoupper(substr($name, 0,1));
+        $saved_data = get_tax_meta($brand->term_id,'ba_exclude_from_voucher_codes');
+        if ( $saved_data != 'on' ) : ?> 
         <? if($initial!=$letter) {
           echo '<li id="' . $initial . '">';
           echo '<header class="section_header"><h3>' . $initial . '</h3></header>';
@@ -47,6 +49,7 @@
         <? if($initial!=$letter) {
         echo '</li>';
       }
+      endif;
       endforeach; ?>
   </section>
   <?php get_template_part( 'parts/_sidebar' ); ?>

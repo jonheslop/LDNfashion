@@ -485,10 +485,8 @@ footer[role="content-info"] {
     text-align: left; }
   .ldnf_widget.index_ad_high, .ldnf_widget.index_ad_low {
     width: 100%;
-    text-align: center; }
-
-.index_ad_high {
-  margin-bottom: 1.5em; }
+    text-align: center;
+    margin-bottom: 1.5em; }
 
 .list-voucher-codes {
   list-style: none; }

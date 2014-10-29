@@ -159,10 +159,8 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 	img { display: inline-block; max-width: 100%; border: .0625em solid $offwhite; }
 	a { background-color: transparent; }
 	&.header_banner { width: 100%; margin-top: .75em; text-align: left; }
-	&.index_ad_high, &.index_ad_low { width: 100%; text-align: center; }
+	&.index_ad_high, &.index_ad_low { width: 100%; text-align: center; margin-bottom: 1.5em;  }
 }
-
-.index_ad_high { margin-bottom: 1.5em; }
 
 // Voucher Codes
 .list-voucher-codes { list-style: none; }

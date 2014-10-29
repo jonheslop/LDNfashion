@@ -37,7 +37,9 @@
     <ul class="cf wrapper brands-alpha">
       <?php foreach ($brands as $brand) :
         $name = $brand->name;
-        $initial = strtoupper(substr($name, 0,1)); ?>
+        $initial = strtoupper(substr($name, 0,1));
+        $saved_data = get_tax_meta($brand->id,'exclude_from_sample_sales');
+        echo $saved_data; ?>
         <? if($initial!=$letter) {
           echo '<li id="' . $initial . '">';
           echo '<header class="section_header"><h3>' . $initial . '</h3></header>';

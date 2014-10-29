@@ -720,10 +720,6 @@ input.voucher-code-button {
     width: 100%; }
     @media screen and (min-width: 40em) {
       .slide figcaption {
-        position: absolute;
-        bottom: 0;
-        left: .75em;
-        right: .75em;
         width: auto; } }
     .slide figcaption h3 {
       font-size: 1.5em;
@@ -739,7 +735,7 @@ input.voucher-code-button {
           font-size: 2em; } }
       @media screen and (min-width: 61.5em) {
         .slide figcaption h3 {
-          font-size: 2.75em; } }
+          font-size: 2.25em; } }
 
 .rslides_nav {
   position: absolute;

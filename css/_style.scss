@@ -242,10 +242,10 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 	img { max-width: 100%; height: auto; display: inline-block; }
 	figure { float: left; overflow: hidden; line-height: 0; width: 100%; background-color: $black; }
 	figcaption { line-height: 1.5; float: left; @include box-sizing(border-box); background-color: $black; padding: .375em 0 .5em .75em; border-top: .25em solid $darkgrey; width: 100%;
-		@include breakpoint ($moblet) { position: absolute; bottom: 0; left: .75em; right: .75em; width: auto; }
+		@include breakpoint ($moblet) { width: auto; }
 		h3 { font-size: 1.5em; line-height: 1.125; margin: 0; font-style: italic; font-weight: normal; @include Freight-Display; color: $white; -webkit-font-smoothing: antialiased;
 			@include breakpoint($moblet) { font-size: 2em; } 
-			@include breakpoint($tablet-landscape) { font-size: 2.75em; } 
+			@include breakpoint($tablet-landscape) { font-size: 2.25em; } 
 		}
 	}
 }

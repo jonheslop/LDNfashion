@@ -93,7 +93,7 @@
 				<h4>Features</h4>
 			</header>
 			<ul class="posts cf equalHeights">
-				<?php while ( have_posts() ) : the_post();
+			<?php while ( $features->have_posts() ) : $features->the_post();
 					$imageID = get_post_thumbnail_id($post->ID);
 					$image = wp_get_attachment_image_src($imageID, 'index-thumb');?>
 				<li class="post-thumb wrapper cf">
@@ -111,6 +111,7 @@
 			<?php endwhile; ?>
 			</ul>
 		</section>
+	<?php endif; ?>
 	<?php endif; ?>
 	<?php if ( have_posts() ) :
 	$count = 0; ?>

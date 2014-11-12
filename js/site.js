@@ -1,4 +1,11 @@
+function navHeightFix() {
+	var navHeight = jQuery('nav[role="navigation"]').outerHeight();
+	jQuery('body').css('margin-top',navHeight);
+}
+
 jQuery(document).ready(function($) {
+
+	navHeightFix();
 
 	$('.menuToggle').click(function(e){
 		e.preventDefault();
@@ -9,23 +16,6 @@ jQuery(document).ready(function($) {
 		vouchercode = $(this).data('voucher-code');
 		$(this).replaceWith('<input class="voucher-code-button" value="' + vouchercode + '" disabled="disabled" />');
 		// $(this).text(vouchercode);
-	});
-
-	navOffset = Math.round($('nav[role="navigation"]').offset().top);
-	navHeight = $('nav[role="navigation"]').outerHeight();
-	// console.log(navOffset);
-
-	$(window).scroll(function(){
-		if ( jQuery(window).width() > 888 ) {
-			scrollPosition = $(window).scrollTop();
-			// console.log(scrollPosition);
-			if ( scrollPosition >= navOffset ) {
-				// console.log('its happening!');
-				$('body').addClass('fixed').css('margin-top',navHeight);
-			} else {
-				$('body').removeClass('fixed').css('margin-top',0);
-			}
-		}
 	});
 
 	// Go Slider! by http://responsiveslides.com/
@@ -76,6 +66,9 @@ jQuery(window).load(function($){
 
 });
 jQuery(window).resize(function($){
+
+	navHeightFix();
+
 	if ( jQuery('.equalHeights').length ) {
 		jQuery('.equalHeights').children().attr('style','');
 		jQuery('.equalHeights').equalHeights();

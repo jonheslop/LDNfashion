@@ -111,7 +111,12 @@ nav[role="navigation"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background-color: #212527; }
+  background-color: #212527;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999; }
   nav[role="navigation"] .logo_wrap {
     width: 33.333333333%;
     margin: 0 33.333333333%;
@@ -204,14 +209,6 @@ nav[role="navigation"] {
       color: #000;
       border-bottom-color: #dbe3e6;
       background-color: white; }
-
-.fixed nav[role="navigation"] {
-  position: fixed;
-  z-index: 999999;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%; }
 
 footer[role="content-info"] {
   margin-top: 3em;

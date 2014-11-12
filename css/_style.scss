@@ -8,7 +8,7 @@
 	@include breakpoint($tablet-landscape) { display: none; }
 }
 
-nav[role="navigation"] { padding: .25em 0 0; @include box-sizing(border-box); background-color: $black;
+nav[role="navigation"] { padding: .25em 0 0; @include box-sizing(border-box); background-color: $black; position: fixed; top: 0; left: 0; right: 0; z-index: 999999;
 	.logo_wrap { width: 33.333333333%; margin: 0 33.333333333%; padding: .4125em 0 .5em; float: left;
 		// @include breakpoint($moblet) { width: 50%; margin: 0 25%; }
 		@include breakpoint($tablet) { width: 20%; margin: 0 40%; padding-top: .5em; }
@@ -42,11 +42,11 @@ nav[role="navigation"] { padding: .25em 0 0; @include box-sizing(border-box); ba
 		}
 	}
 }
-.fixed nav[role="navigation"] { position: fixed; z-index: 999999; top: 0; left: 0; right: 0; width: 100%;
-	// @include breakpoint($tablet-mid) { width: 94.444444444%; }
-	// @include breakpoint($laptop) { width: 88.888888888%; }
-	// @include breakpoint($desktop) { width: 77.777777778%; }
-}
+// .fixed nav[role="navigation"] { position: fixed; z-index: 999999; top: 0; left: 0; right: 0; width: 100%;
+// 	// @include breakpoint($tablet-mid) { width: 94.444444444%; }
+// 	// @include breakpoint($laptop) { width: 88.888888888%; }
+// 	// @include breakpoint($desktop) { width: 77.777777778%; }
+// }
 
 // Footer 
 footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-color: $black; color: $white!important;

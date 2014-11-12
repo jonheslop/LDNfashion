@@ -11,6 +11,9 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <section role="main" class="container">
+		<?php if ( have_posts() ) while ( have_posts() ) : the_post();
+			$imageID = get_post_thumbnail_id($post->ID);
+			$image = wp_get_attachment_image_src($imageID, 'large'); ?>
 	<section id="content" class="cf">
 		<article class="post cf">
 		<?php if ( $image ) : ?>
@@ -23,10 +26,7 @@
 		        <h2><? single_cat_title(); ?></h2>
 		      </header>
 		        <div class="wrapper brand-description"><?= category_description(); ?></div>
-		<?php if ( have_posts() ) while ( have_posts() ) : the_post();
-			$imageID = get_post_thumbnail_id($post->ID);
-			$image = wp_get_attachment_image_src($imageID, 'large');
-			$sample_sale_name = get_post_meta($post->ID, 'sample_sale_name', true);
+<?			$sample_sale_name = get_post_meta($post->ID, 'sample_sale_name', true);
 			$sample_sale_address = get_post_meta($post->ID, 'sample_sale_address', true);
 			$sample_sale_map = get_post_meta($post->ID, 'sample_sale_map', true);
 			$sample_sale_phone = get_post_meta($post->ID, 'sample_sale_phone', true);

@@ -33,6 +33,7 @@
 			$sample_sale_transport = get_post_meta($post->ID, 'sample_sale_transport', true);
 			$sample_sale_when = get_post_meta($post->ID, 'sample_sale_when', true);
 			$sample_sale_description = get_post_meta($post->ID, 'sample_sale_description', true); ?>
+					<? if ( $sample_sale_when ) : ?>
 			<div class="shop-address cf">
 				<span class="partition wrapper">
 					<header class="section_header sidebar_header">
@@ -40,9 +41,7 @@
 					</header>
 				</span>
 				<div class="wrapper">
-					<? if ( $sample_sale_when ) : ?>
 					<p><strong>When:</strong> <?= $sample_sale_when; ?></p>
-					<? endif; ?>
 					<? if ( $sample_sale_address ) : ?>
 					<p><strong>Address:</strong> <?= $sample_sale_name; ?>,<br/><?= str_replace(',', ',<br/>', $sample_sale_address); ?>,<? if ( $sample_sale_map ) : ?><br/><a href="<?= $sample_sale_map; ?>">(map)</a><? endif; ?></p>
 					<? endif; ?>
@@ -65,6 +64,7 @@
 				</div>
 				<? endif; ?>
 			</div>
+					<? endif; ?>
 			<?php include(locate_template('parts/_sharing.php')); ?>
 		<?php include(locate_template('parts/_post-prev-next.php')); ?>
 		<?php include(locate_template('parts/_related-posts.php')); ?>

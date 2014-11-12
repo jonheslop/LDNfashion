@@ -883,6 +883,9 @@ input.voucher-code-button {
     float: left;
     width: 66.666666667%;
     font-size: 1.125em; } }
+.post-type-archive-sample-sale .brand-description {
+  width: 100%; }
+
 .brand-image {
   float: left;
   width: 100%; }

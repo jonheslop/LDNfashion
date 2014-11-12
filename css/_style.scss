@@ -308,6 +308,8 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 	.brand-description { float: left; width: 66.666666667%; font-size: 1.125em; }
 }
 
+.post-type-archive-sample-sale .brand-description { width: 100%; }
+
 .brand-image { float: left; width: 100%;
 	@include breakpoint($tablet-mid) { width: 33.333333333%; }
 }

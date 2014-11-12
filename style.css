@@ -885,7 +885,10 @@ input.voucher-code-button {
     font-size: 1.125em; } }
 .brand-image {
   float: left;
-  width: 33.333333333%; }
+  width: 100%; }
+  @media screen and (min-width: 45em) {
+    .brand-image {
+      width: 33.333333333%; } }
 
 #gallery {
   margin-bottom: .75em; }

@@ -308,7 +308,9 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 	.brand-description { float: left; width: 66.666666667%; font-size: 1.125em; }
 }
 
-.brand-image { float: left; width: 33.333333333%; }
+.brand-image { float: left; width: 100%;
+	@include breakpoint($tablet) { width: 33.333333333%; }
+}
 
 #gallery { margin-bottom: .75em;
 	&:target { padding-top: 3em; }

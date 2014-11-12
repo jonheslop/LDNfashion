@@ -24,7 +24,7 @@
 		        <h2><? single_cat_title(); ?></h2>
 		      </header>
 		      	<figure class="wrapper brand-image">
-		      		<? $brand_image_url = apply_filters( 'taxonomy-images-queried-term-image-url', '', array( 'image_size' => 'large' ) );?>
+		      		<? $brand_image_url = apply_filters( 'taxonomy-images-queried-term-image-url', '', array( 'image_size' => 'medium' ) );?>
 	    			<? if ( $brand_image_url ) : ?>
 		    			<img src="<?= $brand_image_url; ?>">
 		    		<? endif; ?>

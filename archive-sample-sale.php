@@ -56,14 +56,15 @@
 					<p><strong>Details:</strong> <?= $sample_sale_description; ?></p>
 					<? endif; ?>
 				</div>
+					<? if ( $sample_sale_address ) : ?>
 				<div class="wrapper google_map">
 					<figure>
 						<a href="<?= $sample_sale_map; ?>"><img src="http://maps.googleapis.com/maps/api/staticmap?size=400x300&amp;maptype=roadmap\
 &amp;markers=size:mid%7Ccolor:red%7C<?= $sample_sale_address; ?>&amp;sensor=false&amp;scale=2"></a>
 					</figure>
 				</div>
+				<? endif; ?>
 			</div>
-
 			<?php include(locate_template('parts/_sharing.php')); ?>
 		<?php include(locate_template('parts/_post-prev-next.php')); ?>
 		<?php include(locate_template('parts/_related-posts.php')); ?>

@@ -21,7 +21,7 @@
 				<img src="<?php echo $image[0]; ?>">
 			</figure>
 		<?php endif; ?>
-		    <div class="wrapper partition page_headline">
+		    <div class="partition page_headline">
 		      <header class="post-header wrapper" style="width: 100%;">
 		        <h2><? single_cat_title(); ?></h2>
 		      </header>

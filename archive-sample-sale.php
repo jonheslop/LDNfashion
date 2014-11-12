@@ -1,13 +1,8 @@
 <?php
 /**
- * The template for displaying Archive pages.
+ * The Template for displaying all single posts
  *
- * Used to display archive-type pages if nothing more specific matches a query.
- * For example, puts together date-based pages if no date.php file exists.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts() 
+ * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
  *
  * @package 	WordPress
  * @subpackage 	Starkers
@@ -16,11 +11,25 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <section role="main" class="container">
-	<?php if ( have_posts() ) : ?>
 	<section id="content" class="cf">
-		<section class="partition wrapper cf">
+		<?php if ( have_posts() ) while ( have_posts() ) : the_post();
+			$imageID = get_post_thumbnail_id($post->ID);
+			$image = wp_get_attachment_image_src($imageID, 'large');
+			$sample_sale_name = get_post_meta($post->ID, 'sample_sale_name', true);
+			$sample_sale_address = get_post_meta($post->ID, 'sample_sale_address', true);
+			$sample_sale_map = get_post_meta($post->ID, 'sample_sale_map', true);
+			$sample_sale_phone = get_post_meta($post->ID, 'sample_sale_phone', true);
+			$sample_sale_transport = get_post_meta($post->ID, 'sample_sale_transport', true);
+			$sample_sale_when = get_post_meta($post->ID, 'sample_sale_when', true);
+			$sample_sale_description = get_post_meta($post->ID, 'sample_sale_description', true); ?>
+		<article class="post cf">
+		<?php if ( $image ) : ?>
+			<figure class="post-image wrapper">
+				<img src="<?php echo $image[0]; ?>">
+			</figure>
+		<?php endif; ?>
 		    <div class="wrapper partition page_headline">
-		      <header class="post-header">
+		      <header class="post-header wrapper" style="width: 100%;">
 		        <h2><? single_cat_title(); ?></h2>
 		      </header>
 		      	<figure class="wrapper brand-image">
@@ -30,68 +39,44 @@
 		    		<? endif; ?>
 		      	</figure>
 		        <div class="wrapper brand-description"><?= category_description(); ?></div>
+			<div class="shop-address cf">
+				<span class="partition wrapper">
+					<header class="section_header sidebar_header">
+						<h4>Sample Sale Details</h4>
+					</header>
+				</span>
+				<div class="wrapper">
+					<? if ( $sample_sale_when ) : ?>
+					<p><strong>When:</strong> <?= $sample_sale_when; ?></p>
+					<? endif; ?>
+					<? if ( $sample_sale_address ) : ?>
+					<p><strong>Address:</strong> <?= $sample_sale_name; ?>,<br/><?= str_replace(',', ',<br/>', $sample_sale_address); ?>,<? if ( $sample_sale_map ) : ?><br/><a href="<?= $sample_sale_map; ?>">(map)</a><? endif; ?></p>
+					<? endif; ?>
+					<? if ( $sample_sale_phone ) : ?>
+					<p><strong>Telephone:</strong> <?= $sample_sale_phone; ?></p>
+					<? endif; ?>
+					<? if ( $sample_sale_transport ) : ?>
+					<p><strong>Transport:</strong> <?= $sample_sale_transport; ?></p>
+					<? endif; ?>
+					<? if ( $sample_sale_description ) : ?>
+					<p><strong>Details:</strong> <?= $sample_sale_description; ?></p>
+					<? endif; ?>
+				</div>
+				<div class="wrapper google_map">
+					<figure>
+						<a href="<?= $sample_sale_map; ?>"><img src="http://maps.googleapis.com/maps/api/staticmap?size=400x300&amp;maptype=roadmap\
+&amp;markers=size:mid%7Ccolor:red%7C<?= $sample_sale_address; ?>&amp;sensor=false&amp;scale=2"></a>
+					</figure>
+				</div>
+			</div>
+
+			<?php include(locate_template('parts/_sharing.php')); ?>
+		</article>
+		<?php include(locate_template('parts/_post-prev-next.php')); ?>
+		<?php include(locate_template('parts/_related-posts.php')); ?>
+	</section>
 		    </div>
-			<ul class="posts cf">
-					<?php while ( have_posts() ) : the_post();
-						$imageID = get_post_thumbnail_id($post->ID);
-						$image = wp_get_attachment_image_src($imageID, 'index-thumb');
-						$sample_sale_name = get_post_meta($post->ID, 'sample_sale_name', true);
-						$sample_sale_address = get_post_meta($post->ID, 'sample_sale_address', true);
-						$sample_sale_phone = get_post_meta($post->ID, 'sample_sale_phone', true);
-						$sample_sale_transport = get_post_meta($post->ID, 'sample_sale_transport', true);
-						$sample_sale_when = get_post_meta($post->ID, 'sample_sale_when', true);
-						$sample_sale_description = get_post_meta($post->ID, 'sample_sale_description', true); ?>
-					<?// if ( time() > strtotime($voucher_code_start_date) && time() < strtotime($voucher_code_end_date) ) : ?>
-					<li class="list-sample-sale cf">
-						<? if ( $image ) : ?>
-						<figure class="wrapper">
-							<img src="<?= $image[0]; ?>">
-						</figure>
-						<? endif; ?>
-						<header class="wrapper">
-							<h3><a href="<?php the_permalink(); ?>"><? the_title(); ?></a></h3>
-							<p><? the_content(); ?></p>
-						</header>
-						<div class="wrapper">
-							<? if ( $sample_sale_when ) : ?>
-							<p><strong>When:</strong> <?= $sample_sale_when; ?></p>
-							<? endif; ?>
-							<? if ( $sample_sale_address ) : ?>
-							<p><strong>Address:</strong> <?= $sample_sale_name; ?>,<br/><?= str_replace(',', ',<br/>', $sample_sale_address); ?>,<? if ( $sample_sale_map ) : ?><br/><a href="<?= $sample_sale_map; ?>">(map)</a><? endif; ?></p>
-							<? endif; ?>
-							<? if ( $sample_sale_phone ) : ?>
-							<p><strong>Telephone:</strong> <?= $sample_sale_phone; ?></p>
-							<? endif; ?>
-							<? if ( $sample_sale_transport ) : ?>
-							<p><strong>Transport:</strong> <?= $sample_sale_transport; ?></p>
-							<? endif; ?>
-							<? if ( $sample_sale_description ) : ?>
-							<p><strong>Details:</strong> <?= $sample_sale_description; ?></p>
-							<? endif; ?>
-						</div>
-					</li>
-					<? // endif; ?>
-				<?php endwhile; ?>
-			</ul>
-		</section>
-	</section>
-	<?php else: ?>
-	<section id="content" class="cf">
-	    <div class="wrapper partition page_headline">
-	      <header class="post-header">
-	        <h2><? single_cat_title(); ?></h2>
-	      </header>
-	      	<figure class="wrapper brand-image">
-	      		<? $brand_image_url = apply_filters( 'taxonomy-images-queried-term-image-url', '', array( 'image_size' => 'medium' ) );?>
-    			<? if ( $brand_image_url ) : ?>
-	    			<img src="<?= $brand_image_url; ?>">
-	    		<? endif; ?>
-	      	</figure>
-	        <div class="wrapper brand-description"><?= category_description(); ?></div>
-	    </div>
-	<p class="wrapper"><em>There are no upcoming samples sales right now</em></p>
-	</section>
-	<?php endif; ?>
+	<?php endwhile; ?>
 	<?php get_template_part( 'parts/_sidebar' ); ?>
 </section>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

@@ -187,7 +187,7 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 	figure { width: 33.333333333%;
 		img { display: block; border: .0625em solid $lightgrey; padding: .125em; @include box-sizing(border-box); background: $offwhite; }
 	}
-	header, div { width: 33.333333333%; }
+	header, div { width: 66.666666666%; }
 	header {
 		h3 { margin: 0 0 .75em; }
 	}

@@ -12,16 +12,6 @@
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 <section role="main" class="container">
 	<section id="content" class="cf">
-		<?php if ( have_posts() ) while ( have_posts() ) : the_post();
-			$imageID = get_post_thumbnail_id($post->ID);
-			$image = wp_get_attachment_image_src($imageID, 'large');
-			$sample_sale_name = get_post_meta($post->ID, 'sample_sale_name', true);
-			$sample_sale_address = get_post_meta($post->ID, 'sample_sale_address', true);
-			$sample_sale_map = get_post_meta($post->ID, 'sample_sale_map', true);
-			$sample_sale_phone = get_post_meta($post->ID, 'sample_sale_phone', true);
-			$sample_sale_transport = get_post_meta($post->ID, 'sample_sale_transport', true);
-			$sample_sale_when = get_post_meta($post->ID, 'sample_sale_when', true);
-			$sample_sale_description = get_post_meta($post->ID, 'sample_sale_description', true); ?>
 		<article class="post cf">
 		<?php if ( $image ) : ?>
 			<figure class="post-image wrapper">
@@ -33,6 +23,16 @@
 		        <h2><? single_cat_title(); ?></h2>
 		      </header>
 		        <div class="wrapper brand-description"><?= category_description(); ?></div>
+		<?php if ( have_posts() ) while ( have_posts() ) : the_post();
+			$imageID = get_post_thumbnail_id($post->ID);
+			$image = wp_get_attachment_image_src($imageID, 'large');
+			$sample_sale_name = get_post_meta($post->ID, 'sample_sale_name', true);
+			$sample_sale_address = get_post_meta($post->ID, 'sample_sale_address', true);
+			$sample_sale_map = get_post_meta($post->ID, 'sample_sale_map', true);
+			$sample_sale_phone = get_post_meta($post->ID, 'sample_sale_phone', true);
+			$sample_sale_transport = get_post_meta($post->ID, 'sample_sale_transport', true);
+			$sample_sale_when = get_post_meta($post->ID, 'sample_sale_when', true);
+			$sample_sale_description = get_post_meta($post->ID, 'sample_sale_description', true); ?>
 			<div class="shop-address cf">
 				<span class="partition wrapper">
 					<header class="section_header sidebar_header">
@@ -65,12 +65,12 @@
 			</div>
 
 			<?php include(locate_template('parts/_sharing.php')); ?>
-		</article>
 		<?php include(locate_template('parts/_post-prev-next.php')); ?>
 		<?php include(locate_template('parts/_related-posts.php')); ?>
-	</section>
-		    </div>
 	<?php endwhile; ?>
+		</article>
+		    </div>
+	</section>
 	<?php get_template_part( 'parts/_sidebar' ); ?>
 </section>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

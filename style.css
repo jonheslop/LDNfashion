@@ -70,16 +70,6 @@ figure {
   .cf:after {
     clear: both; }
 
-header[role="banner"] .logo_wrap {
-  width: 37.5%;
-  margin: 0 31.25%; }
-  @media screen and (min-width: 30em) {
-    header[role="banner"] .logo_wrap {
-      width: 20%;
-      margin: 0; } }
-  header[role="banner"] .logo_wrap h1 {
-    margin: .375em 0; }
-
 #logo {
   display: block;
   text-indent: -9999px;
@@ -91,74 +81,98 @@ header[role="banner"] .logo_wrap {
   padding-bottom: 22.3333333%;
   background-color: transparent !important; }
 
+.menuToggle {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5em;
+  height: 1.5em;
+  text-indent: -9999px;
+  margin: .5em 1em;
+  padding: .25em;
+  background-color: transparent !important; }
+  .menuToggle span {
+    display: block;
+    background-image: url(menu-burger.png);
+    background-repeat: no-repeat;
+    background-size: 100%; }
+  .menuToggle:hover {
+    opacity: .8; }
+  @media screen and (min-width: 30em) {
+    .menuToggle {
+      margin: 1em; } }
+  @media screen and (min-width: 61.5em) {
+    .menuToggle {
+      display: none; } }
+
 nav[role="navigation"] {
-  padding: .25em 0 .25em;
+  padding: .25em 0 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #212527; }
   nav[role="navigation"] .logo_wrap {
-    width: 50%;
-    margin: 0 25%;
-    padding-top: .4125em; }
-    @media screen and (min-width: 40em) {
-      nav[role="navigation"] .logo_wrap {
-        width: 25%;
-        padding-top: 0;
-        margin: 0; } }
+    width: 33.333333333%;
+    margin: 0 33.333333333%;
+    padding: .4125em 0 .5em;
+    float: left; }
     @media screen and (min-width: 45em) {
       nav[role="navigation"] .logo_wrap {
-        width: 12.5%;
+        width: 20%;
+        margin: 0 40%;
         padding-top: .5em; } }
     @media screen and (min-width: 55.5em) {
       nav[role="navigation"] .logo_wrap {
         padding-top: .333em; } }
-    @media screen and (min-width: 55.5em) {
+    @media screen and (min-width: 61.5em) {
       nav[role="navigation"] .logo_wrap {
-        padding-top: .25em; } }
-    @media screen and (min-width: 75em) {
-      nav[role="navigation"] .logo_wrap {
-        padding-top: 0; } }
+        width: 12.5%;
+        padding: .25em .75em .375em;
+        margin: 0; } }
     nav[role="navigation"] .logo_wrap h1 {
-      margin: .25em 0 0; }
+      margin: 0; }
   nav[role="navigation"] ul {
     list-style: none;
     padding: 0;
     margin: 0;
     float: left;
     width: 100%;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    -moz-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-box-pack: justify;
-    -moz-box-pack: justify;
-    box-pack: justify;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    -ms-justify-content: space-between;
-    -o-justify-content: space-between;
-    justify-content: space-between;
-    -ms-flex-pack: justify; }
-    @media screen and (min-width: 40em) {
+    display: none; }
+    @media screen and (min-width: 61.5em) {
       nav[role="navigation"] ul {
-        width: 75%; } }
-    @media screen and (min-width: 45em) {
-      nav[role="navigation"] ul {
-        width: 81.25%;
-        margin: 0 6.25% 0 0; } }
+        float: left;
+        width: 87.5%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        -moz-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        box-pack: justify;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+        -ms-flex-pack: justify; } }
     @media screen and (min-width: 64em) {
       nav[role="navigation"] ul {
         width: 75%;
         margin: 0 6.25%; } }
-    nav[role="navigation"] ul li:last-child {
-      display: block !important; }
+    @media screen and (max-width: 61.5em) {
+      nav[role="navigation"] ul li {
+        width: 100%;
+        float: left;
+        text-align: center; }
+        nav[role="navigation"] ul li:last-child a {
+          border-bottom: 0.25em solid #5a6163; } }
     nav[role="navigation"] ul li a {
       display: block;
       font-family: "freight-sans-pro",helvetica,arial,sans-serif;
@@ -170,8 +184,13 @@ nav[role="navigation"] {
       background-color: #212527;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      float: left; }
+      box-sizing: border-box; }
+      @media screen and (max-width: 61.5em) {
+        nav[role="navigation"] ul li a {
+          border-top: 0.25em solid #5a6163; } }
+      @media screen and (min-width: 61.5em) {
+        nav[role="navigation"] ul li a {
+          float: left; } }
       @media screen and (min-width: 55.5em) {
         nav[role="navigation"] ul li a {
           letter-spacing: .125em; } }
@@ -180,27 +199,10 @@ nav[role="navigation"] {
       nav[role="navigation"] ul li a:hover {
         color: #fff;
         border-bottom-color: #5a6163;
-        /* border-width: 0 0 .0625em 0; @include horizontal-border; */
         background-color: #5a6163; }
-    @media screen and (max-width: 30em) {
-      nav[role="navigation"] ul li:nth-child(n+3) {
-        display: none; } }
-    @media screen and (max-width: 40em) {
-      nav[role="navigation"] ul li:nth-child(n+4) {
-        display: none; } }
-    @media screen and (max-width: 45em) {
-      nav[role="navigation"] ul li:nth-child(n+5) {
-        display: none; } }
-    @media screen and (max-width: 61.5em) {
-      nav[role="navigation"] ul li:nth-child(n+6) {
-        display: none; } }
-    @media screen and (min-width: 61.5em) {
-      nav[role="navigation"] ul li:last-child {
-        display: none !important; } }
     nav[role="navigation"] ul li.active a:link, nav[role="navigation"] ul li.active a:visited {
       color: #000;
       border-bottom-color: #dbe3e6;
-      /* border-width: 0 0 .0625em 0; @include horizontal-border; */
       background-color: white; }
 
 .fixed nav[role="navigation"] {

@@ -1,4 +1,5 @@
 <nav role="navigation" class="cf">
+	<a href="#" class="menuToggle"><span>Menu</span></a>
 	<div class="wrapper logo_wrap">
 		<h1><a id="logo" href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 	</div>

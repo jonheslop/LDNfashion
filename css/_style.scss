@@ -1,42 +1,43 @@
-// Header
-header[role="banner"] {
-	.logo_wrap { width: 37.5%; margin: 0 31.25%;
-		@include breakpoint($mobile) { width: 20%; margin: 0; }
-		h1 { margin: .375em 0; }
-	}
-}
 #logo { display: block; text-indent: -9999px; background-image: url(LDNf-logo.png); background-repeat: no-repeat; background-size: 100%; width: 100%; height: 0; padding-bottom: 22.3333333%; background-color: transparent!important; }
 
 // Menu  
-nav[role="navigation"] { padding: .25em 0 .25em; @include box-sizing(border-box); background-color: $black;
-	.logo_wrap { width: 50%; margin: 0 25%; padding-top: .4125em;
-		@include breakpoint($moblet) { width: 25%; padding-top: 0; margin: 0; }
-		@include breakpoint($tablet) { width: 12.5%; padding-top: .5em; }
+.menuToggle { display: block; position: absolute; top: 0; left: 0; width: 1.5em; height: 1.5em; text-indent: -9999px; margin: .5em 1em; padding: .25em;  background-color: transparent!important;
+	span { display: block; background-image: url(menu-burger.png); background-repeat: no-repeat; background-size: 100%; }
+	&:hover { opacity: .8; }
+	@include breakpoint($mobile) { margin: 1em; }
+	@include breakpoint($tablet-landscape) { display: none; }
+}
+
+nav[role="navigation"] { padding: .25em 0 0; @include box-sizing(border-box); background-color: $black;
+	.logo_wrap { width: 33.333333333%; margin: 0 33.333333333%; padding: .4125em 0 .5em; float: left;
+		// @include breakpoint($moblet) { width: 50%; margin: 0 25%; }
+		@include breakpoint($tablet) { width: 20%; margin: 0 40%; padding-top: .5em; }
 		@include breakpoint($tablet-mid) { padding-top: .333em; }
-		@include breakpoint($tablet-mid) { padding-top: .25em; }
-		@include breakpoint($laptop) { padding-top: 0; }
-		h1 { margin: .25em 0 0; }
+		@include breakpoint($tablet-landscape) { width: 12.5%; padding: .25em .75em .375em; margin: 0; }
+		// @include breakpoint($laptop) { padding-top: 0; }
+		h1 { margin: 0; }
 	}
-	ul { list-style: none; padding: 0; margin: 0; float: left; width: 100%; @include display(flex); @include flex-flow(row wrap); @include justify-content(space-between);
-		@include breakpoint($moblet) { width: 75%; }
-		// @include breakpoint($tablet) { width: 87.50%; }
-		@include breakpoint($tablet) { width: 81.25%; margin: 0 6.25% 0 0; }
+	ul { list-style: none; padding: 0; margin: 0; float: left; width: 100%; display: none;
+		@include breakpoint($tablet-landscape) { float: left; width: 87.5%; @include display(flex); @include flex-flow(row wrap); @include justify-content(space-between); }
 		@include breakpoint($ipad) { width: 75%; margin: 0 6.25%; }
+		// @include breakpoint($tablet) { width: 87.50%; }
+		// @include breakpoint($tablet) { width: 81.25%; margin: 0 6.25% 0 0; }
+		// @include breakpoint($ipad) { width: 75%;  }
 		li {
-			// &:first-child { padding-left: .375em; }
-			&:last-child { display: block!important; }
-			a { display: block; @include Freight; font-size: .75em; border-bottom: .25em solid $black; text-transform: uppercase; padding: .75rem .75rem .5em!important; line-height: 1.5; background-color: $black; @include box-sizing(border-box); float: left;
+			@include breakpoint-max($tablet-landscape) { width: 100%; float: left; text-align: center;
+				&:last-child {
+					a { border-bottom: .25em solid $darkgrey; }
+				}
+			}
+			a { display: block; @include Freight; font-size: .75em; border-bottom: .25em solid $black; text-transform: uppercase; padding: .75rem .75rem .5em!important; line-height: 1.5; background-color: $black; @include box-sizing(border-box);
+				@include breakpoint-max($tablet-landscape) { border-top: .25em solid $darkgrey; }
+				@include breakpoint($tablet-landscape) { float: left; }
 				@include breakpoint($tablet-mid) { letter-spacing: .125em; }
 				&:link, &:visited { color: $white; }
-				&:hover { color: #fff; border-bottom-color: $darkgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */ background-color: $darkgrey; }
+				&:hover { color: #fff; border-bottom-color: $darkgrey; background-color: $darkgrey; }
 			}
-			@include breakpoint-max($mobile) { &:nth-child(n+3) { display: none; } }
-			@include breakpoint-max($moblet) { &:nth-child(n+4) { display: none; } }
-			@include breakpoint-max($tablet) { &:nth-child(n+5) { display: none; } }
-			@include breakpoint-max($tablet-landscape) { &:nth-child(n+6) { display: none; } }
-			@include breakpoint($tablet-landscape) { &:last-child { display: none!important; } }
 			&.active a{
-				&:link, &:visited { color: #000; border-bottom-color: $lightgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */ background-color: $white; } 
+				&:link, &:visited { color: #000; border-bottom-color: $lightgrey; background-color: $white; } 
 			}
 		}
 	}

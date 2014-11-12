@@ -1,5 +1,10 @@
 jQuery(document).ready(function($) {
 
+	$('.menuToggle').click(function(e){
+		e.preventDefault();
+		$(this).parent().find('ul').slideToggle();
+	});
+
 	$('.voucher-code-button').click(function(e){
 		vouchercode = $(this).data('voucher-code');
 		$(this).replaceWith('<input class="voucher-code-button" value="' + vouchercode + '" disabled="disabled" />');

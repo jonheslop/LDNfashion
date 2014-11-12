@@ -57,7 +57,7 @@
 							<p><strong>When:</strong> <?= $sample_sale_when; ?></p>
 							<? endif; ?>
 							<? if ( $sample_sale_address ) : ?>
-							<p><strong>Address:</strong> <?= $sample_sale_name; ?>,<br/><?= str_replace(',', ',<br/>', $sample_sale_address); ?>,<br/><a href="<?= $sample_sale_map; ?>">(map)</a></p>
+							<p><strong>Address:</strong> <?= $sample_sale_name; ?>,<br/><?= str_replace(',', ',<br/>', $sample_sale_address); ?>,<? if ( $sample_sale_map ) : ?><br/><a href="<?= $sample_sale_map; ?>">(map)</a><? endif; ?></p>
 							<? endif; ?>
 							<? if ( $sample_sale_phone ) : ?>
 							<p><strong>Telephone:</strong> <?= $sample_sale_phone; ?></p>

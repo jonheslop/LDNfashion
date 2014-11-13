@@ -71,7 +71,7 @@
 				<? endif; ?>
 			</div>
 				<? else : ?>
-				<p class="wrapper" style="font-size: 1.25em; font-style: italic; padding-left:1.5em;">Sorry, no sample sales right now&hellip;</p>
+				<p class="wrapper" style="font-size: 1.25em; font-style: italic; padding-left:1.25em;">Sorry, no sample sales right now&hellip;</p>
 					<? endif; ?>
 			<?php include(locate_template('parts/_sharing.php')); ?>
 		<?php include(locate_template('parts/_post-prev-next.php')); ?>

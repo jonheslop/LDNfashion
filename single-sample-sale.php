@@ -37,15 +37,14 @@
 				</div>
 			</div>
 			<div class="shop-address cf">
+			<? if ( $sample_sale_when ) : ?>
 				<span class="partition wrapper">
 					<header class="section_header sidebar_header">
 						<h4>Sample Sale Details</h4>
 					</header>
 				</span>
 				<div class="wrapper">
-					<? if ( $sample_sale_when ) : ?>
 					<p><strong>When:</strong> <?= $sample_sale_when; ?></p>
-					<? endif; ?>
 					<? if ( $sample_sale_address ) : ?>
 					<p><strong>Address:</strong> <?= $sample_sale_name; ?>,<br/><?= str_replace(',', ',<br/>', $sample_sale_address); ?>,<? if ( $sample_sale_map ) : ?><br/><a href="<?= $sample_sale_map; ?>">(map)</a><? endif; ?></p>
 					<? endif; ?>
@@ -65,6 +64,9 @@
 &amp;markers=size:mid%7Ccolor:red%7C<?= $sample_sale_address; ?>&amp;sensor=false&amp;scale=2"></a>
 					</figure>
 				</div>
+			<? else : ?>
+				<p>Sorry, no sample sales right now&hellip;</p>
+			<? endif; ?>
 			</div>
 			<?php include(locate_template('parts/_sharing.php')); ?>
 			<section class="post-comments wrapper">

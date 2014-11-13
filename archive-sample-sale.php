@@ -68,6 +68,8 @@
 &amp;markers=size:mid%7Ccolor:red%7C<?= $sample_sale_address; ?>&amp;sensor=false&amp;scale=2"></a>
 					</figure>
 				</div>
+			<? else : ?>
+				<p class="wrapper" style="font-size: 1.25em; font-style: italic;">Sorry, no sample sales right now&hellip;</p>
 				<? endif; ?>
 			</div>
 					<? endif; ?>

@@ -39,7 +39,7 @@
 			$sample_sale_transport = get_post_meta($post->ID, 'sample_sale_transport', true);
 			$sample_sale_when = get_post_meta($post->ID, 'sample_sale_when', true);
 			$sample_sale_description = get_post_meta($post->ID, 'sample_sale_description', true); ?>
-					<? if ( $sample_sale_when ) : ?>
+			<? if ( $sample_sale_when ) : ?>
 			<div class="shop-address cf">
 				<span class="partition wrapper">
 					<header class="section_header sidebar_header">
@@ -68,10 +68,10 @@
 &amp;markers=size:mid%7Ccolor:red%7C<?= $sample_sale_address; ?>&amp;sensor=false&amp;scale=2"></a>
 					</figure>
 				</div>
-			<? else : ?>
-				<p class="wrapper" style="font-size: 1.25em; font-style: italic;">Sorry, no sample sales right now&hellip;</p>
 				<? endif; ?>
 			</div>
+				<? else : ?>
+				<p class="wrapper" style="font-size: 1.25em; font-style: italic;">Sorry, no sample sales right now&hellip;</p>
 					<? endif; ?>
 			<?php include(locate_template('parts/_sharing.php')); ?>
 		<?php include(locate_template('parts/_post-prev-next.php')); ?>

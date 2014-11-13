@@ -13,11 +13,16 @@
 <section role="main" class="container">
 	<section id="content" class="cf">
 		<article class="post cf">
-		<?php if ( $image ) : ?>
+		<?php if ( have_posts() ) while ( have_posts() ) : the_post();
+			$imageID = get_post_thumbnail_id($post->ID);
+			$image = wp_get_attachment_image_src($imageID, 'large');
+			 if ( $image ) : ?>
 			<figure class="post-image wrapper">
 				<img src="<?php echo $image[0]; ?>">
 			</figure>
-		<?php endif; ?>
+		<?php endif;
+		endwhile;
+		?>
 		    <div class="wrapper partition page_headline">
 		      <header class="post-header wrapper" style="width: 100%;">
 		        <h2><? single_cat_title(); ?></h2>

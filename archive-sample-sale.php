@@ -25,7 +25,7 @@
 		?>
 		    <div class="wrapper partition page_headline">
 		      <header class="post-header wrapper" style="width: 100%;">
-		        <h2><? single_cat_title(); ?> Sample Sales</h2>
+		        <h2><? single_cat_title(); ?> Sample Sale</h2>
 		      </header>
 		        <div class="wrapper brand-description"><?= category_description(); ?></div>
 		    </div>

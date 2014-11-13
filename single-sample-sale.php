@@ -65,7 +65,7 @@
 					</figure>
 				</div>
 			<? else : ?>
-				<p>Sorry, no sample sales right now&hellip;</p>
+				<p class="wrapper">Sorry, no sample sales right now&hellip;</p>
 			<? endif; ?>
 			</div>
 			<?php include(locate_template('parts/_sharing.php')); ?>

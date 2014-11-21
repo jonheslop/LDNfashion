@@ -52,6 +52,7 @@
       }
       endif;
       endforeach; ?>
+  </ul>
   </section>
   <?php get_template_part( 'parts/_sidebar' ); ?>
 </section>

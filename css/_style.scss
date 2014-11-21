@@ -274,7 +274,7 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 	@include breakpoint($moblet) { @include columns(2); @include column-gap(1.5em); }
 	@include breakpoint($tablet-mid) { @include columns(3); }
 	li { -webkit-column-break-inside: avoid; break-inside: avoid; margin-bottom: 1.5em;
-		&:target { @include animation(flash 1s 1 ease-out); padding-top: 1.5em; }
+		&:target { @include animation(flash 1s 1 ease-out); }
 		p+p { margin-top: 0; }
 	}
 }
@@ -359,3 +359,5 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 		&:hover { @include background-gradient; color: $white; }
 	}
 }
+
+pre { @include columns(3); @include column-gap(3em); @include column-rule(1px solid $grey); font-size: .875em!important; line-height: 1.5; background-color: $lightgrey; padding: 1.5em; }

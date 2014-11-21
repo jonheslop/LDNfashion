@@ -833,8 +833,7 @@ input.voucher-code-button {
     .brands-alpha li:target {
       -webkit-animation: flash 1s 1 ease-out;
       -moz-animation: flash 1s 1 ease-out;
-      animation: flash 1s 1 ease-out;
-      padding-top: 1.5em; }
+      animation: flash 1s 1 ease-out; }
     .brands-alpha li p + p {
       margin-top: 0; }
 
@@ -1045,6 +1044,21 @@ input.voucher-code-button {
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end',GradientType=1 );
       /* IE6-9 fallback on horizontal gradient */
       color: white; }
+
+pre {
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 3;
+  -webkit-column-gap: 3em;
+  -moz-column-gap: 3em;
+  column-gap: 3em;
+  -webkit-column-rule: 1px solid #8a9599;
+  -moz-column-rule: 1px solid #8a9599;
+  column-rule: 1px solid #8a9599;
+  font-size: 0.875em !important;
+  line-height: 1.5;
+  background-color: #dbe3e6;
+  padding: 1.5em; }
 
 /*! http://responsiveslides.com v1.54 by @viljamis */
 .rslides {

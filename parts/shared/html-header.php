@@ -33,6 +33,8 @@
 			<script type='text/javascript'>
 			googletag.cmd.push(function() {
 			googletag.defineSlot('/12244649/Header_Banner_Billboard', [970, 250], 'div-gpt-ad-1').addService(googletag.pubads());
+			googletag.defineSlot('/12244649/ldnfashion_super_mpu', [300, 600], 'div-gpt-ad-1417193528892-0').addService(googletag.pubads());
+			googletag.defineSlot('/12244649/Header_Banner_Billboard', [970, 250], 'div-gpt-ad-1417193501220-0').addService(googletag.pubads());
 			googletag.pubads().enableSingleRequest();
 			googletag.pubads().collapseEmptyDivs(true);
 			googletag.pubads().enableAsyncRendering();

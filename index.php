@@ -27,11 +27,16 @@
 			<ul class="slides">
 			<?php while ( $featured->have_posts() ) : $featured->the_post();
 				$imageID = get_post_thumbnail_id($post->ID);
-				$image = wp_get_attachment_image_src($imageID, 'gallery-crop-large'); ?>
+				$imageLarge = wp_get_attachment_image_src($imageID, 'gallery-crop-large');
+				$imageMedium = wp_get_attachment_image_src($imageID, 'gallery-crop-medium'); ?>
 				<li class="slide wrapper">
 					<a href="<?php the_permalink(); ?>">
 						<figure>
-							<img src="<?php echo $image[0]; ?>">
+							<? if ( $imageLarge[2] == 1024 ) : ?>
+							<img src="<?php echo $imageLarge[0]; ?>">
+							<? else : ?>
+							<img src="<?php echo $imageMedium[0]; ?>">
+							<? endif; ?>
 							<figcaption>
 								<h3><?php the_title(); ?></h3>
 							</figcaption>

@@ -29,6 +29,7 @@
 	if ( function_exists( 'add_image_size' ) ) { 
 		add_image_size('voucher-code-thumb', 300, 300, true);
 		add_image_size('gallery-crop', 550, 310, true);
+		add_image_size('gallery-crop-medium', 800, 450, true);
 		add_image_size('gallery-crop-large', 1024, 576, true);
 		add_image_size('index-thumb', 256, 192, true);
 		add_image_size('streetstyle-thumb', 128, 128, true);

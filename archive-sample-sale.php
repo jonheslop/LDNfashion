@@ -25,11 +25,11 @@
 		  $brand = wp_get_post_terms($post->ID,'brand');
       if ( ! empty($brand) ) :
 		  $brandname = $brand[0]->name;
-          $initial = strtoupper(substr($brandname, 0,1));
-          if($initial!=$letter) : ?>
-            <a href="#<?= $initial; ?>"><?= $initial; ?></a>
-          <? $letter=$initial; 
-      endif;
+        $initial = strtoupper(substr($brandname, 0,1));
+        if($initial!=$letter) : ?>
+          <a href="#<?= $initial; ?>"><?= $initial; ?></a>
+        <? $letter=$initial; 
+        endif;
       endif;
 		endwhile; ?>
         </p>

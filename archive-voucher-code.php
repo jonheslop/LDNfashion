@@ -39,7 +39,7 @@
 						$voucher_code_start_date = get_post_meta($post->ID, 'voucher_code_start_date', true);
 						$voucher_code_terms = get_post_meta($post->ID, 'voucher_code_terms', true);
 						$voucher_code_url = get_post_meta($post->ID, 'voucher_code_url', true); ?>
-					<?// if ( time() > strtotime($voucher_code_start_date) && time() < strtotime($voucher_code_end_date) ) : ?>
+					<? if ( time() > strtotime($voucher_code_start_date) && time() < strtotime($voucher_code_end_date) ) : ?>
 					<li class="list-voucher-code cf">
 						<? if ( $image ) : ?>
 						<figure class="wrapper">
@@ -59,7 +59,7 @@
 						</footer>
 						<? endif; ?>
 					</li>
-					<? // endif; ?>
+					<? endif; ?>
 				<?php endwhile; ?>
 			</ul>
 		</section>

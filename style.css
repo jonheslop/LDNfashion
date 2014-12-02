@@ -529,6 +529,9 @@ footer[role="content-info"] {
     text-transform: uppercase;
     letter-spacing: .125em;
     font-weight: bold; }
+    @media screen and (min-width: 45em) {
+      .list-voucher-code div.wrapper {
+        width: 66.666666666%; } }
   .list-voucher-code footer {
     margin-top: .75em; }
     .list-voucher-code footer p {

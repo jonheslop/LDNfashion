@@ -169,7 +169,9 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 	header, footer { width: 66.666666666%; }
 	h3 { margin: 0; }
 	.meta { color: $grey; font-size: .875em; line-height: 1.5; }
-	div.wrapper { margin-top: .75em; width: 100%; text-align: center; @include Freight; text-transform: uppercase; letter-spacing: .125em; font-weight: bold; }
+	div.wrapper { margin-top: .75em; width: 100%; text-align: center; @include Freight; text-transform: uppercase; letter-spacing: .125em; font-weight: bold;
+		@include breakpoint($tablet) { width: 66.666666666%; }
+	}
 	footer { margin-top: .75em;
 		p { margin: 0; }
 	}

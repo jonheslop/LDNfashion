@@ -8,6 +8,8 @@
 	@include breakpoint($tablet-landscape) { display: none; }
 }
 
+.logged-in nav[role="navigation"] { top: 32px; }
+
 nav[role="navigation"] { padding: .25em 0 0; @include box-sizing(border-box); background-color: $black; position: fixed; top: 0; left: 0; right: 0; z-index: 999999;
 	.logo_wrap { width: 33.333333333%; margin: 0 33.333333333%; padding: .4125em 0 .5em; float: left;
 		@include breakpoint($tablet) { width: 20%; margin: 0 40%; padding-top: .5em; }
@@ -167,7 +169,7 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 	header, footer { width: 66.666666666%; }
 	h3 { margin: 0; }
 	.meta { color: $grey; font-size: .875em; line-height: 1.5; }
-	div.wrapper { margin-top: .75em; width: 66.666666666%; text-align: center; @include Freight; text-transform: uppercase; letter-spacing: .125em; font-weight: bold; }
+	div.wrapper { margin-top: .75em; width: 100%; text-align: center; @include Freight; text-transform: uppercase; letter-spacing: .125em; font-weight: bold; }
 	footer { margin-top: .75em;
 		p { margin: 0; }
 	}

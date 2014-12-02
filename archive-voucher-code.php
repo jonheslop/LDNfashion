@@ -45,6 +45,10 @@
 						<figure class="wrapper">
 							<img src="<?= $image[0]; ?>">
 						</figure>
+						<? elseif ( $brand_image_url ) : ?>
+						<figure class="wrapper">
+							<img src="<?= $brand_image_url; ?>">
+						</figure>
 						<? endif; ?>
 						<header class="wrapper">
 							<h3><? the_content(); ?></h3>

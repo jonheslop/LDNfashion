@@ -35,6 +35,7 @@
     <ul class="cf wrapper brands-alpha">
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post();
 		$brand = wp_get_post_terms($post->ID,'brand');
+    if ( ! empty($brand) ) :
 		// Starkers_Utilities::print_a($brand);
         $brandname = $brand[0]->name;
         $initial = strtoupper(substr($brandname, 0,1)); ?>
@@ -47,6 +48,7 @@
         <? if($initial!=$letter) {
         echo '</li>';
       } ?>
+  <?php endif; ?>
 	<?php endwhile; ?>
 	</ul>
 	</section>

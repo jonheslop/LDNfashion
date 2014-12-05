@@ -30,6 +30,7 @@
 			})();
 			</script>
 
+			<meta name="google-site-verification" content="xfCpaGH81BD3xk70uTYuqGBqIs_NHuyj7m99GdG2fUA" />
 			<script type='text/javascript'>
 			googletag.cmd.push(function() {
 			googletag.defineSlot('/12244649/Header_Banner_Billboard', [970, 250], 'div-gpt-ad-1').addService(googletag.pubads());

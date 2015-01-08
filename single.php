@@ -16,6 +16,7 @@
 			$imageID = get_post_thumbnail_id($post->ID);
 			$image = wp_get_attachment_image_src($imageID, 'large');
 			$video = get_post_meta($post->ID, 'video_embed', true);
+			$customvideo = get_post_meta($post->ID, 'custom_embed', true);
 			$gallery = get_post_meta($post->ID, 'gallery', true); ?>
 		<article class="post cf">
 		<? if ( $gallery ) : ?>
@@ -72,6 +73,10 @@
 		<? elseif ($video) : ?>
 			<figure class="post-image video wrapper">
 				<iframe width="560" height="315" src="//www.youtube.com/embed/<?= $video;?>" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
+			</figure>
+		<? elseif ($customvideo) : ?>
+			<figure class="post-image video wrapper">
+				<?= $customvideo; ?>
 			</figure>
 		<?php elseif ( $image ) : ?>
 			<figure class="post-image wrapper">

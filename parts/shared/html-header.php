@@ -42,5 +42,9 @@
 			googletag.enableServices();
 			});
 			</script>
+			<? if (is_tax()) : ?>
+				<meta name="robots" content="noindex">
+				<meta name="googlebot" content="noindex">
+			<? endif; ?>
 	</head>
 	<body <?php body_class(); ?>>

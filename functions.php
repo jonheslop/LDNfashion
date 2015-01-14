@@ -56,10 +56,10 @@
 	    global $wp_rewrite;
 	 
 		$new_rules = array(
-			'brands/(.+?)/?$' => 'index.php?brand=' . $wp_rewrite->preg_index(1),
+			// 'brands/(.+?)/?$' => 'index.php?brand=' . $wp_rewrite->preg_index(1),
 			'vouchercodes/(.+?)/?$' => 'index.php?post_type=voucher-code&brand=' . $wp_rewrite->preg_index(1),
-			'samplesales/(.+?)/?$' => 'index.php?post_type=sample-sale&brand=' . $wp_rewrite->preg_index(1),
-			'shop/(.+?)/?$' => 'index.php?post_type=shop&brand=' . $wp_rewrite->preg_index(1),
+			// 'samplesales/(.+?)/?$' => 'index.php?post_type=sample-sale&brand=' . $wp_rewrite->preg_index(1),
+			// 'shop/(.+?)/?$' => 'index.php?post_type=shop&brand=' . $wp_rewrite->preg_index(1),
 		);
 		$wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
 	}

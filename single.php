@@ -17,6 +17,7 @@
 			$image = wp_get_attachment_image_src($imageID, 'large');
 			$video = get_post_meta($post->ID, 'video_embed', true);
 			$customvideo = get_post_meta($post->ID, 'custom_embed', true);
+			$hideFeaturedImage = get_post_meta($post->ID, 'hide_featured_image', true);
 			$gallery = get_post_meta($post->ID, 'gallery', true); ?>
 		<article class="post cf">
 		<? if ( $gallery ) : ?>
@@ -78,7 +79,7 @@
 			<figure class="post-image video wrapper">
 				<?= $customvideo; ?>
 			</figure>
-		<?php elseif ( $image ) : ?>
+		<?php elseif ( $image && !$hideFeaturedImage ) : ?>
 			<figure class="post-image wrapper">
 				<img src="<?php echo $image[0]; ?>">
 			</figure>

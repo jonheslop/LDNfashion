@@ -17,14 +17,12 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/responsiveslides.min.js"></script>
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jQuery.equalHeights.js"></script>
-	<?php if (is_single()) : ?>
-		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.fitvids.js"></script>
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$('.video').fitVids();
-			});
-		</script>
-	<?php endif; ?>
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.fitvids.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$('.video, .widget_text').fitVids();
+		});
+	</script>
 	<?php wp_footer(); ?>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

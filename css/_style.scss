@@ -309,7 +309,9 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 }
 
 @include breakpoint($tablet-mid) {
-	.brand-description { float: left; width: 66.666666667%; font-size: 1.125em; }
+	.brand-description { float: left; width: 100%; font-size: 1.125em;
+		&.with_image { width: 66.666666667%; }
+	}
 }
 
 .post-type-archive-sample-sale .brand-description { width: 100%; }

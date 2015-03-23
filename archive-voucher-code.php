@@ -71,16 +71,18 @@
 	<?php else: ?>
 	<section id="content" class="cf">
 	    <div class="wrapper partition page_headline">
-	      <header class="post-header">
+	      <header class="post-header wrapper">
 				<h2><?= get_term_by('slug', get_query_var('brand'), 'brand')->name; ?> voucher codes</h2>
 	      </header>
-	      	<figure class="wrapper brand-image">
-	      		<? $brand_image_url = apply_filters( 'taxonomy-images-queried-term-image-url', '', array( 'image_size' => 'medium' ) );?>
-    			<? if ( $brand_image_url ) : ?>
-	    			<img src="<?= $brand_image_url; ?>">
-	    		<? endif; ?>
-	      	</figure>
+			<? $brand_image_url = apply_filters( 'taxonomy-images-queried-term-image-url', '', array( 'image_size' => 'medium' ) );?>
+			<? if ( $brand_image_url ) : ?>
+			<figure class="wrapper brand-image">
+				<img src="<?= $brand_image_url; ?>">
+			</figure>
+	        <div class="wrapper brand-description with_image"><?= category_description(); ?></div>
+			<? else : ?>
 	        <div class="wrapper brand-description"><?= category_description(); ?></div>
+			<? endif; ?>
 	    </div>
 	<p class="wrapper"><em>There are no voucher codes for this brand right now</em></p>
 	</section>

@@ -203,7 +203,7 @@ nav[role="navigation"] {
         nav[role="navigation"] ul li a {
           letter-spacing: .125em; } }
       nav[role="navigation"] ul li a:link, nav[role="navigation"] ul li a:visited {
-        color: white; }
+        color: #fff; }
       nav[role="navigation"] ul li a:hover {
         color: #fff;
         border-bottom-color: #5a6163;
@@ -211,15 +211,15 @@ nav[role="navigation"] {
     nav[role="navigation"] ul li.active a:link, nav[role="navigation"] ul li.active a:visited {
       color: #000;
       border-bottom-color: #dbe3e6;
-      background-color: white; }
+      background-color: #fff; }
 
 footer[role="content-info"] {
   margin-top: 3em;
   padding-bottom: 3em;
   background-color: #212527;
-  color: white !important; }
+  color: #fff !important; }
   footer[role="content-info"] a:link, footer[role="content-info"] a:visited {
-    color: white;
+    color: #fff;
     background-color: #212527;
     -webkit-font-smoothing: antialiased; }
 
@@ -554,7 +554,7 @@ footer[role="content-info"] {
   /* IE10+ */
   background: linear, 45deg, #f6f8f9 0%, #dbe3e6 100%;
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
   border: 0.0625rem solid #dbe3e6;
   padding: 1.5rem .75rem;
@@ -581,9 +581,9 @@ footer[role="content-info"] {
     /* IE10+ */
     background: linear, 45deg, #2eb1e5 0%, #8a9599 100%;
     /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end',GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
     /* IE6-9 fallback on horizontal gradient */
-    color: white; }
+    color: #fff; }
 
 input.voucher-code-button {
   -webkit-appearance: none;
@@ -606,9 +606,9 @@ input.voucher-code-button {
   /* IE10+ */
   background: linear, 45deg, #2eb1e5 0%, #8a9599 100%;
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
-  color: white;
+  color: #fff;
   font-size: 1.5em; }
 
 .post-type-archive-voucher-code #content {
@@ -732,7 +732,7 @@ input.voucher-code-button {
       font-style: italic;
       font-weight: normal;
       font-family: "freight-display-pro",times,serif;
-      color: white;
+      color: #fff;
       -webkit-font-smoothing: antialiased; }
       @media screen and (min-width: 40em) {
         .slide figcaption h3 {
@@ -758,7 +758,7 @@ input.voucher-code-button {
   .rslides_nav.next {
     right: 0; }
   .rslides_nav:link, .rslides_nav:visited {
-    color: white; }
+    color: #fff; }
 
 .partition {
   width: 100%; }
@@ -778,44 +778,32 @@ input.voucher-code-button {
 
 @-webkit-keyframes flash {
   0% {
-    background-color: white; }
-
+    background-color: #fff; }
   33% {
     background-color: #f9fac7; }
-
   100% {
-    background-color: white; } }
-
+    background-color: #fff; } }
 @-moz-keyframes flash {
   0% {
-    background-color: white; }
-
+    background-color: #fff; }
   33% {
     background-color: #f9fac7; }
-
   100% {
-    background-color: white; } }
-
+    background-color: #fff; } }
 @-o-keyframes flash {
   0% {
-    background-color: white; }
-
+    background-color: #fff; }
   33% {
     background-color: #f9fac7; }
-
   100% {
-    background-color: white; } }
-
+    background-color: #fff; } }
 @keyframes flash {
   0% {
-    background-color: white; }
-
+    background-color: #fff; }
   33% {
     background-color: #f9fac7; }
-
   100% {
-    background-color: white; } }
-
+    background-color: #fff; } }
 .brands-alpha {
   width: 100%;
   list-style-type: none; }
@@ -848,7 +836,7 @@ input.voucher-code-button {
   margin: 0 -.125em; }
   .letter-list a:hover {
     background-color: #212527;
-    color: white; }
+    color: #fff; }
 
 .tax-brand .partition {
   width: 100%; }
@@ -882,8 +870,10 @@ input.voucher-code-button {
 @media screen and (min-width: 55.5em) {
   .brand-description {
     float: left;
-    width: 66.666666667%;
-    font-size: 1.125em; } }
+    width: 100%;
+    font-size: 1.125em; }
+    .brand-description.with_image {
+      width: 66.666666667%; } }
 .post-type-archive-sample-sale .brand-description {
   width: 100%; }
 
@@ -910,7 +900,7 @@ input.voucher-code-button {
   #gallery .arrow {
     padding: 0 .25em;
     position: absolute;
-    color: white;
+    color: #fff;
     top: 45%;
     font-size: 3em;
     opacity: .5;
@@ -1028,7 +1018,7 @@ input.voucher-code-button {
     /* IE10+ */
     background: linear, 45deg, #f6f8f9 0%, #dbe3e6 100%;
     /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end',GradientType=1 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
     /* IE6-9 fallback on horizontal gradient */
     padding-right: .5em;
     color: #8a9599; }
@@ -1047,9 +1037,9 @@ input.voucher-code-button {
       /* IE10+ */
       background: linear, 45deg, #2eb1e5 0%, #8a9599 100%;
       /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end',GradientType=1 );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
       /* IE6-9 fallback on horizontal gradient */
-      color: white; }
+      color: #fff; }
 
 pre {
   -webkit-columns: 3;
@@ -1094,3 +1084,5 @@ pre {
   float: left;
   width: 100%;
   border: 0; }
+
+/*# sourceMappingURL=style.css.map */

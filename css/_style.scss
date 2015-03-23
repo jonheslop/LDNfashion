@@ -165,6 +165,11 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 	&+.list-voucher-code { margin-top: .75em; border-top: .0625em solid $lightgrey; }
 	figure { width: 33.333333333%;
 		img { display: block; border: .0625em solid $lightgrey; padding: .125em; @include box-sizing(border-box); background: $offwhite; }
+		figcaption { width: 100%; background-color: $black; color: $lightgrey; text-transform: uppercase; letter-spacing: .25em; font-size: .75em; text-align: center; margin-top: .125em;
+			&.voucher-type-voucher { -webkit-font-smoothing: antialiased; }
+			&.voucher-type-exclusive { background-color: $cyan; }
+			&.voucher-type-offer { background-color: $yellow; color: $black; }
+		}
 	}
 	header, footer { width: 66.666666666%; }
 	h3 { margin: 0; }

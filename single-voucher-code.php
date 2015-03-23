@@ -19,7 +19,8 @@
 			$voucher_code_start_date = get_post_meta($post->ID, 'voucher_code_start_date', true);
 			$voucher_code_terms = get_post_meta($post->ID, 'voucher_code_terms', true);
 			$voucher_code_url = get_post_meta($post->ID, 'voucher_code_url', true);
-			$brand = wp_get_post_terms($post->ID, 'brand'); ?>
+			$brand = wp_get_post_terms($post->ID, 'brand');
+			$voucher_type = wp_get_post_terms($post->ID,'voucher-type'); ?>
 			<?php // Starkers_Utilities::print_a($brand) ?>
 		<article class="post cf">
 			<div class="post-words wrapper">
@@ -33,6 +34,9 @@
 					<? if ( $image ) : ?>
 					<figure class="wrapper">
 						<img src="<?= $image[0]; ?>">
+						<? if ($voucher_type) : ?>
+							<figcaption class="voucher-type-<?= $voucher_type[0]->slug; ?>"><?= $voucher_type[0]->name; ?></figcaption>
+						<? endif; ?>
 					</figure>
 					<? endif; ?>
 					<header class="wrapper">
@@ -42,7 +46,11 @@
 					<div class="wrapper">
 						<a target="_blank" class="voucher-code-button" data-voucher-code="<? the_title(); ?>" href="<?= $voucher_code_url; ?>">Reveal code &amp; open site</a>
 					</div>
-					</a>
+					<? if ( $voucher_code_terms != '' ) : ?>
+					<footer class="wrapper">
+						<p><small><strong>Terms:</strong> <?= $voucher_code_terms; ?></small></p>
+					</footer>
+					<? endif; ?>
 				</li>
 			</ul>
 			<? endif; ?>

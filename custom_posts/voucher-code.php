@@ -111,6 +111,22 @@ var $single = "Voucher Code"; 		// this represents the singular name of the post
 		    ),
 		  )
 		 );
+	  register_taxonomy(
+	  	'voucher-type', 
+	  	array($this->type), // to set brand to other cpt's
+	  	array(
+		    'hierarchical' => true,
+		    'labels' => array(
+		    	'name' => __( 'Voucher Type' ),
+		    	'singular_name' => __( 'Voucher Type' ),
+		    	'all_items' => __( 'All Voucher Types' ),
+		    	'add_new_item' => __( 'Add Voucher Type' )
+		  	),
+		  	'public' => true,
+		    'query_var' => true,
+		  )
+		 );
+
 	}
 
 	function save_postdata($post_id){

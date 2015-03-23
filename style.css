@@ -513,6 +513,22 @@ footer[role="content-info"] {
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       background: #f6f8f9; }
+    .list-voucher-code figure figcaption {
+      width: 100%;
+      background-color: #212527;
+      color: #dbe3e6;
+      text-transform: uppercase;
+      letter-spacing: .25em;
+      font-size: .75em;
+      text-align: center;
+      margin-top: .125em; }
+      .list-voucher-code figure figcaption.voucher-type-voucher {
+        -webkit-font-smoothing: antialiased; }
+      .list-voucher-code figure figcaption.voucher-type-exclusive {
+        background-color: #2eb1e5; }
+      .list-voucher-code figure figcaption.voucher-type-offer {
+        background-color: #fbfd58;
+        color: #212527; }
   .list-voucher-code header, .list-voucher-code footer {
     width: 66.666666666%; }
   .list-voucher-code h3 {

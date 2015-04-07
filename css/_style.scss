@@ -17,10 +17,13 @@ nav[role="navigation"] { padding: .25em 0 0; @include box-sizing(border-box); ba
 		@include breakpoint($tablet-landscape) { width: 12.5%; padding: .25em .75em .375em; margin: 0; }
 		h1 { margin: 0; }
 	}
-	ul { list-style: none; padding: 0; margin: 0; float: left; width: 100%; display: none;
+	.menu { list-style: none; padding: 0; margin: 0; float: left; width: 100%; display: none;
 		@include breakpoint($tablet-landscape) { float: left; width: 87.5%; @include display(flex); @include flex-flow(row wrap); @include justify-content(space-between); }
 		@include breakpoint($ipad) { width: 75%; margin: 0 6.25%; }
-		li {
+		li { position: relative;
+			@include breakpoint($tablet-landscape) {
+				&:hover { .sub-menu { display: block; } }
+			}
 			@include breakpoint-max($tablet-landscape) { width: 100%; float: left; text-align: center;
 				&:last-child {
 					a { border-bottom: .25em solid $darkgrey; }
@@ -38,6 +41,17 @@ nav[role="navigation"] { padding: .25em 0 0; @include box-sizing(border-box); ba
 			}
 		}
 	}
+	.sub-menu { list-style: none; padding: 0; margin: 0; width: 100%; display: none; background-color: lighten($black, 8%); 
+		@include breakpoint($tablet-landscape) { position: absolute; top: 100%; left: 0; right: 0; }
+		li { display: block;
+			a { float: none; background-color: lighten($black, 8%); border-bottom: none; }
+			&:last-child a { border-bottom: none; }
+		}
+	}
+}
+
+.menu-item-has-children {
+	&>a:after { content: "\25BC"; color: $white; font-size: .875em; margin-left: .75em; }
 }
 
 // Footer 
@@ -368,7 +382,12 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 	}
 	.search_submit { text-transform: uppercase; font-weight: bold; width: 30%; @include Freight; font-size: 1em; letter-spacing: 2px; text-align: center; background-color: $offwhite; @include background-gradient($offwhite, $lightgrey); padding-right: .5em; color: $grey;
 		&:hover { @include background-gradient; color: $white; }
+		&.longer { width: 40%; }
 	}
+}
+
+.newsletter_signup {
+	p { font-size: .75em; @include Freight; }
 }
 
 pre { @include columns(3); @include column-gap(3em); @include column-rule(1px solid $grey); font-size: .875em!important; line-height: 1.5; background-color: $lightgrey; padding: 1.5em; }

@@ -31,6 +31,23 @@
 		</header>
 		<?php get_search_form(); ?>
 	</section>
+<!-- 	<section class="sidebar_section wrapper newsletter_signup">
+		<header class="section_header sidebar_header">
+			<h4>Subscribe to LDNfashion</h4>
+		</header>
+		<p>Get the latest LDN Fashion updates via email</p>
+		<form action="//ldnfashion.us9.list-manage.com/subscribe/post?u=dacb3e7db54afa3fc77bb88c9&amp;id=ec84afbda0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="search-wrapper validate" novalidate>
+			<div class="mc-field-group">
+				<input type="email" value="" name="EMAIL" class="required email search_box" placeholder="your.name@email.com" id="mce-EMAIL">
+				<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button search_submit longer">
+				<div style="position: absolute; left: -5000px;"><input type="text" name="b_dacb3e7db54afa3fc77bb88c9_ec84afbda0" tabindex="-1" value=""></div>
+			</div>
+			<div id="mce-responses">
+				<div class="response" id="mce-error-response" style="display:none"></div>
+				<div class="response" id="mce-success-response" style="display:none"></div>
+			</div>
+		</form>
+	</section> -->
 	<section class="sidebar_section wrapper">
 		<header class="section_header sidebar_header">
 			<h4>Top 10 most read</h4>

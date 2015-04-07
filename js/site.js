@@ -9,8 +9,14 @@ jQuery(document).ready(function($) {
 
 	$('.menuToggle').click(function(e){
 		e.preventDefault();
-		$(this).parent().find('ul').slideToggle();
+		$(this).parent().find('ul').first().slideToggle();
 	});
+	if ( $(window).width() < 1024 ) {
+		$('.menu-item-has-children > a').one('click', function(e){
+			e.preventDefault();
+			$(this).parent().find('ul').first().slideToggle();
+		});
+	}
 
 	$('.voucher-code-button').click(function(e){
 		vouchercode = $(this).data('voucher-code');

@@ -24,7 +24,7 @@
 					$wp_query = $backup_query;
 				} ?>
 			</section>
-			<section class="footer_section wrapper double">
+			<section class="footer_section wrapper">
 				<header class="section_header footer_header">
 					<h4>London Department Stores</h4>
 				</header>

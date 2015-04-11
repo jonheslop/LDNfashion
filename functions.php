@@ -40,6 +40,7 @@
 	register_nav_menus(array('footer-nav-1' => 'Footer Left Navigation'));
 	register_nav_menus(array('footer-nav-2' => 'Footer Middle Navigation'));
 	register_nav_menus(array('footer-nav-3' => 'Footer Right Navigation'));
+	register_nav_menus(array('footer-nav-4' => 'Footer Most Right Navigation'));
 
 	/* ========================================================================================================================
 	
@@ -103,7 +104,7 @@
 		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ), rand(), true );
 		wp_enqueue_script( 'site' );
 
-		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '1.4', 'screen' );
+		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '1.5', 'screen' );
 		wp_enqueue_style( 'screen' );
 	}	
 

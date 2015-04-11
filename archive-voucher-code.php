@@ -92,8 +92,8 @@
 			<? else : ?>
 	        <div class="wrapper brand-description"><?= category_description(); ?></div>
 			<? endif; ?>
+			<p class="wrapper no-vouchers"><em>There are no voucher codes for this brand right now</em></p>
 	    </div>
-	<p class="wrapper"><em>There are no voucher codes for this brand right now</em></p>
 	</section>
 	<?php endif; ?>
 	<?php get_template_part( 'parts/_sidebar' ); ?>

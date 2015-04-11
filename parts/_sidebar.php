@@ -52,7 +52,7 @@
 		<header class="section_header sidebar_header">
 			<h4>Top 10 most read</h4>
 		</header>
-		<?php if (function_exists('wpp_get_mostpopular')) wpp_get_mostpopular('limit=10&stats_comments=0&stats_views=0'); ?>
+		<?php if (function_exists('wpp_get_mostpopular')) wpp_get_mostpopular('limit=10&stats_comments=0&stats_views=0&thumbnail_width=50&thumbnail_height=50'); ?>
 	</section>
 	<?php if ( is_dynamic_sidebar('Sidebar Mini Adverts') ) : ?>
 		<ul class="cf mini-ads">

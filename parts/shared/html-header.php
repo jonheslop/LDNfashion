@@ -13,6 +13,7 @@
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
 		<script type="text/javascript" src="//use.typekit.net/hbj0cwk.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<meta name="google-site-verification" content="xfCpaGH81BD3xk70uTYuqGBqIs_NHuyj7m99GdG2fUA" />
 		<?php wp_head(); ?>
 
 			<script type='text/javascript'>

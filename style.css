@@ -388,7 +388,16 @@ footer[role="content-info"] {
     display: none; } }
 
 .wpp-list {
-  font-style: italic; }
+  font-style: italic;
+  list-style: none;
+  padding: 0 0 .75em; }
+  .wpp-list li {
+    *zoom: 1; }
+    .wpp-list li:before, .wpp-list li:after {
+      content: " ";
+      display: table; }
+    .wpp-list li:after {
+      clear: both; }
   .wpp-list li + li {
     margin-top: .375em; }
 

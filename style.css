@@ -1106,7 +1106,7 @@ input.voucher-code-button {
     .search-wrapper .search_submit.longer {
       width: 40%; }
 
-.search-results #content {
+.search-results #content, .archive #content {
   margin-top: 1.5em; }
 
 .newsletter_signup p {

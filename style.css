@@ -389,8 +389,8 @@ footer[role="content-info"] {
 
 .wpp-list {
   font-style: italic;
-  list-style: none;
-  padding: 0 0 .75em; }
+  list-style-type: none;
+  padding: 0 0 0.75em !important; }
   .wpp-list li {
     *zoom: 1; }
     .wpp-list li:before, .wpp-list li:after {

@@ -67,6 +67,8 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 }
 .page_headline { margin: 1.5em 0; width: 100%; }
 
+.no-vouchers { margin-top: 1.5em; font-size: 1.25em; letter-spacing: 1.5; }
+
 #sidebar { margin-top: 1.5em; width: 100%; float: left;
 	@include breakpoint($tablet) { width: 37.5%; }
 	@include breakpoint($laptop) { width: 31.25%; }
@@ -329,7 +331,7 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 }
 
 @include breakpoint($tablet-mid) {
-	.brand-description { float: left; width: 100%; font-size: 1.125em;
+	.brand-description { float: left; width: 100%; font-size: 1.25em; letter-spacing: 1.5;
 		&.with_image { width: 66.666666667%; }
 	}
 }
@@ -385,6 +387,10 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 		&:hover { @include background-gradient; color: $white; }
 		&.longer { width: 40%; }
 	}
+}
+
+.search-results {
+	#content { margin-top: 1.5em; }
 }
 
 .newsletter_signup {

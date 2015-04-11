@@ -274,6 +274,11 @@ footer[role="content-info"] {
   margin: 1.5em 0;
   width: 100%; }
 
+.no-vouchers {
+  margin-top: 1.5em;
+  font-size: 1.25em;
+  letter-spacing: 1.5; }
+
 #sidebar {
   margin-top: 1.5em;
   width: 100%;
@@ -928,7 +933,8 @@ input.voucher-code-button {
   .brand-description {
     float: left;
     width: 100%;
-    font-size: 1.125em; }
+    font-size: 1.25em;
+    letter-spacing: 1.5; }
     .brand-description.with_image {
       width: 66.666666667%; } }
 .post-type-archive-sample-sale .brand-description {
@@ -1099,6 +1105,9 @@ input.voucher-code-button {
       color: #fff; }
     .search-wrapper .search_submit.longer {
       width: 40%; }
+
+.search-results #content {
+  margin-top: 1.5em; }
 
 .newsletter_signup p {
   font-size: .75em;

@@ -410,3 +410,10 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 }
 
 pre { @include columns(3); @include column-gap(3em); @include column-rule(1px solid $grey); font-size: .875em!important; line-height: 1.5; background-color: $lightgrey; padding: 1.5em; }
+
+// Archives Template
+.archive-categories-list { @include columns(2); @include column-gap(1.5em); padding: 0; margin-bottom: 3em;
+	@include breakpoint($tablet) { @include columns(3); }
+	@include breakpoint($tablet-landscape) { @include columns(4); }
+	@include breakpoint($laptop) { @include columns(5); }
+}

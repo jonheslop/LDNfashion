@@ -23,7 +23,7 @@
 		<?php if ( have_posts() ) : ?>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
-				<h4><a href="/samplesales/<?= get_query_var('brand'); ?>"><? single_cat_title(); ?> Sample Sales</a></h4>
+				<h4>Latest <a href="/samplesales/<?= get_query_var('brand'); ?>"><? single_cat_title(); ?> Sample Sales</a></h4>
 			</header>
 			<ul class="posts brand-lists cf">
 				<?php while ( have_posts() ) : the_post();
@@ -41,11 +41,33 @@
 			</ul>
 		</section>
 		<?php endif; ?>
+		<?php query_posts($query_string.'&posts_per_page=-1&post_type=voucher-code'); ?>
+		<?php if ( have_posts() ) : ?>
+		<section class="partition wrapper cf">
+			<header class="section_header sidebar_header">
+				<h4>Latest <a href="/vouchercodes/<?= get_query_var('brand'); ?>">Latest <? single_cat_title(); ?> Voucher Codes</a></h4>
+			</header>
+			<ul class="posts brand-lists cf">
+				<?php while ( have_posts() ) : the_post();
+					$imageID = get_post_thumbnail_id($post->ID);
+					$image = wp_get_attachment_image_src($imageID, 'index-thumb');
+					$voucher_code_end_date = get_post_meta($post->ID, 'voucher_code_end_date', true);
+					$voucher_code_start_date = get_post_meta($post->ID, 'voucher_code_start_date', true);
+					$voucher_code_terms = get_post_meta($post->ID, 'voucher_code_terms', true);
+					$voucher_code_url = get_post_meta($post->ID, 'voucher_code_url', true); ?>
+				<li>
+					<? the_content(); ?>
+					<small><a href="<?php the_permalink(); ?>">View code&nbsp;&raquo;</a></small>
+				</li>
+			<?php endwhile; ?>
+			</ul>
+		</section>
+		<?php endif; ?>
 		<?php query_posts($query_string.'&posts_per_page=1&post_type=shop'); ?>
 		<?php if ( have_posts() ) : ?>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
-				<h4><a href="/shop/<?= get_query_var('brand'); ?>">Shops</a></h4>
+				<h4><a href="/shop/<?= get_query_var('brand'); ?>">Shop <? single_cat_title(); ?></a></h4>
 			</header>
 			<ul class="posts brand-lists cf">
 				<?php while ( have_posts() ) : the_post();
@@ -66,29 +88,7 @@
 			</ul>
 		</section>
 		<?php endif; ?>
-		<?php query_posts($query_string.'&posts_per_page=-1&post_type=voucher-code'); ?>
-		<?php if ( have_posts() ) : ?>
-		<section class="partition wrapper cf">
-			<header class="section_header sidebar_header">
-				<h4><a href="/vouchercodes/<?= get_query_var('brand'); ?>">Latest <? single_cat_title(); ?> Voucher Codes</a></h4>
-			</header>
-			<ul class="posts brand-lists cf">
-				<?php while ( have_posts() ) : the_post();
-					$imageID = get_post_thumbnail_id($post->ID);
-					$image = wp_get_attachment_image_src($imageID, 'index-thumb');
-					$voucher_code_end_date = get_post_meta($post->ID, 'voucher_code_end_date', true);
-					$voucher_code_start_date = get_post_meta($post->ID, 'voucher_code_start_date', true);
-					$voucher_code_terms = get_post_meta($post->ID, 'voucher_code_terms', true);
-					$voucher_code_url = get_post_meta($post->ID, 'voucher_code_url', true); ?>
-				<li>
-					<? the_content(); ?>
-					<small><a href="<?php the_permalink(); ?>">View code&nbsp;&raquo;</a></small>
-				</li>
-			<?php endwhile; ?>
-			</ul>
-		</section>
-		<?php endif; ?>
-		<section class="partition brand_news cf">
+<!-- 		<section class="partition brand_news cf">
 		<div class="header_wrap wrapper">
 			<header class="section_header sidebar_header">
 				<h4>Latest News</h4>
@@ -113,7 +113,7 @@
 				</li>
 			<?php endwhile; ?>
 			</ul>
-		</section>
+		</section> -->
 	</section>
 	<?php get_template_part( 'parts/_sidebar' ); ?>
 </section>

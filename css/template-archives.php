@@ -32,6 +32,7 @@
 			<ul class="archive-categories-list">
 			<? $catArgs = array(
 					'title_li' => '',
+					'hierarchical' => 0
 				);
 			wp_list_categories( $catArgs ); ?> 
 			</ul>
@@ -42,13 +43,13 @@
 			</header>
 			<ul class="archive-categories-list">
 			<? $archiveArgs = array(
-					'limit' => '12',
+					'limit' => '24',
 				);
 			wp_get_archives( $archiveArgs ); ?> 
 			</ul>
 		</section>
 		<?php $archiveArgs = array(
-			'posts_per_page' => -30,
+			'posts_per_page' => 30,
 			'date_query' => array(
 				array(
 					'before'    => array(

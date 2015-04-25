@@ -15,5 +15,7 @@
 <? if ( !is_404() ) : ?>
 <header role="banner" class="container">
 	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Header Banner')); ?>
+	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Header Banner Tablet')); ?>
+	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Header Banner Mobile')); ?>
 </header>
 <? endif; ?>

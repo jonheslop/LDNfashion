@@ -143,10 +143,26 @@
 	function ldnFashion_widgets_init() {
 		register_sidebar( array(
 			'name' => 'Header Banner',
-			'description' => 'Banner along side the site logo',
+			'description' => 'Banner along side the site logo (1024px wide)',
 			'id' => 'header_banner',
 			'class' => 'header_banner',
-			'before_widget' => '<div id="%1$s" class="wrapper ldnf_widget header_banner %2$s">',
+			'before_widget' => '<div id="%1$s" class="wrapper ldnf_widget header_banner header_banner_desktop %2$s">',
+			'after_widget' => '</div>',
+		));
+		register_sidebar( array(
+			'name' => 'Header Banner Tablet',
+			'description' => 'Banner along side the site logo (768px wide)',
+			'id' => 'header_banner_tablet',
+			'class' => 'header_banner_tablet',
+			'before_widget' => '<div id="%1$s" class="wrapper ldnf_widget header_banner header_banner_tablet %2$s">',
+			'after_widget' => '</div>',
+		));
+		register_sidebar( array(
+			'name' => 'Header Banner Mobile',
+			'description' => 'Banner along side the site logo (320px wide)',
+			'id' => 'header_banner_mobile',
+			'class' => 'header_banner_mobile',
+			'before_widget' => '<div id="%1$s" class="wrapper ldnf_widget header_banner header_banner_mobile %2$s">',
 			'after_widget' => '</div>',
 		));
 		register_sidebar( array(

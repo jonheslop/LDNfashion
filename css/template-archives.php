@@ -27,7 +27,18 @@
 
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
-				<h4>LDNfashion Categories</h4>
+				<h4>Browse LDNfashion by month</h4>
+			</header>
+			<ul class="archive-categories-list">
+			<? $archiveArgs = array(
+					'limit' => '24',
+				);
+			wp_get_archives( $archiveArgs ); ?> 
+			</ul>
+		</section>
+		<section class="partition wrapper cf">
+			<header class="section_header sidebar_header">
+				<h4>Browse LDNfashion by subject</h4>
 			</header>
 			<ul class="archive-categories-list">
 			<? $catArgs = array(
@@ -35,17 +46,6 @@
 					'hierarchical' => 0
 				);
 			wp_list_categories( $catArgs ); ?> 
-			</ul>
-		</section>
-		<section class="partition wrapper cf">
-			<header class="section_header sidebar_header">
-				<h4>LDNfashion Categories</h4>
-			</header>
-			<ul class="archive-categories-list">
-			<? $archiveArgs = array(
-					'limit' => '24',
-				);
-			wp_get_archives( $archiveArgs ); ?> 
 			</ul>
 		</section>
 		<?php $archiveArgs = array(

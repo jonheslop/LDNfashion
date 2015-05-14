@@ -1,3 +1,8 @@
+	<div class="container">
+		<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Banner')); ?>
+		<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Banner Tablet')); ?>
+		<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Banner Mobile')); ?>
+	</div>
 	<footer role="content-info">
 		<div class="container">
 			<section class="footer_section wrapper">

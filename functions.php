@@ -166,6 +166,30 @@
 			'after_widget' => '</div>',
 		));
 		register_sidebar( array(
+			'name' => 'Footer Banner',
+			'description' => 'Banner along side the site logo (1024px wide)',
+			'id' => 'footer_banner',
+			'class' => 'footer_banner',
+			'before_widget' => '<div id="%1$s" class="wrapper ldnf_widget footer_banner footer_banner_desktop %2$s">',
+			'after_widget' => '</div>',
+		));
+		register_sidebar( array(
+			'name' => 'Footer Banner Tablet',
+			'description' => 'Banner along side the site logo (768px wide)',
+			'id' => 'footer_banner_tablet',
+			'class' => 'footer_banner_tablet',
+			'before_widget' => '<div id="%1$s" class="wrapper ldnf_widget footer_banner footer_banner_tablet %2$s">',
+			'after_widget' => '</div>',
+		));
+		register_sidebar( array(
+			'name' => 'Footer Banner Mobile',
+			'description' => 'Banner along side the site logo (320px wide)',
+			'id' => 'footer_banner_mobile',
+			'class' => 'footer_banner_mobile',
+			'before_widget' => '<div id="%1$s" class="wrapper ldnf_widget footer_banner footer_banner_mobile %2$s">',
+			'after_widget' => '</div>',
+		));
+		register_sidebar( array(
 			'name' => 'Sidebar Top',
 			'description' => 'Ad at the top of the sidebar',
 			'id' => 'sidebar_ad_top',

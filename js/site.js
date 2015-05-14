@@ -11,6 +11,7 @@ jQuery(document).ready(function($) {
 			// Image has loaded
 			// console.log('loaded',ele);
 			if ( jQuery('.equalHeights').length ) {
+				jQuery('.equalHeights').children().attr('style','');
 				jQuery('.equalHeights').equalHeights();
 			}
 		}

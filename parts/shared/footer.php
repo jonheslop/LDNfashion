@@ -41,9 +41,9 @@
 					$wp_query = $backup_query;
 				} ?>
 			</section>
-<!-- 			<section class="footer_section wrapper">
+			<section class="footer_section wrapper">
 				<header class="section_header footer_header">
-					<h4>XXX</h4>
+					<h4>Categories</h4>
 				</header>
 				<?php wp_nav_menu( array( 'theme_location' => 'footer-nav-4' ) ); ?>
 				<?php if ( is_home() || is_front_page() || is_category() ) {
@@ -53,6 +53,6 @@
 					$wp_query = $backup_query;
 				} ?>
 			</section>
- -->			<p class="credits wrapper">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</p>
+			<p class="credits wrapper">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</p>
 		</div>
 	</footer>

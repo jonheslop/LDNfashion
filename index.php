@@ -33,9 +33,9 @@
 					<a href="<?php the_permalink(); ?>">
 						<figure>
 							<? if ( $imageLarge[2] == 1024 ) : ?>
-							<img src="<?php echo $imageLarge[0]; ?>">
+							<img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $imageLarge[0]; ?>">
 							<? else : ?>
-							<img src="<?php echo $imageMedium[0]; ?>">
+							<img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $imageMedium[0]; ?>">
 							<? endif; ?>
 							<figcaption>
 								<h3><?php the_title(); ?></h3>
@@ -70,7 +70,7 @@
 				<a href="<?php the_permalink(); ?>">
 					<?php if ( $image ) : ?>
 						<figure class="post-image">
-							<img src="<?php echo $image[0]; ?>">
+							<img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $image[0]; ?>">
 						</figure>
 					<?php endif; ?>
 						<header class="section_header post-thumb-header">
@@ -105,7 +105,7 @@
 				<a href="<?php the_permalink(); ?>">
 					<?php if ( $image ) : ?>
 						<figure class="post-image">
-							<img src="<?php echo $image[0]; ?>">
+							<img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $image[0]; ?>">
 						</figure>
 					<?php endif; ?>
 						<header class="section_header post-thumb-header">
@@ -139,7 +139,7 @@
 				<li class="wrapper">
 					<a href="<?php the_permalink(); ?>">
 						<figure>
-							<img src="<?php echo $image[0]; ?>">
+							<img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $image[0]; ?>">
 						</figure>
 					</a>
 				</li>
@@ -161,7 +161,7 @@
 				<a href="<?php the_permalink(); ?>">
 					<?php if ( $image ) : ?>
 						<figure class="post-image">
-							<img src="<?php echo $image[0]; ?>">
+							<img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $image[0]; ?>">
 						</figure>
 					<?php endif; ?>
 						<header class="section_header post-thumb-header">
@@ -190,7 +190,7 @@
 				<a href="<?php the_permalink(); ?>">
 					<?php if ( $image ) : ?>
 						<figure class="post-image">
-							<img src="<?php echo $image[0]; ?>">
+							<img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $image[0]; ?>">
 						</figure>
 					<?php endif; ?>
 						<header class="section_header post-thumb-header">

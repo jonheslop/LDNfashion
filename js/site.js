@@ -5,6 +5,23 @@ function navHeightFix() {
 
 jQuery(document).ready(function($) {
 
+	// Initialize Blazy
+	var bLazy = new Blazy({
+		success: function(ele){
+			// Image has loaded
+			// Do your business here
+			console.log('loaded',ele);
+		}
+		, error: function(ele, msg){
+			if(msg === 'missing'){
+				console.log('missing',ele);
+			}
+			else if(msg === 'invalid'){
+				console.log('invalid',ele);
+			}
+		}
+	});
+
 	navHeightFix();
 
 	$('.menuToggle').click(function(e){

@@ -15,8 +15,7 @@
 	  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=197891740280631";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/responsiveslides.min.js"></script>
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jQuery.equalHeights.js"></script>
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/plugins.min.js"></script>
 	<?php if (is_single()) : ?>
 		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.fitvids.js"></script>
 		<script type="text/javascript">

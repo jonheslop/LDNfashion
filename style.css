@@ -262,6 +262,9 @@ footer[role="content-info"] {
   text-align: center;
   margin-top: 2em; }
 
+.footer_widget_area {
+  margin-top: 3em; }
+
 #content {
   width: 100%;
   float: left; }

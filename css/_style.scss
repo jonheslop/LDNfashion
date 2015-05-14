@@ -60,6 +60,8 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 }
 .credits { color: $grey; font-size: 1em; width: 100%; text-align: center; margin-top: 2em; }
 
+.footer_widget_area { margin-top: 3em; }
+
 // Structure
 #content { width: 100%; float: left;
 	@include breakpoint($tablet) { width: 62.5%; }

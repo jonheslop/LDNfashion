@@ -1,4 +1,4 @@
-	<div class="container">
+	<div class="container footer_widget_area cf">
 		<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Banner')); ?>
 		<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Banner Tablet')); ?>
 		<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Footer Banner Mobile')); ?>

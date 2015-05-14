@@ -87,7 +87,7 @@
 			<div class="post-words wrapper">
 				<header class="section_header post-header">
 					<h2><?php the_title(); ?></h2>
-					<p class="meta"><?php the_category(',','single'); ?> | <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> | <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?></p>
+					<p class="meta"><?php the_category(','); ?> | <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?></time> | <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?></p>
 				</header>
 				<div class="post-content">
 					<?php the_content(); ?>

@@ -33,9 +33,9 @@
 					<a href="<?php the_permalink(); ?>">
 						<figure>
 							<? if ( $imageLarge[2] == 1024 ) : ?>
-							<img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $imageLarge[0]; ?>">
+							<img src="<?php echo $imageLarge[0]; ?>">
 							<? else : ?>
-							<img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $imageMedium[0]; ?>">
+							<img src="<?php echo $imageMedium[0]; ?>">
 							<? endif; ?>
 							<figcaption>
 								<h3><?php the_title(); ?></h3>

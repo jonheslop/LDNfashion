@@ -538,28 +538,28 @@ footer[role="content-info"] {
   .ldnf_widget a {
     background-color: transparent; }
 
-.header_banner {
+.header_banner, .footer_header {
   width: 100%;
   margin-top: .75em;
   text-align: left; }
 
-.header_banner_desktop {
+.header_banner_desktop, .footer_banner_desktop {
   display: none; }
 
-.header_banner_tablet {
+.header_banner_tablet, .footer_banner_tablet {
   display: none; }
 
 @media screen and (min-width: 40em) {
-  .header_banner_mobile {
+  .header_banner_mobile, .footer_banner_mobile {
     display: none; }
 
-  .header_banner_tablet {
+  .header_banner_tablet, .footer_banner_tablet {
     display: block; } }
 @media screen and (min-width: 61.5em) {
-  .header_banner_tablet {
+  .header_banner_tablet, .footer_banner_tablet {
     display: none; }
 
-  .header_banner_desktop {
+  .header_banner_desktop, .footer_banner_desktop {
     display: block; } }
 .index_ad_high, .index_ad_low {
   width: 100%;

@@ -36,6 +36,8 @@
 			googletag.defineSlot('/12244649/ROS_Billboard', [970, 250], 'div-gpt-ad-1424262122172-0').addService(googletag.pubads());
 			googletag.defineSlot('/12244649/ROS_HPU', [300, 600], 'div-gpt-ad-1424262122172-1').addService(googletag.pubads());
 			googletag.defineSlot('/12244649/ROS_MPU_Top', [300, 250], 'div-gpt-ad-1424262122172-2').addService(googletag.pubads());
+			googletag.defineSlot('/12244649/Lower_Billboard', [970, 250], 'div-gpt-ad-1431803170704-0').addService(googletag.pubads());
+			googletag.defineSlot('/12244649/Lower_HPU', [300, 600], 'div-gpt-ad-1431803170704-1').addService(googletag.pubads());
 			googletag.pubads().enableSingleRequest();
 			googletag.enableServices();
 			});

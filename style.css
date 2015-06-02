@@ -451,10 +451,13 @@ footer[role="content-info"] {
 
 .post-header h2 {
   margin: 0 0 .375em;
-  font-size: 3em;
+  font-size: 2em;
   line-height: 1.125;
   font-weight: 400;
   font-style: italic; }
+  @media screen and (min-width: 45em) {
+    .post-header h2 {
+      font-size: 3em; } }
 .post-header p {
   font-family: "freight-sans-pro",helvetica,arial,sans-serif;
   font-size: .75em;
@@ -735,24 +738,19 @@ input.voucher-code-button {
   @media screen and (min-width: 55.5em) {
     .shop-address div {
       width: 50%; } }
-  .shop-address div:first-of-type {
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    columns: 2;
-    -webkit-column-gap: 1.5em;
-    -moz-column-gap: 1.5em;
-    column-gap: 1.5em;
-    margin-bottom: 1.5em; }
-  .shop-address .section_header {
-    -webkit-column-span: all;
-    -moz-column-span: all;
-    column-span: all; }
-  .shop-address p {
-    -webkit-column-break-inside: avoid;
-    break-inside: avoid; }
+
+.shop-details-title {
+  margin: .75em 0 0;
+  text-transform: uppercase;
+  font-family: "freight-sans-pro",helvetica,arial,sans-serif;
+  font-size: .75em;
+  letter-spacing: .125em; }
 
 .google_map img {
   display: block; }
+  @media screen and (max-width: 55.5em) {
+    .google_map img {
+      margin-top: 1.5em; } }
 
 .posts {
   list-style-type: none;

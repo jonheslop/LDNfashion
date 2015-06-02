@@ -44,23 +44,28 @@
 					</header>
 				</span>
 				<div class="wrapper">
-					<p><strong>When:</strong> <?= $sample_sale_when; ?></p>
+					<? if ( $sample_sale_description ) : ?>
+					<h4 class="shop-details-title">What</h4>
+					<p><?= $sample_sale_description; ?></p>
+					<? endif; ?>
+					<h4 class="shop-details-title">When</h4>
+					<p><?= str_replace(',','<br/>', $sample_sale_when); ?></p>
 					<? if ( $sample_sale_address ) : ?>
-					<p><strong>Address:</strong> <?= $sample_sale_name; ?>,<br/><?= str_replace(',', ',<br/>', $sample_sale_address); ?>,<? if ( $sample_sale_map ) : ?><br/><a href="<?= $sample_sale_map; ?>">(map)</a><? endif; ?></p>
+					<h4 class="shop-details-title">Where</h4>
+					<p><?= $sample_sale_name; ?>,<br/><?= str_replace(',', ',<br/>', $sample_sale_address); ?>,<br/><a href="https://www.google.co.uk/maps?q=<?= $sample_sale_address; ?>">(map)</a></p>
 					<? endif; ?>
 					<? if ( $sample_sale_phone ) : ?>
-					<p><strong>Telephone:</strong> <?= $sample_sale_phone; ?></p>
+					<h4 class="shop-details-title">Telephone</h4>
+					<p><?= $sample_sale_phone; ?></p>
 					<? endif; ?>
 					<? if ( $sample_sale_transport ) : ?>
-					<p><strong>Transport:</strong> <?= $sample_sale_transport; ?></p>
-					<? endif; ?>
-					<? if ( $sample_sale_description ) : ?>
-					<p><strong>Details:</strong> <?= $sample_sale_description; ?></p>
+					<h4 class="shop-details-title">Transport</h4>
+					<p><?= $sample_sale_transport; ?></p>
 					<? endif; ?>
 				</div>
 				<div class="wrapper google_map">
 					<figure>
-						<a href="<?= $sample_sale_map; ?>"><img src="http://maps.googleapis.com/maps/api/staticmap?size=400x300&amp;maptype=roadmap\
+						<a href="https://www.google.co.uk/maps?q=<?= $sample_sale_address; ?>"><img src="http://maps.googleapis.com/maps/api/staticmap?size=400x400&amp;maptype=roadmap\
 &amp;markers=size:mid%7Ccolor:red%7C<?= $sample_sale_address; ?>&amp;sensor=false&amp;scale=2"></a>
 					</figure>
 				</div>

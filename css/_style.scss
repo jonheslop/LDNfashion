@@ -137,7 +137,9 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 	a { border-bottom: .0625em solid $black; }
 }
 .post-header {
-	h2 { margin: 0 0 .375em; font-size: 3em; line-height: 1.125; font-weight: 400; font-style: italic; }
+	h2 { margin: 0 0 .375em; font-size: 2em; line-height: 1.125; font-weight: 400; font-style: italic;
+		@include breakpoint($tablet) { font-size: 3em; }
+	}
 	p { @include Freight; font-size: .75em; color: $darkgrey; text-transform: uppercase; letter-spacing: .125em; text-align: right; line-height: 1.5; padding-bottom: .25em;
 		a:link, a:visited { color: $darkgrey; }
 	}
@@ -249,11 +251,11 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 	@include breakpoint($tablet-mid) {
 		div { width: 50%; }
 	}
-	div:first-of-type { @include columns(2); @include column-gap(1.5em); margin-bottom: 1.5em; }
-	.section_header { @include column-span(all); }
-	p { -webkit-column-break-inside: avoid; break-inside: avoid; }
 }
-.google_map img { display: block; }
+.shop-details-title { margin: .75em 0 0; text-transform: uppercase; @include Freight; font-size: .75em; letter-spacing: .125em; }
+.google_map img { display: block;
+	@include breakpoint-max($tablet-mid) { margin-top: 1.5em; }
+}
 
 // Index 
 .posts { list-style-type: none; padding: 0; margin: 1.5em 0 0; }

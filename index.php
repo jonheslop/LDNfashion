@@ -178,9 +178,9 @@
 	<?php $sampleSaleArgs = array(
 		  'post_type' => 'sample-sale',
 		  'posts_per_page' => -1,
-		  'paged' => $paged,
 		);
-		$sampleSales = new WP_Query($sampleSaleArgs); 
+		$sampleSales = new WP_Query($sampleSaleArgs);
+		// Starkers_Utilities::print_a($sampleSales);
 		if ( $sampleSales->have_posts() ): ?>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">

@@ -191,20 +191,16 @@
 					$imageID = get_post_thumbnail_id($post->ID);
 					$image = wp_get_attachment_image_src($imageID, 'index-thumb');
 					$sample_sale_expiry = strtotime(get_post_meta($post->ID, 'sample_sale_expiry', true)); ?>
-				<? if ( $sample_sale_expiry > time() ) : ?>
 				<li class="post-thumb wrapper cf">
 				<a href="<?php the_permalink(); ?>">
-					<?php if ( $image ) : ?>
 						<figure class="post-image">
 							<img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $image[0]; ?>">
 						</figure>
-					<?php endif; ?>
 						<header class="section_header post-thumb-header">
 							<h4><?php the_title(); ?></h4>
 						</header>
 					</a>
 				</li>
-				<?php endif; ?>
 			<?php endwhile; ?>
 			</ul>
 		</section>

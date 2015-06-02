@@ -209,6 +209,37 @@
 			</ul>
 		</section>
 	<?php endif; ?>
+	<?php $interviewArgs = array(
+		  'posts_per_page' => 12,
+		  'paged' => $paged,
+		  'cat' => 11586
+		);
+		$interviews = new WP_Query($interviewArgs); 
+		if ( $interviews->have_posts() ): ?>
+		<section class="partition wrapper cf">
+			<header class="section_header sidebar_header">
+				<h4>Interviews</h4>
+			</header>
+			<ul class="posts cf equalHeights">
+			<?php while ( $interviews->have_posts() ) : $interviews->the_post();
+					$imageID = get_post_thumbnail_id($post->ID);
+					$image = wp_get_attachment_image_src($imageID, 'index-thumb'); ?>
+				<li class="post-thumb wrapper cf">
+				<a href="<?php the_permalink(); ?>">
+					<?php if ( $image ) : ?>
+						<figure class="post-image">
+							<img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $image[0]; ?>">
+						</figure>
+					<?php endif; ?>
+						<header class="section_header post-thumb-header">
+							<h4><?php the_title(); ?></h4>
+						</header>
+					</a>
+				</li>
+			<?php endwhile; ?>
+			</ul>
+		</section>
+	<?php endif; ?>
 	</section>
 	<?php get_template_part( 'parts/_sidebar' ); ?>
 </section>

@@ -142,12 +142,8 @@ var $single = "Sample Sale"; 		// this represents the singular name of the post 
 		  <input type="text" id= "data[sample_sale_map]" name="data[sample_sale_map]" value="<?php if(isset($sample_sale_map)) echo htmlspecialchars($sample_sale_map[0]) ?>" />
 	  </p>
 	  <p>
-		  <label for="data[sample_sale_phone]">Phone</label>
-		  <input type="text" id= "data[sample_sale_phone]" name="data[sample_sale_phone]" value="<?php if(isset($sample_sale_phone)) echo htmlspecialchars($sample_sale_phone[0]) ?>"  />
-	  </p>
-	  <p>
-		  <label for="data[sample_sale_transport]">Transport</label>
-		  <input type="text" id= "data[sample_sale_transport]" name="data[sample_sale_transport]" value="<?php if(isset($sample_sale_transport)) echo htmlspecialchars($sample_sale_transport[0]) ?>"  />
+		  <label for="data[sample_sale_expiry]">Expiry Date (MM/DD/YYYY)</label>
+		  <input type="text" id= "data[sample_sale_expiry]" name="data[sample_sale_expiry]" value="<?php if(isset($sample_sale_expiry)) echo htmlspecialchars($sample_sale_expiry[0]) ?>"  />
 	  </p>
 	  <p>
 		  <label for="data[sample_sale_when]">When</label>

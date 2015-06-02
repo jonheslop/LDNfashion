@@ -118,7 +118,7 @@
 		</section>
 	<?php endif; ?>
 	<?php endif; ?>
-	<?php if ( have_posts() ) :
+<!-- 	<?php if ( have_posts() ) :
 	$count = 0; ?>
 	<?php $streetstyleargs = array(
 		  'posts_per_page' => 18,
@@ -146,12 +146,12 @@
 			<?php endwhile; ?>
 				</ul>
 		</section>
-	<?php endif; ?>
+	<?php endif; ?> -->
 	<?php if ( have_posts() ) : ?>
-	<?php query_posts($query_string.'&cat=4960&posts_per_page=12'); ?>
+	<?php query_posts($query_string.'&cat=11154&posts_per_page=12'); ?>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
-				<h4>Shopping</h4>
+				<h4>London Guides</h4>
 			</header>
 			<ul class="posts cf equalHeights">
 				<?php while ( have_posts() ) : the_post();
@@ -175,17 +175,23 @@
 		<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Index Ad Low')); ?>
 		<?php endif; ?>
 	<?php endif; ?>
-	<?php if ( have_posts() ) : ?>
-	<?php // CHANGE cat=XXX IN LINE BELOW TO CHANGE THE CATEGORY
-	query_posts($query_string.'&cat=4962&posts_per_page=12'); ?>
+	<?php $sampleSaleArgs = array(
+		  'post_type' => 'sample-sale',
+		  'posts_per_page' => 6,
+		  'paged' => $paged,
+		);
+		$sampleSales = new WP_Query($sampleSaleArgs); 
+		if ( $sampleSales->have_posts() ): ?>
 		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
-				<h4>Menswear</h4>
+				<h4>Sample Sales</h4>
 			</header>
 			<ul class="posts cf equalHeights">
-				<?php while ( have_posts() ) : the_post();
+			<?php while ( $sampleSales->have_posts() ) : $sampleSales->the_post();
 					$imageID = get_post_thumbnail_id($post->ID);
-					$image = wp_get_attachment_image_src($imageID, 'index-thumb');?>
+					$image = wp_get_attachment_image_src($imageID, 'index-thumb');
+					$sample_sale_expiry = strtotime(get_post_meta($post->ID, 'sample_sale_expiry', true)); ?>
+				<? if ( $sample_sale_expiry > time() ) : ?>
 				<li class="post-thumb wrapper cf">
 				<a href="<?php the_permalink(); ?>">
 					<?php if ( $image ) : ?>
@@ -198,6 +204,7 @@
 						</header>
 					</a>
 				</li>
+				<?php endif; ?>
 			<?php endwhile; ?>
 			</ul>
 		</section>

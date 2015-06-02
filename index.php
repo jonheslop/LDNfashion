@@ -177,7 +177,7 @@
 	<?php endif; ?>
 	<?php $sampleSaleArgs = array(
 		  'post_type' => 'sample-sale',
-		  'posts_per_page' => 6,
+		  'posts_per_page' => -1,
 		  'paged' => $paged,
 		);
 		$sampleSales = new WP_Query($sampleSaleArgs); 

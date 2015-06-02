@@ -345,6 +345,8 @@ footer[role="content-info"] {
           column-gap: 1.5em;
           list-style-position: inside;
           padding-left: 0; } }
+  .footer_section li + li {
+    margin-top: .25em; }
 
 .section_header {
   margin: 0 0 .75em;

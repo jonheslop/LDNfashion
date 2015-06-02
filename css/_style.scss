@@ -121,7 +121,7 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 }
 
 // Single
-.post { float: left; width: 100%; margin-top: 1.5em;
+.post { float: left; width: 100%; margin-top: 1.5em; margin-bottom: 1.5em;
 	&+.post { border-top: .125em solid $lightgrey; padding-top: 1.5em; }
 }
 .post-image { width: 100%;

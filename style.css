@@ -415,7 +415,8 @@ footer[role="content-info"] {
 .post {
   float: left;
   width: 100%;
-  margin-top: 1.5em; }
+  margin-top: 1.5em;
+  margin-bottom: 1.5em; }
   .post + .post {
     border-top: 0.125em solid #dbe3e6;
     padding-top: 1.5em; }

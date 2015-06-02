@@ -29,10 +29,9 @@ nav[role="navigation"] { padding: .25em 0 0; @include box-sizing(border-box); ba
 					a { border-bottom: .25em solid $darkgrey; }
 				}
 			}
-			a { display: block; @include Freight; font-size: .75em; border-bottom: .25em solid $black; text-transform: uppercase; padding: .75rem .75rem .5em!important; line-height: 1.5; background-color: $black; @include box-sizing(border-box);
+			a { display: block; @include Freight; font-size: .75em; border-bottom: .25em solid $black; text-transform: uppercase; padding: .75rem .75rem .5em!important; line-height: 1.5; background-color: $black; @include box-sizing(border-box); letter-spacing: .125em;
 				@include breakpoint-max($tablet-landscape) { border-top: .25em solid $darkgrey; }
 				@include breakpoint($tablet-landscape) { float: left; }
-				@include breakpoint($tablet-mid) { letter-spacing: .125em; }
 				&:link, &:visited { color: $white; }
 				&:hover { color: #fff; border-bottom-color: $darkgrey; background-color: $darkgrey; }
 			}

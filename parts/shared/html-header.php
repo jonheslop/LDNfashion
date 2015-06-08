@@ -46,5 +46,10 @@
 				<meta name="robots" content="noindex">
 				<meta name="googlebot" content="noindex">
 			<? endif; ?>
+
+			<? if (is_page(48351)) : ?>
+			<?php wp_redirect( 'http://ldnfashion.com/sample-sales', 301 ); exit; ?>
+			<? endif; ?>
+
 	</head>
 	<body <?php body_class(); ?>>

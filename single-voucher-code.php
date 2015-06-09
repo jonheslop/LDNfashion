@@ -32,11 +32,17 @@
 			<ul class="list-voucher-codes wrapper cf">
 				<li class="list-voucher-code cf">
 					<figure class="wrapper">
-					<? $brand_image_url = apply_filters( 'taxonomy-images-queried-term-image-url', '', array( 'image_size' => 'medium' ) );?>
+					<? $brand_image_url = apply_filters( 'taxonomy-images-get-terms', '', array(
+							'taxonomy' => 'brand',
+							'term_args' => array(
+								'slug' => $brand[0]->slug,
+							)
+					) );
+					// Starkers_Utilities::print_a($brand_image_url[0]->image_id); ?>
 					<? if ( $image ) : ?>
 						<img src="<?= $image[0]; ?>">
 					<? elseif ( $brand_image_url ) : ?>
-						<img src="<?= $brand_image_url; ?>">
+						<img src="<?= wp_get_attachment_image_src($brand_image_url[0]->image_id)[0]; ?>">
 					<? endif; ?>
 						<? if ($voucher_type) : ?>
 							<figcaption class="voucher-type-<?= $voucher_type[0]->slug; ?>"><?= $voucher_type[0]->name; ?></figcaption>

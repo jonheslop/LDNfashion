@@ -16,7 +16,8 @@
   'parent' => 0
   );
   $letter=' ';
-  $brands = get_terms( 'brand', $args ); ?>
+  $brands = get_terms( 'brand', $args );
+  Starkers_Utilities::print_a($brands); ?>
 <section role="main" class="container">
   <section id="content" class="cf">
     <div class="wrapper partition page_headline">

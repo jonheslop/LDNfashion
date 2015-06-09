@@ -23,10 +23,17 @@
 		      <header class="post-header wrapper">
 				<h2><?= get_term_by('slug', get_query_var('brand'), 'brand')->name; ?> voucher codes</h2>
 		      </header>
-				<? $brand_image_url = apply_filters( 'taxonomy-images-queried-term-image-url', '', array( 'image_size' => 'medium' ) );?>
-				<? if ( $brand_image_url ) : ?>
+					<? $brand_image_object = apply_filters( 'taxonomy-images-get-terms', '', array(
+							'taxonomy' => 'brand',
+							'term_args' => array(
+								'slug' => $brand[0]->slug,
+							)
+					) );
+					$brand_image_id = $brand_image_object[0]->image_id;
+					$brand_image = wp_get_attachment_image_src($brand_image_object[0]->image_id);?>
+				<? if ( $brand_image_top ) : ?>
 				<figure class="wrapper brand-image">
-					<img src="<?= $brand_image_url; ?>">
+					<img src="<?= $brand_image[0]; ?>">
 				</figure>
 		        <div class="wrapper brand-description with_image"><?= category_description(); ?></div>
 				<? else : ?>
@@ -44,21 +51,16 @@
 						$voucher_type = wp_get_post_terms($post->ID,'voucher-type'); ?>
 					<? if ( time() > strtotime($voucher_code_start_date) && time() < strtotime($voucher_code_end_date) ) : ?>
 					<li class="list-voucher-code cf">
-						<? if ( $image ) : ?>
 						<figure class="wrapper">
-							<img src="<?= $image[0]; ?>">
+							<? if ( $image ) : ?>
+								<img src="<?= $image[0]; ?>">
+							<? elseif ( $brand_image ) : ?>
+								<img src="<?= $brand_image[0]; ?>">
+							<? endif; ?>
 							<? if ($voucher_type) : ?>
 								<figcaption class="voucher-type-<?= $voucher_type[0]->slug; ?>"><?= $voucher_type[0]->name; ?></figcaption>
 							<? endif; ?>
 						</figure>
-						<? elseif ( $brand_image_url ) : ?>
-						<figure class="wrapper">
-							<img src="<?= $brand_image_url; ?>">
-							<? if ($voucher_type) : ?>
-								<figcaption class="voucher-type-<?= $voucher_type[0]->slug; ?>"><?= $voucher_type[0]->name; ?></figcaption>
-							<? endif; ?>
-						</figure>
-						<? endif; ?>
 						<header class="wrapper">
 							<h3><? the_content(); ?></h3>
 							<p class="meta">Start: <?= date('jS F Y', strtotime($voucher_code_start_date)); ?> | Expiry: <?= date('jS F Y', strtotime($voucher_code_end_date)); ?></p>

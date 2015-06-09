@@ -21,7 +21,7 @@
 		<section class="partition wrapper cf">
 		    <div class="wrapper partition page_headline">
 		      <header class="post-header wrapper">
-				<h2><?= get_term_by('slug', get_query_var('brand'), 'brand')->name; ?> voucher codes</h2>
+				<h2><?= get_term_by('slug', get_query_var('brand'), 'brand')->name; ?> Latest voucher codes</h2>
 		      </header>
 					<? $brand_image_object = apply_filters( 'taxonomy-images-get-terms', '', array(
 							'taxonomy' => 'brand',

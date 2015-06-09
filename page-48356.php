@@ -34,6 +34,7 @@
           endif;
           endforeach; ?>
         </p>
+        <p><em>Latest voucher codes in <strong>bold</strong></em></p>
     </div>
     <ul class="cf wrapper brands-alpha">
       <?php foreach ($brands as $brand) :

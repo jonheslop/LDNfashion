@@ -17,7 +17,7 @@
   );
   $letter=' ';
   $brands = get_terms( 'brand', $args );
-  Starkers_Utilities::print_a($brands); ?>
+  // Starkers_Utilities::print_a($brands); ?>
 <section role="main" class="container">
   <section id="content" class="cf">
     <div class="wrapper partition page_headline">
@@ -46,7 +46,11 @@
           echo '<header class="section_header"><h3>' . $initial . '</h3></header>';
           $letter=$initial;
         } ?>
+          <? if ( $brand->count > 1 ) : ?>
+          <p><strong><a href="/vouchercodes/<?= $brand->slug; ?>"><?= $brand->name; ?></a></strong></p>
+          <? else : ?>
           <p><a href="/vouchercodes/<?= $brand->slug; ?>"><?= $brand->name; ?></a></p>
+          <? endif; ?>
         <? if($initial!=$letter) {
         echo '</li>';
       }

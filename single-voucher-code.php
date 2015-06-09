@@ -31,14 +31,17 @@
 			<? if ( time() > strtotime($voucher_code_start_date) && time() < strtotime($voucher_code_end_date) ) : ?>
 			<ul class="list-voucher-codes wrapper cf">
 				<li class="list-voucher-code cf">
-					<? if ( $image ) : ?>
 					<figure class="wrapper">
+					<? $brand_image_url = apply_filters( 'taxonomy-images-queried-term-image-url', '', array( 'image_size' => 'medium' ) );?>
+					<? if ( $image ) : ?>
 						<img src="<?= $image[0]; ?>">
+					<? elseif ( $brand_image_url ) : ?>
+						<img src="<?= $brand_image_url; ?>">
+					<? endif; ?>
 						<? if ($voucher_type) : ?>
 							<figcaption class="voucher-type-<?= $voucher_type[0]->slug; ?>"><?= $voucher_type[0]->name; ?></figcaption>
 						<? endif; ?>
 					</figure>
-					<? endif; ?>
 					<header class="wrapper">
 						<h3><? the_content(); ?></h3>
 						<p class="meta">Expires: <?= date('jS F', strtotime($voucher_code_end_date)); ?></p>

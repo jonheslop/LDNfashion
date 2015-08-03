@@ -56,5 +56,5 @@
 	<?php endif; ?>
 	<?php get_template_part( 'parts/_sidebar' ); ?>
 </section>
-
+	<? wp_reset_query(); ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

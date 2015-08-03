@@ -325,7 +325,8 @@ footer[role="content-info"] {
 
 .footer_section {
   margin-top: 1.5em;
-  width: 50%; }
+  width: 50%;
+  text-align: center; }
   @media screen and (min-width: 45em) {
     .footer_section {
       width: 25%; } }
@@ -346,6 +347,12 @@ footer[role="content-info"] {
   .footer_section li + li {
     margin-top: .25em; }
 
+@media screen and (min-width: 45em) {
+  .footer_section_one {
+    margin-left: 25%; }
+
+  .footer_section_two {
+    margin-right: 25%; } }
 .section_header {
   margin: 0 0 .75em;
   border-bottom: 0.0625em solid #dbe3e6;
@@ -952,6 +959,9 @@ input.voucher-code-button {
   margin-top: .75em;
   padding-top: .75em;
   border-top: 1px dashed #dbe3e6; }
+
+.brand-header {
+  width: 100%; }
 
 @media screen and (min-width: 55.5em) {
   .brand-description {

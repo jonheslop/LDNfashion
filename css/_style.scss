@@ -86,7 +86,7 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 	ul { margin: 0; padding: 0 0 .75em 0; list-style-type: none; color: $lightgrey; }
 }
 .sidebar_section { margin-top: 1.5em; width: 100%; }
-.footer_section { margin-top: 1.5em; width: 50%;
+.footer_section { margin-top: 1.5em; width: 50%; text-align: center;
 	@include breakpoint($tablet) { width: 25%; }
 	&.double { width: 100%;
 		@include breakpoint($tablet) { width: 50%;
@@ -94,6 +94,10 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 		}
 	}
 	li + li { margin-top: .25em; }
+}
+@include breakpoint($tablet) {
+	.footer_section_one { margin-left: 25%; }
+	.footer_section_two { margin-right: 25%; }
 }
 .section_header { margin: 0 0 .75em; border-bottom: .0625em solid $lightgrey; /* border-width: 0 0 .0625em 0; @include horizontal-border; */
 	h2, h3, h4, h5 { margin: 0; }
@@ -345,6 +349,8 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 .brand-lists {
 	li+li { margin-top: .75em; padding-top: .75em; border-top: 1px dashed $lightgrey; }
 }
+
+.brand-header { width: 100%; }
 
 @include breakpoint($tablet-mid) {
 	.brand-description { float: left; width: 100%; font-size: 1.25em; line-height: 1.5;

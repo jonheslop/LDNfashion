@@ -47,14 +47,16 @@
 			</ul>
 		</section>
 		<?php endif; ?>
-<!-- 		<section class="partition wrapper cf">
+	<? if ( is_active_sidebar( 'category_grid' ) ) : ?>
+		<section class="partition wrapper cf">
 			<header class="section_header sidebar_header">
 				<h4>Categories</h4>
 			</header>
 			<ul class="posts cf equalHeights">
-				<?php // if (function_exists('dynamic_sidebar') && dynamic_sidebar('Homepage Categories')); ?>
+				<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Homepage Categories')); ?>
 			</ul>
-		</section> -->
+		</section>
+	<?php endif; ?>
 	<?php if ( have_posts() ) : ?>
 	<?php // CHANGE cat=XXX IN LINE BELOW TO CHANGE THE CATEGORY
 	query_posts($query_string.'&cat=10890&posts_per_page=12'); ?>

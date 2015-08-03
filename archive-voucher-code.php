@@ -20,8 +20,8 @@
 	<section id="content" class="cf">
 		<section class="partition wrapper cf">
 		    <div class="wrapper partition page_headline">
-		      <header class="post-header wrapper">
-				<h2><?= get_term_by('slug', get_query_var('brand'), 'brand')->name; ?> Latest voucher codes</h2>
+		      <header class="post-header brand-header wrapper">
+				<h2><?= get_term_by('slug', get_query_var('brand'), 'brand')->name; ?> latest voucher codes</h2>
 		      </header>
 					<? $brand_image_object = apply_filters( 'taxonomy-images-get-terms', '', array(
 							'taxonomy' => 'brand',
@@ -29,9 +29,10 @@
 								'slug' => $brand[0]->slug,
 							)
 					) );
+					// Starkers_Utilities::print_a($brand_image_object);
 					$brand_image_id = $brand_image_object[0]->image_id;
 					$brand_image = wp_get_attachment_image_src($brand_image_object[0]->image_id);?>
-				<? if ( $brand_image_top ) : ?>
+				<? if ( $brand_image ) : ?>
 				<figure class="wrapper brand-image">
 					<img src="<?= $brand_image[0]; ?>">
 				</figure>

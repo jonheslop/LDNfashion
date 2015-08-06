@@ -1056,7 +1056,9 @@ input.voucher-code-button {
       letter-spacing: .125em;
       margin: 2.5em .75em 0;
       font-weight: 600;
-      font-size: 1.5em; }
+      font-size: 1.5em;
+      color: #fff;
+      -webkit-font-smoothing: antialiased; }
 
 .header_404 {
   margin: 1.5em 0; }

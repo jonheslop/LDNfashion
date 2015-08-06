@@ -388,7 +388,7 @@ input.voucher-code-button { -webkit-appearance: none; text-align: center; @inclu
 }
 .category-image { position: relative;
 	figcaption { position: absolute; top: 0; left: 0; right: 0; bottom: 0; text-align: center;
-		h4 { text-transform: uppercase; @include Freight; letter-spacing: .125em; margin: 2.5em .75em 0; font-weight: 600; font-size: 1.5em; }
+		h4 { text-transform: uppercase; @include Freight; letter-spacing: .125em; margin: 2.5em .75em 0; font-weight: 600; font-size: 1.5em; color: $white; -webkit-font-smoothing: antialiased; }
 	}
 }
 

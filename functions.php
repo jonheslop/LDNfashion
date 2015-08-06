@@ -106,10 +106,10 @@
 		wp_register_script( 'modernizr', get_template_directory_uri().'/js/modernizr.min.js' );
 		wp_enqueue_script( 'modernizr' );
 
-		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ), '1.7', true );
+		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ), '1.71', true );
 		wp_enqueue_script( 'site' );
 
-		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '1.7', 'screen' );
+		wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '1.71', 'screen' );
 		wp_enqueue_style( 'screen' );
 	}	
 

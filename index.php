@@ -203,8 +203,6 @@
 			<?php endwhile; ?>
 			</ul>
 		</section>
-		<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('Index Ad Low')); ?>
-		<?php endif; ?>
 	<?php endif; ?>
 	<? wp_reset_query(); ?>
 	<?php $interviewArgs = array(

@@ -29,7 +29,7 @@
 								'slug' => get_query_var('brand'),
 							)
 					) );
-					Starkers_Utilities::print_a($brand_image_object);
+					// Starkers_Utilities::print_a($brand_image_object);
 					$brand_image_id = $brand_image_object[0]->image_id;
 					$brand_image = wp_get_attachment_image_src($brand_image_object[0]->image_id);?>
 				<? if ( $brand_image ) : ?>

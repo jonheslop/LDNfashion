@@ -66,7 +66,7 @@ var $single = "Sample Sale"; 		// this represents the singular name of the post 
       'publicly_queryable' => true,
       'show_ui' => true,
       'query_var' => true,
-      'rewrite' => array('slug' => str_replace(" ", "-", strtolower($this->plural)), 'with_front' => true),
+      'rewrite' => array('slug' => str_replace(" ", "-", strtolower($this->plural)), 'with_front' => true) . 'type',
       'capability_type' => 'post',
       'hierarchical' => false,
       'has_archive' => true,

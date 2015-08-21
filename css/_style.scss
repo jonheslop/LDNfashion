@@ -176,20 +176,24 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 }
 
 // OUTFIT LAYOUT
+$outfitpink: #FF7D7B; //pink
+$outfitlightgrey: #C7C5CD; // light grey
+$outfitdarkgrey: #656074; // - dark grey
 .outfit_layout {
 	.post-content { margin-bottom: 3em; }
 	#gallery, .outfit_content { width: 100%;
 		@include breakpoint($tablet) { width: 50%; }
 	}
+	#gallery div { background-color: $outfitdarkgrey; }
 }
 .outfit-piece { width: 100%;
 	a:hover { background-color: transparent; }
 	@include breakpoint($tablet) { width: 50%; }
-	figcaption { border-top: 1px solid $black; padding: .375em 0; 
+	figcaption { border-top: 3px solid $outfitlightgrey; padding: .375em 0; 
 		p { margin: 0; }
 	}
-	.button { margin-top: .75em; text-transform: uppercase; font-weight: bold; width: 100%; @include Freight; font-size: 1em; letter-spacing: 2px; text-align: center; background-color: $offwhite; @include background-gradient($offwhite, $lightgrey); padding: .25em .375em; color: $grey; display: block; box-sizing: border-box;
-		&:hover { @include background-gradient; color: $white; }
+	.button { margin-top: .75em; text-transform: uppercase; font-weight: bold; width: 100%; @include Freight; font-size: 1em; letter-spacing: 2px; text-align: center; background-color: $outfitpink; padding: .25em .375em; color: $white; display: block; box-sizing: border-box;
+		&:hover { background-color: $outfitdarkgrey; }
 	}
 }
 

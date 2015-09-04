@@ -1085,6 +1085,13 @@ input.voucher-code-button {
       border-bottom-color: #f9fac7;
       background-color: transparent; }
 
+.gallery-thumbs {
+  margin-top: .75em; }
+  .gallery-thumbs img {
+    width: 20% !important;
+    box-sizing: border-box;
+    padding: 0 .375em .75em; }
+
 .category-image {
   position: relative; }
   .category-image figcaption {

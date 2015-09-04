@@ -75,8 +75,28 @@
 					</figcaption>
 					<? endif; ?>
 				</div>
-			</figure>
 			<?php  }?>
+			<? $allGalleryImages = new WP_Query( array(
+			    'post_parent' => get_the_ID(),
+			    'post_status' => 'inherit',
+			    'post_type' => 'attachment',
+			    'post_mime_type' => 'image',
+			    'order' => 'ASC',
+			    'orderby' => 'menu_order ID',
+			    'update_post_term_cache' => false,
+			    'posts_per_page' => -1,
+			    'offset' => $galleryoffset
+			  ) ); ?>
+			  <div class="gallery-thumbs">
+				<? $galleryCurrentThumb = 0;
+					foreach ($allGalleryImages->posts as $galleryImage) : 
+					$cellThumb = wp_get_attachment_image_src( $galleryImage->ID, 'thumbnail' );
+					?>
+					<a href="?offset=<?= $galleryCurrentThumb; ?>#gallery"><img src="<?= $cellThumb[0]; ?>"></a>
+					<? $galleryCurrentThumb++; ?>
+				<? endforeach; ?>
+				</div>
+			</figure>
 			<? endif; ?>
 		<? endif; ?>
 			<div class="outfit_content wrapper">

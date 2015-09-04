@@ -179,7 +179,9 @@ footer[role="content-info"] { margin-top: 3em; padding-bottom: 3em; background-c
 $outfitpink: #FF7D7B; //pink
 $outfitlightgrey: #C7C5CD; // light grey
 $outfitdarkgrey: #656074; // - dark grey
-.outfit_layout {
+$oufitfonts: "ITC Avant Garde Gothic W01", sans-serif;
+.outfit_layout { font-family: $oufitfonts; 
+	.post-header h2 { font-family: $oufitfonts; font-style: normal; }
 	.post-content { margin-bottom: 3em; }
 	#gallery, .outfit_content { width: 100%;
 		@include breakpoint($tablet) { width: 50%; }

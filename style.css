@@ -536,15 +536,20 @@ footer[role="content-info"] {
   .author_meta p {
     margin: 0; }
 
-.outfit_layout .post-content {
-  margin-bottom: 3em; }
-.outfit_layout #gallery, .outfit_layout .outfit_content {
-  width: 100%; }
-  @media screen and (min-width: 45em) {
-    .outfit_layout #gallery, .outfit_layout .outfit_content {
-      width: 50%; } }
-.outfit_layout #gallery div {
-  background-color: #656074; }
+.outfit_layout {
+  font-family: "ITC Avant Garde Gothic W01", sans-serif; }
+  .outfit_layout .post-header h2 {
+    font-family: "ITC Avant Garde Gothic W01", sans-serif;
+    font-style: normal; }
+  .outfit_layout .post-content {
+    margin-bottom: 3em; }
+  .outfit_layout #gallery, .outfit_layout .outfit_content {
+    width: 100%; }
+    @media screen and (min-width: 45em) {
+      .outfit_layout #gallery, .outfit_layout .outfit_content {
+        width: 50%; } }
+  .outfit_layout #gallery div {
+    background-color: #656074; }
 
 .outfit-piece {
   width: 100%; }

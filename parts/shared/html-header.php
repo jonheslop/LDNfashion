@@ -10,14 +10,18 @@
 		if ($post) {
 			$currentPostType = get_post_type();
 			$content = $post->post_content;
+			$outfit_layout = get_post_meta($post->ID, 'outfit_layout', true);
 		} 
 		if ( $currentPostType == 'voucher-code') : ?>
 		<title><?php bloginfo( 'name' ); ?> | <?php echo $content; ?></title>
 		<? else : ?>
 		<title><?php bloginfo( 'name' ); ?><?php wp_title( '|' ); ?></title>
 		<? endif; ?>
+		<? if ( $outfit_layout ) : ?>
+			<link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/d295cab0-5317-4d97-9218-2c2af7321d02.css"/>
+		<? endif; ?>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>

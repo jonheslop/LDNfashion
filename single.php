@@ -190,7 +190,7 @@
 					<p><?//=  the_author_meta('user_description'); ?></p>
 			</section> -->
 			<section class="post-comments wrapper">
-				<?php comments_template( '', true ); ?>
+				<?php // comments_template( '', true ); ?>
 			</section>
 		</article>
 		<?php include(locate_template('parts/_post-prev-next.php')); ?>

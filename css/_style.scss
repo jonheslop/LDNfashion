@@ -181,8 +181,10 @@ $outfitlightgrey: #C7C5CD; // light grey
 $outfitdarkgrey: #656074; // - dark grey
 $oufitfonts: "ITC Avant Garde Gothic W01", sans-serif;
 .outfit_layout { font-family: $oufitfonts; 
-	.post-header h2 { font-family: $oufitfonts; font-style: normal; }
-	.post-content { margin-bottom: 3em; }
+	.post-header h2 { font-family: $oufitfonts; font-style: normal; font-size: 2.25em; }
+	.post-content { margin-bottom: 3em;
+		p { font-size: 1em; }
+	}
 	#gallery, .outfit_content { width: 100%;
 		@include breakpoint($tablet) { width: 50%; }
 	}
@@ -192,7 +194,7 @@ $oufitfonts: "ITC Avant Garde Gothic W01", sans-serif;
 	a:hover { background-color: transparent; }
 	@include breakpoint($tablet) { width: 50%; }
 	figcaption { border-top: 3px solid $outfitlightgrey; padding: .375em 0; 
-		p { margin: 0; }
+		p { margin: 0; font-size: .875em; line-height: 1.5; }
 	}
 	.button { margin-top: .75em; text-transform: uppercase; font-weight: bold; width: 100%; @include Freight; font-size: 1em; letter-spacing: 2px; text-align: center; background-color: $outfitpink; padding: .25em .375em; color: $white; display: block; box-sizing: border-box;
 		&:hover { background-color: $outfitdarkgrey; }

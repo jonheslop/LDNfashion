@@ -540,9 +540,12 @@ footer[role="content-info"] {
   font-family: "ITC Avant Garde Gothic W01", sans-serif; }
   .outfit_layout .post-header h2 {
     font-family: "ITC Avant Garde Gothic W01", sans-serif;
-    font-style: normal; }
+    font-style: normal;
+    font-size: 2.25em; }
   .outfit_layout .post-content {
     margin-bottom: 3em; }
+    .outfit_layout .post-content p {
+      font-size: 1em; }
   .outfit_layout #gallery, .outfit_layout .outfit_content {
     width: 100%; }
     @media screen and (min-width: 45em) {
@@ -562,7 +565,9 @@ footer[role="content-info"] {
     border-top: 3px solid #C7C5CD;
     padding: .375em 0; }
     .outfit-piece figcaption p {
-      margin: 0; }
+      margin: 0;
+      font-size: .875em;
+      line-height: 1.5; }
   .outfit-piece .button {
     margin-top: .75em;
     text-transform: uppercase;

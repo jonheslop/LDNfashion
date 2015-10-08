@@ -87,7 +87,7 @@
 			    'posts_per_page' => -1,
 			    'offset' => $galleryoffset
 			  ) ); ?>
-			  <div class="gallery-thumbs">
+<!-- 			  <div class="gallery-thumbs">
 				<? $galleryCurrentThumb = 0;
 					foreach ($allGalleryImages->posts as $galleryImage) : 
 					$cellThumb = wp_get_attachment_image_src( $galleryImage->ID, 'thumbnail' );
@@ -95,7 +95,7 @@
 					<a href="?offset=<?= $galleryCurrentThumb; ?>#gallery"><img src="<?= $cellThumb[0]; ?>"></a>
 					<? $galleryCurrentThumb++; ?>
 				<? endforeach; ?>
-				</div>
+				</div> -->
 			</figure>
 			<? endif; ?>
 		<? endif; ?>

@@ -200,6 +200,7 @@ $oufitfonts: "ITC Avant Garde Gothic W01", sans-serif;
 	}
 	.button { margin-top: .75em; text-transform: uppercase; font-weight: bold; width: 100%; @include Freight; font-size: 1em; letter-spacing: 2px; text-align: center; background-color: $outfitpink; padding: .25em .375em; color: $white!important; display: block; box-sizing: border-box; -webkit-font-smoothing: antialiased;
 		&:hover { background-color: $outfitdarkgrey; }
+		a:link, a:visited { color: $white!important; }
 	}
 }
 

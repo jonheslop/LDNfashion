@@ -587,6 +587,8 @@ footer[role="content-info"] {
     -webkit-font-smoothing: antialiased; }
     .outfit-piece .button:hover {
       background-color: #656074; }
+    .outfit-piece .button a:link, .outfit-piece .button a:visited {
+      color: #fff !important; }
 
 .ldnf_widget {
   text-align: center; }

@@ -188,7 +188,9 @@ $oufitfonts: "ITC Avant Garde Gothic W01", sans-serif;
 	#gallery, .outfit_content { width: 100%;
 		@include breakpoint($tablet) { width: 50%; }
 	}
-	#gallery div { background-color: $outfitdarkgrey; }
+	#gallery div { background-color: $outfitdarkgrey;
+		.arrow { display: none; }
+	}
 }
 .outfit-piece { width: 100%;
 	a:hover { background-color: transparent; }
@@ -196,7 +198,7 @@ $oufitfonts: "ITC Avant Garde Gothic W01", sans-serif;
 	figcaption { border-top: 3px solid $outfitlightgrey; padding: .375em 0; 
 		p { margin: 0; font-size: .875em; line-height: 1.5; }
 	}
-	.button { margin-top: .75em; text-transform: uppercase; font-weight: bold; width: 100%; @include Freight; font-size: 1em; letter-spacing: 2px; text-align: center; background-color: $outfitpink; padding: .25em .375em; color: $white; display: block; box-sizing: border-box;
+	.button { margin-top: .75em; text-transform: uppercase; font-weight: bold; width: 100%; @include Freight; font-size: 1em; letter-spacing: 2px; text-align: center; background-color: $outfitpink; padding: .25em .375em; color: $white!important; display: block; box-sizing: border-box; -webkit-font-smoothing: antialiased;
 		&:hover { background-color: $outfitdarkgrey; }
 	}
 }

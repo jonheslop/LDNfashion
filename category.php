@@ -23,7 +23,7 @@
 			<a href="<?php the_permalink(); ?>">
 				<?php if ( $image ) : ?>
 					<figure class="post-image">
-						<? if ( is_category(9717) ) : ?>
+						<? if ( is_category(array(9717,11707) ) : ?>
 						<img src="<?php echo $streetstyle[0]; ?>">
 						<? else : ?>
 						<img src="<?php echo $image[0]; ?>">

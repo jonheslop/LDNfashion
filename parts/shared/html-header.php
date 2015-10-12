@@ -47,11 +47,13 @@
 
 			<script type='text/javascript'>
 			googletag.cmd.push(function() {
+			googletag.defineSlot('/12244649/ROS_Leaderboard', [728, 90], 'div-gpt-ad-1444657406597-0').addService(googletag.pubads());
 			googletag.defineSlot('/12244649/ROS_Billboard', [970, 250], 'div-gpt-ad-1424262122172-0').addService(googletag.pubads());
 			googletag.defineSlot('/12244649/ROS_HPU', [300, 600], 'div-gpt-ad-1424262122172-1').addService(googletag.pubads());
 			googletag.defineSlot('/12244649/ROS_MPU_Top', [300, 250], 'div-gpt-ad-1424262122172-2').addService(googletag.pubads());
 			googletag.defineSlot('/12244649/Lower_Billboard', [970, 250], 'div-gpt-ad-1431803170704-0').addService(googletag.pubads());
 			googletag.defineSlot('/12244649/Lower_HPU', [300, 600], 'div-gpt-ad-1431803170704-1').addService(googletag.pubads());
+			googletag.defineSlot('/12244649/ROS_Mobile_Banner', [320, 50], 'div-gpt-ad-1444657301807-0').addService(googletag.pubads());
 			googletag.pubads().enableSingleRequest();
 			googletag.enableServices();
 			});

@@ -834,7 +834,7 @@ input.voucher-code-button {
   border-bottom: none; }
 
 @media screen and (min-width: 45em) {
-  .category-streetstyle .post-thumb {
+  .category-streetstyle .post-thumb, .category-ootd .post-thumb {
     width: 20%; } }
 
 .featured {

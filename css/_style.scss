@@ -210,7 +210,11 @@ $oufitfonts: "ITC Avant Garde Gothic W01", sans-serif;
 	img { display: inline-block; max-width: 100%; border: .0625em solid $offwhite; }
 	a { background-color: transparent; }
 }
-.header_banner, .footer_header { width: 100%; margin-top: .75em; text-align: left; }
+.header_banner, .footer_header, .footer_banner { width: 100%; margin-top: 1.5em; text-align: left;
+	.textwidget { text-align: center;
+		div { display: inline-block; }
+	}
+}
 .header_banner_desktop, .footer_banner_desktop { display: none; }
 .header_banner_tablet, .footer_banner_tablet { display: none; }
 @include breakpoint($moblet) {

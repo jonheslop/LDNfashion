@@ -602,13 +602,24 @@ footer[role="content-info"] {
   .ldnf_widget a {
     background-color: transparent; }
 
-.header_banner, .footer_header, .footer_banner, .sidebar_ad_top, .sidebar_ad_bottom {
+.header_banner, .footer_header, .footer_banner {
   width: 100%;
   margin-top: 1.5em;
   text-align: left; }
-  .header_banner .textwidget, .footer_header .textwidget, .footer_banner .textwidget, .sidebar_ad_top .textwidget, .sidebar_ad_bottom .textwidget {
+  .header_banner .textwidget, .footer_header .textwidget, .footer_banner .textwidget {
     text-align: center; }
-    .header_banner .textwidget div, .footer_header .textwidget div, .footer_banner .textwidget div, .sidebar_ad_top .textwidget div, .sidebar_ad_bottom .textwidget div {
+    .header_banner .textwidget div, .footer_header .textwidget div, .footer_banner .textwidget div {
+      display: inline-block; }
+
+.sidebar_ad_top, .sidebar_ad_bottom {
+  width: 100%;
+  text-align: left; }
+  .sidebar_ad_top .textwidget, .sidebar_ad_bottom .textwidget {
+    text-align: center; }
+    @media screen and (min-width: 45em) {
+      .sidebar_ad_top .textwidget, .sidebar_ad_bottom .textwidget {
+        text-align: left; } }
+    .sidebar_ad_top .textwidget div, .sidebar_ad_bottom .textwidget div {
       display: inline-block; }
 
 .header_banner_desktop, .footer_banner_desktop {

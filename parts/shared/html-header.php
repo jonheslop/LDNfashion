@@ -25,8 +25,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico"/>
-		<script type="text/javascript" src="//use.typekit.net/hbj0cwk.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<script src="https://use.typekit.net/yza4ilg.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 		<meta name="google-site-verification" content="xfCpaGH81BD3xk70uTYuqGBqIs_NHuyj7m99GdG2fUA" />
 		<?php wp_head(); ?>
 
